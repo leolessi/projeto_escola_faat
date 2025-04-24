@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 import Util.bd as bd
+from flasgger import Swagger
 
 app = Flask(__name__)
 
