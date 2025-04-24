@@ -4,6 +4,8 @@ from flasgger import Swagger
 
 app = Flask(__name__)
 
+swagger = Swagger(app)
+
 
 @app.route("/alunos", methods=["GET"])
 def listar_alunos():
@@ -41,6 +43,39 @@ def listar_alunos():
 
 @app.route("/alunos", methods=["POST"])
 def cadastrar_aluno():
+    """
+    Cadastra um novo aluno.
+    ---
+    tags:
+      - Alunos
+    parameters:
+      - name: body
+        in: body
+        required: true
+        schema:
+          type: object
+          properties:
+            nome_completo:
+              type: string
+            data_nascimento:
+              type: string
+              format: date
+            id_turma:
+              type: integer
+            nome_responsavel:
+              type: string
+            telefone_responsavel:
+              type: string
+            email_responsavel:
+              type: string
+            informacoes_adicionais:
+              type: string
+        responses:
+      201:
+        description: Categoria criada com sucesso.
+      400:
+        description: Erro ao criar a categoria.
+    """
     data = request.get_json()
     conn = bd.create_connection()
     if conn is None:
