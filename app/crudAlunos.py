@@ -110,9 +110,9 @@ def cadastrar_aluno():
               type: string
         responses:
       201:
-        description: Categoria criada com sucesso.
+        description: Aluno cadastrado com sucesso.
       400:
-        description: Erro ao criar a categoria.
+        description: Erro ao criar aluno.
     """
     data = request.get_json()
     conn = bd.create_connection()
