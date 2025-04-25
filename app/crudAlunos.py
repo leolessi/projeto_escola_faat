@@ -9,6 +9,44 @@ swagger = Swagger(app)
 
 @app.route("/alunos", methods=["GET"])
 def listar_alunos():
+    """
+    Lista todos os alunos.
+    ---
+    tags:
+      - Alunos
+    responses:
+      200:
+        description: Lista de alunos retornada com sucesso.
+        schema:
+          type: array
+          items:
+            type: object
+            properties:
+              id_aluno:
+                type: integer
+              nome_completo:
+                type: string
+              data_nascimento:
+                type: string
+                format: date
+              id_turma:
+                type: integer
+              nome_responsavel:
+                type: string
+              telefone_responsavel:
+                type: string
+              email_responsavel:
+                type: string
+              informacoes_adicionais:
+                type: string
+      400:
+        description: Erro ao buscar os alunos.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+    """
     conn = bd.create_connection()
     if conn is None:
         return jsonify({"error": "Failed to connect to the database"}), 500
