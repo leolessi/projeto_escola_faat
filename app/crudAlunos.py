@@ -147,6 +147,44 @@ def cadastrar_aluno():
 
 @app.route("/alunos/<int:id_aluno>", methods=["PUT"])
 def alterar_aluno(id_aluno):
+    """
+    Atualiza os dados de um aluno cadastrado.
+    ---
+    tags:
+      - Alunos
+    parameters:
+      - name: id_aluno
+        in: path
+        required: true
+        type: integer
+        description: ID do aluno a ser atualizado.
+      - name: body
+        in: body
+        required: true
+        schema:
+          type: object
+          properties:
+            nome_completo:
+              type: string
+            data_nascimento:
+              type: string
+              format: date
+            id_turma:
+              type: integer
+            nome_responsavel:
+              type: string
+            telefone_responsavel:
+              type: string
+            email_responsavel:
+              type: string
+            informacoes_adicionais:
+              type: string
+    responses:
+      200:
+        description: Dados do aluno atualizados com sucesso.
+      400:
+        description: Erro ao atualizar os dados do aluno.
+    """
     data = request.get_json()
     conn = bd.create_connection()
     if conn is None:
