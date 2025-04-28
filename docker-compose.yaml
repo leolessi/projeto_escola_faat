@@ -1,0 +1,37 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    container_name: flask_app
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+
+  db:
+    build: ./bd
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: leonardo
+      POSTGRES_PASSWORD: leonardo123
+      POSTGRES_DB: escola
+    ports:
+      - "3000:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  postgres_exporter:
+    image: quay.io/prometheus/postgres-exporter
+    container_name: postgres_exporter
+    environment:
+      DATA_SOURCE_NAME: "postgresql://leonardo:leonardo123@db:5432/escola"
+    ports:
+      - "9187:9187"
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:
