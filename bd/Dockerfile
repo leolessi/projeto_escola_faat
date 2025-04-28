@@ -7,4 +7,4 @@ ENV POSTGRES_PASSWORD=faat
 
 COPY escola.sql /docker-entrypoint-initdb.d/
 
-EXPOSE 5000
+EXPOSE 5432
