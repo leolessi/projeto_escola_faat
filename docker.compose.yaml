@@ -15,8 +15,8 @@ services:
     build: ./InfraBD
     container_name: postgres_db
     environment:
-      POSTGRES_USER: faat
-      POSTGRES_PASSWORD: faat
+      POSTGRES_USER: leonardo
+      POSTGRES_PASSWORD: leonardo123
       POSTGRES_DB: escola
     ports:
       - "3000:5432"

@@ -1,5 +1,5 @@
 db_name: "escola"
-db_user: "faat"
-db_password: "faat"
+db_user: "leonardo"
+db_password: "leonardo123"
 db_host: "postgres_db"
 db_port: "5432"
