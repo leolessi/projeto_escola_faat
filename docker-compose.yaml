@@ -16,7 +16,7 @@ services:
     container_name: postgres_db
     environment:
       POSTGRES_USER: leonardo
-      POSTGRES_PASSWORD: leonardo123
+      POSTGRES_PASSWORD: leonardo
       POSTGRES_DB: escola
     ports:
       - "3000:5432"
@@ -24,10 +24,10 @@ services:
       - postgres_data:/var/lib/postgresql/data
 
   postgres_exporter:
-    image: quay.io/prometheus/postgres-exporter
+    image: bitnami/postgres-exporter:latest
     container_name: postgres_exporter
     environment:
-      DATA_SOURCE_NAME: "postgresql://leonardo:leonardo123@db:5432/escola"
+      DATA_SOURCE_NAME: "postgresql://leonardo:leonardo@db:5432/escola"
     ports:
       - "9187:9187"
     depends_on:
@@ -36,9 +36,7 @@ services:
       - monitoring_network
 
   prometheus:
-    image: prom/prometheus
-    build:
-      context: ./prometheus
+    build: ./prometheus
     container_name: prometheus
     ports:
       - "9090:9090"
