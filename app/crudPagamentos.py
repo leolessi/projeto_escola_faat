@@ -7,6 +7,50 @@ app = Flask(__name__)
 
 @app.route("/pagamentos", methods=["GET"])
 def listar_pagamentos():
+    """
+    Lista todos os pagamentos cadastrados.
+    ---
+    tags:
+      - Pagamentos
+    responses:
+      200:
+        description: Lista de pagamentos retornada com sucesso.
+        schema:
+          type: array
+          items:
+            type: object
+            properties:
+              id_pagamento:
+                type: integer
+              id_aluno:
+                type: integer
+              data_pagamento:
+                type: string
+                format: date
+              valor_pago:
+                type: number
+                format: float
+              forma_pagamento:
+                type: string
+              referencia:
+                type: string
+              status:
+                type: string
+      400:
+        description: Erro ao buscar os pagamentos.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+      500:
+        description: Erro de conexão com o banco de dados.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+    """
     conn = bd.create_connection()
     if conn is None:
         return jsonify({"error": "Failed to connect to the database"}), 500
@@ -40,6 +84,55 @@ def listar_pagamentos():
 
 @app.route("/pagamentos", methods=["POST"])
 def cadastrar_pagamento():
+    """
+    Cadastra um novo pagamento.
+    ---
+    tags:
+      - Pagamentos
+    parameters:
+      - name: body
+        in: body
+        required: true
+        schema:
+          type: object
+          properties:
+            id_aluno:
+              type: integer
+            data_pagamento:
+              type: string
+              format: date
+            valor_pago:
+              type: number
+              format: float
+            forma_pagamento:
+              type: string
+            referencia:
+              type: string
+            status:
+              type: string
+    responses:
+      201:
+        description: Pagamento cadastrado com sucesso.
+        schema:
+          type: object
+          properties:
+            message:
+              type: string
+      400:
+        description: Erro ao cadastrar o pagamento.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+      500:
+        description: Erro de conexão com o banco de dados.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+    """
     data = request.get_json()
     conn = bd.create_connection()
     if conn is None:
@@ -72,6 +165,60 @@ def cadastrar_pagamento():
 
 @app.route("/pagamentos/<int:id_pagamento>", methods=["PUT"])
 def alterar_pagamento(id_pagamento):
+    """
+    Atualiza os dados de um pagamento existente.
+    ---
+    tags:
+      - Pagamentos
+    parameters:
+      - name: id_pagamento
+        in: path
+        required: true
+        type: integer
+        description: ID do pagamento a ser atualizado.
+      - name: body
+        in: body
+        required: true
+        schema:
+          type: object
+          properties:
+            id_aluno:
+              type: integer
+            data_pagamento:
+              type: string
+              format: date
+            valor_pago:
+              type: number
+              format: float
+            forma_pagamento:
+              type: string
+            referencia:
+              type: string
+            status:
+              type: string
+    responses:
+      200:
+        description: Dados do pagamento atualizados com sucesso.
+        schema:
+          type: object
+          properties:
+            message:
+              type: string
+      400:
+        description: Erro ao atualizar os dados do pagamento.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+      500:
+        description: Erro de conexão com o banco de dados.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+    """
     data = request.get_json()
     conn = bd.create_connection()
     if conn is None:
@@ -106,6 +253,40 @@ def alterar_pagamento(id_pagamento):
 
 @app.route("/pagamentos/<int:id_pagamento>", methods=["DELETE"])
 def excluir_pagamento(id_pagamento):
+    """
+    Exclui um pagamento existente.
+    ---
+    tags:
+      - Pagamentos
+    parameters:
+      - name: id_pagamento
+        in: path
+        required: true
+        type: integer
+        description: ID do pagamento a ser excluído.
+    responses:
+      200:
+        description: Pagamento excluído com sucesso.
+        schema:
+          type: object
+          properties:
+            message:
+              type: string
+      400:
+        description: Erro ao excluir o pagamento.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+      500:
+        description: Erro de conexão com o banco de dados.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+    """
     conn = bd.create_connection()
     if conn is None:
         return jsonify({"error": "Failed to connect to the database"}), 500
