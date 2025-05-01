@@ -9,6 +9,42 @@ swagger = Swagger(app)
 
 @app.route("/turmas", methods=["GET"])
 def listar_turmas():
+    """
+    Lista todas as turmas cadastradas.
+    ---
+    tags:
+      - Turmas
+    responses:
+      200:
+        description: Lista de turmas retornada com sucesso.
+        schema:
+          type: array
+          items:
+            type: object
+            properties:
+              id_turma:
+                type: integer
+              nome_turma:
+                type: string
+              id_professor:
+                type: integer
+              horario:
+                type: string
+      400:
+        description: Erro ao buscar as turmas.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+      500:
+        description: Erro de conexão com o banco de dados.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+    """
     conn = bd.create_connection()
     if conn is None:
         return jsonify({"error": "Failed to connect to the database"}), 500
@@ -39,6 +75,47 @@ def listar_turmas():
 
 @app.route("/turmas", methods=["POST"])
 def cadastrar_turma():
+    """
+    Cadastra uma nova turma.
+    ---
+    tags:
+      - Turmas
+    parameters:
+      - name: body
+        in: body
+        required: true
+        schema:
+          type: object
+          properties:
+            nome_turma:
+              type: string
+            id_professor:
+              type: integer
+            horario:
+              type: string
+    responses:
+      201:
+        description: Turma cadastrada com sucesso.
+        schema:
+          type: object
+          properties:
+            message:
+              type: string
+      400:
+        description: Erro ao cadastrar a turma.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+      500:
+        description: Erro de conexão com o banco de dados.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+    """
     data = request.get_json()
     conn = bd.create_connection()
     if conn is None:
@@ -68,6 +145,52 @@ def cadastrar_turma():
 
 @app.route("/turmas/<int:id_turma>", methods=["PUT"])
 def alterar_turma(id_turma):
+    """
+    Atualiza os dados de uma turma existente.
+    ---
+    tags:
+      - Turmas
+    parameters:
+      - name: id_turma
+        in: path
+        required: true
+        type: integer
+        description: ID da turma a ser atualizada.
+      - name: body
+        in: body
+        required: true
+        schema:
+          type: object
+          properties:
+            nome_turma:
+              type: string
+            id_professor:
+              type: integer
+            horario:
+              type: string
+    responses:
+      200:
+        description: Dados da turma atualizados com sucesso.
+        schema:
+          type: object
+          properties:
+            message:
+              type: string
+      400:
+        description: Erro ao atualizar os dados da turma.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+      500:
+        description: Erro de conexão com o banco de dados.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+    """
     data = request.get_json()
     conn = bd.create_connection()
     if conn is None:
@@ -99,6 +222,40 @@ def alterar_turma(id_turma):
 
 @app.route("/turmas/<int:id_turma>", methods=["DELETE"])
 def excluir_turma(id_turma):
+    """
+    Exclui uma turma existente.
+    ---
+    tags:
+      - Turmas
+    parameters:
+      - name: id_turma
+        in: path
+        required: true
+        type: integer
+        description: ID da turma a ser excluída.
+    responses:
+      200:
+        description: Turma excluída com sucesso.
+        schema:
+          type: object
+          properties:
+            message:
+              type: string
+      400:
+        description: Erro ao excluir a turma.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+      500:
+        description: Erro de conexão com o banco de dados.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+    """
     conn = bd.create_connection()
     if conn is None:
         return jsonify({"error": "Failed to connect to the database"}), 500
