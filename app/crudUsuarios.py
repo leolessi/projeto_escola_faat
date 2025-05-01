@@ -9,6 +9,44 @@ swagger = Swagger(app)
 
 @app.route("/usuarios", methods=["GET"])
 def listar_usuarios():
+    """
+    Lista todos os usuários cadastrados.
+    ---
+    tags:
+      - Usuarios
+    responses:
+      200:
+        description: Lista de usuários retornada com sucesso.
+        schema:
+          type: array
+          items:
+            type: object
+            properties:
+              id_usuario:
+                type: integer
+              login:
+                type: string
+              senha:
+                type: string
+              nivel_acesso:
+                type: string
+              id_professor:
+                type: integer
+      400:
+        description: Erro ao buscar os usuários.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+      500:
+        description: Erro de conexão com o banco de dados.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+    """
     conn = bd.create_connection()
     if conn is None:
         return jsonify({"error": "Failed to connect to the database"}), 500
@@ -40,6 +78,49 @@ def listar_usuarios():
 
 @app.route("/usuarios", methods=["POST"])
 def cadastrar_usuario():
+    """
+    Cadastra um novo usuário.
+    ---
+    tags:
+      - Usuarios
+    parameters:
+      - name: body
+        in: body
+        required: true
+        schema:
+          type: object
+          properties:
+            login:
+              type: string
+            senha:
+              type: string
+            nivel_acesso:
+              type: string
+            id_professor:
+              type: integer
+    responses:
+      201:
+        description: Usuário cadastrado com sucesso.
+        schema:
+          type: object
+          properties:
+            message:
+              type: string
+      400:
+        description: Erro ao cadastrar o usuário.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+      500:
+        description: Erro de conexão com o banco de dados.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+    """
     data = request.get_json()
     conn = bd.create_connection()
     if conn is None:
@@ -70,6 +151,54 @@ def cadastrar_usuario():
 
 @app.route("/usuarios/<int:id_usuario>", methods=["PUT"])
 def alterar_usuario(id_usuario):
+    """
+    Atualiza os dados de um usuário existente.
+    ---
+    tags:
+      - Usuarios
+    parameters:
+      - name: id_usuario
+        in: path
+        required: true
+        type: integer
+        description: ID do usuário a ser atualizado.
+      - name: body
+        in: body
+        required: true
+        schema:
+          type: object
+          properties:
+            login:
+              type: string
+            senha:
+              type: string
+            nivel_acesso:
+              type: string
+            id_professor:
+              type: integer
+    responses:
+      200:
+        description: Dados do usuário atualizados com sucesso.
+        schema:
+          type: object
+          properties:
+            message:
+              type: string
+      400:
+        description: Erro ao atualizar os dados do usuário.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+      500:
+        description: Erro de conexão com o banco de dados.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+    """
     data = request.get_json()
     conn = bd.create_connection()
     if conn is None:
@@ -102,6 +231,40 @@ def alterar_usuario(id_usuario):
 
 @app.route("/usuarios/<int:id_usuario>", methods=["DELETE"])
 def excluir_usuario(id_usuario):
+    """
+    Exclui um usuário existente.
+    ---
+    tags:
+      - Usuarios
+    parameters:
+      - name: id_usuario
+        in: path
+        required: true
+        type: integer
+        description: ID do usuário a ser excluído.
+    responses:
+      200:
+        description: Usuário excluído com sucesso.
+        schema:
+          type: object
+          properties:
+            message:
+              type: string
+      400:
+        description: Erro ao excluir o usuário.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+      500:
+        description: Erro de conexão com o banco de dados.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+    """
     conn = bd.create_connection()
     if conn is None:
         return jsonify({"error": "Failed to connect to the database"}), 500
