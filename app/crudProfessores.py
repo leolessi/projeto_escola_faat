@@ -4,6 +4,8 @@ from flasgger import Swagger
 
 app = Flask(__name__)
 
+swagger = Swagger(app)
+
 
 @app.route("/professores", methods=["GET"])
 def listar_professores():
