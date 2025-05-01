@@ -220,6 +220,40 @@ def alterar_aluno(id_aluno):
 
 @app.route("/alunos/<int:id_aluno>", methods=["DELETE"])
 def excluir_aluno(id_aluno):
+    """
+    Exclui um aluno existente.
+    ---
+    tags:
+      - Alunos
+    parameters:
+      - name: id_aluno
+        in: path
+        required: true
+        type: integer
+        description: ID do aluno a ser excluído.
+    responses:
+      200:
+        description: Aluno excluído com sucesso.
+        schema:
+          type: object
+          properties:
+            message:
+              type: string
+      400:
+        description: Erro ao excluir o aluno.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+      500:
+        description: Erro de conexão com o banco de dados.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
+    """
     conn = bd.create_connection()
     if conn is None:
         return jsonify({"error": "Failed to connect to the database"}), 500
