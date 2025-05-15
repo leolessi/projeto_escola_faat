@@ -1,9 +1,17 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, Blueprint
 import Util.bd as bd
 from flasgger import Swagger
+import logging
 
+logging.basicConfig(
+    filename="escola_infantil.log",
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+)
+
+logger = logging.getLogger(__name__)
 app = Flask(__name__)
-
+alunos_bp = Blueprint("alunos", __name__)
 swagger = Swagger(app)
 
 
@@ -270,5 +278,5 @@ def excluir_aluno(id_aluno):
         conn.close()
 
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+# if __name__ == "__main__":
+#     app.run(host="0.0.0.0", port=5000, debug=True)

@@ -1,13 +1,13 @@
-from flask import Flask, request, jsonify
+from flask import Blueprint, request, jsonify
 import Util.bd as bd
 from flasgger import Swagger
 
-app = Flask(__name__)
+# Criação do Blueprint para Professores
+professores_bp = Blueprint("professores", __name__)
+swagger = Swagger()
 
-swagger = Swagger(app)
 
-
-@app.route("/professores", methods=["GET"])
+@professores_bp.route("/professores", methods=["GET"])
 def listar_professores():
     """
     Lista todos os professores cadastrados.
@@ -17,33 +17,6 @@ def listar_professores():
     responses:
       200:
         description: Lista de professores retornada com sucesso.
-        schema:
-          type: array
-          items:
-            type: object
-            properties:
-              id_professor:
-                type: integer
-              nome_completo:
-                type: string
-              email:
-                type: string
-              telefone:
-                type: string
-      400:
-        description: Erro ao buscar os professores.
-        schema:
-          type: object
-          properties:
-            error:
-              type: string
-      500:
-        description: Erro de conexão com o banco de dados.
-        schema:
-          type: object
-          properties:
-            error:
-              type: string
     """
     conn = bd.create_connection()
     if conn is None:
@@ -73,48 +46,13 @@ def listar_professores():
         conn.close()
 
 
-@app.route("/professores", methods=["POST"])
+@professores_bp.route("/professores", methods=["POST"])
 def cadastrar_professor():
     """
     Cadastra um novo professor.
     ---
     tags:
       - Professores
-    parameters:
-      - name: body
-        in: body
-        required: true
-        schema:
-          type: object
-          properties:
-            nome_completo:
-              type: string
-            email:
-              type: string
-            telefone:
-              type: string
-    responses:
-      201:
-        description: Professor cadastrado com sucesso.
-        schema:
-          type: object
-          properties:
-            message:
-              type: string
-      400:
-        description: Erro ao cadastrar o professor.
-        schema:
-          type: object
-          properties:
-            error:
-              type: string
-      500:
-        description: Erro de conexão com o banco de dados.
-        schema:
-          type: object
-          properties:
-            error:
-              type: string
     """
     data = request.get_json()
     conn = bd.create_connection()
@@ -143,53 +81,13 @@ def cadastrar_professor():
         conn.close()
 
 
-@app.route("/professores/<int:id_professor>", methods=["PUT"])
+@professores_bp.route("/professores/<int:id_professor>", methods=["PUT"])
 def alterar_professor(id_professor):
     """
     Atualiza os dados de um professor existente.
     ---
     tags:
       - Professores
-    parameters:
-      - name: id_professor
-        in: path
-        required: true
-        type: integer
-        description: ID do professor a ser atualizado.
-      - name: body
-        in: body
-        required: true
-        schema:
-          type: object
-          properties:
-            nome_completo:
-              type: string
-            email:
-              type: string
-            telefone:
-              type: string
-    responses:
-      200:
-        description: Dados do professor atualizados com sucesso.
-        schema:
-          type: object
-          properties:
-            message:
-              type: string
-      400:
-        description: Erro ao atualizar os dados do professor.
-        schema:
-          type: object
-          properties:
-            error:
-              type: string
-      500:
-        description: Erro de conexão com o banco de dados.
-        schema:
-          type: object
-          properties:
-            error:
-              type: string
     """
     data = request.get_json()
     conn = bd.create_connection()
@@ -220,41 +118,13 @@ def alterar_professor(id_professor):
         conn.close()
 
 
-@app.route("/professores/<int:id_professor>", methods=["DELETE"])
+@professores_bp.route("/professores/<int:id_professor>", methods=["DELETE"])
 def excluir_professor(id_professor):
     """
     Exclui um professor existente.
     ---
     tags:
       - Professores
-    parameters:
-      - name: id_professor
-        in: path
-        required: true
-        type: integer
-        description: ID do professor a ser excluído.
-    responses:
-      200:
-        description: Professor excluído com sucesso.
-        schema:
-          type: object
-          properties:
-            message:
-              type: string
-      400:
-        description: Erro ao excluir o professor.
-        schema:
-          type: object
-          properties:
-            error:
-              type: string
-      500:
-        description: Erro de conexão com o banco de dados.
-        schema:
-          type: object
-          properties:
-            error:
-              type: string
     """
     conn = bd.create_connection()
     if conn is None:
@@ -270,7 +140,3 @@ def excluir_professor(id_professor):
     finally:
         cursor.close()
         conn.close()
-
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5002, debug=True)

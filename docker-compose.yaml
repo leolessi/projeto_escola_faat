@@ -15,8 +15,6 @@ services:
     build: ./bd
     container_name: postgres_db
     environment:
-      POSTGRES_USER: leonardo
-      POSTGRES_PASSWORD: leonardo
       POSTGRES_DB: escola
     ports:
       - "3000:5432"
