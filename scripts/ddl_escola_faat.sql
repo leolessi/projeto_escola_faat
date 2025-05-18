@@ -59,3 +59,25 @@ CREATE TABLE Usuario (
     nivel_acesso VARCHAR(20) NOT NULL,
     id_professor INT REFERENCES Professor(id_professor)
 );
+
+CREATE TABLE Disciplina (
+    id_disciplina SERIAL PRIMARY KEY,
+    nome_disciplina VARCHAR(100) NOT NULL,
+    id_professor INT REFERENCES Professor(id_professor)
+);
+
+CREATE TABLE Nota (
+    id_nota SERIAL PRIMARY KEY,
+    id_aluno INT REFERENCES Aluno(id_aluno),
+    id_disciplina INT REFERENCES Disciplina(id_disciplina),
+    valor_nota DECIMAL(4,2) NOT NULL,
+    data_avaliacao DATE NOT NULL
+);
+
+CREATE TABLE Frequencia (
+    id_frequencia SERIAL PRIMARY KEY,
+    id_aluno INT REFERENCES Aluno(id_aluno),
+    id_disciplina INT REFERENCES Disciplina(id_disciplina),
+    data_aula DATE NOT NULL,
+    presente BOOLEAN NOT NULL
+);
