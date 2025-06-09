@@ -1,13 +1,14 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, Blueprint
 import Util.bd as bd
 from flasgger import Swagger
 
-app = Flask(__name__)
+# app = Flask(__name__)
 
-swagger = Swagger(app)
+# swagger = Swagger(app)
+turmas_bp = Blueprint("turmas", __name__)
 
 
-@app.route("/turmas", methods=["GET"])
+@turmas_bp.route("/turmas", methods=["GET"])
 def listar_turmas():
     """
     Lista todas as turmas cadastradas.
@@ -73,7 +74,7 @@ def listar_turmas():
         conn.close()
 
 
-@app.route("/turmas", methods=["POST"])
+@turmas_bp.route("/turmas", methods=["POST"])
 def cadastrar_turma():
     """
     Cadastra uma nova turma.
@@ -143,7 +144,7 @@ def cadastrar_turma():
         conn.close()
 
 
-@app.route("/turmas/<int:id_turma>", methods=["PUT"])
+@turmas_bp.route("/turmas/<int:id_turma>", methods=["PUT"])
 def alterar_turma(id_turma):
     """
     Atualiza os dados de uma turma existente.
@@ -220,7 +221,7 @@ def alterar_turma(id_turma):
         conn.close()
 
 
-@app.route("/turmas/<int:id_turma>", methods=["DELETE"])
+@turmas_bp.route("/turmas/<int:id_turma>", methods=["DELETE"])
 def excluir_turma(id_turma):
     """
     Exclui uma turma existente.
@@ -272,5 +273,5 @@ def excluir_turma(id_turma):
         conn.close()
 
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5001, debug=True)
+# if __name__ == "__main__":
+#     app.run(host="0.0.0.0", port=5001, debug=True)

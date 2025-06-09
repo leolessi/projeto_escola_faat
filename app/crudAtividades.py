@@ -1,13 +1,15 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, Blueprint
 import Util.bd as bd
 from flasgger import Swagger
 
-app = Flask(__name__)
+# app = Flask(__name__)
 
-swagger = Swagger(app)
+# swagger = Swagger(atividades_bp)
+
+atividades_bp = Blueprint("atividades", __name__)
 
 
-@app.route("/atividades", methods=["GET"])
+@atividades_bp.route("/atividades", methods=["GET"])
 def listar_atividades():
     """
     Lista todas as atividades cadastradas.
@@ -71,7 +73,7 @@ def listar_atividades():
         conn.close()
 
 
-@app.route("/atividades", methods=["POST"])
+@atividades_bp.route("/atividades", methods=["POST"])
 def cadastrar_atividade():
     """
     Cadastra uma nova atividade.
@@ -139,7 +141,7 @@ def cadastrar_atividade():
         conn.close()
 
 
-@app.route("/atividades/<int:id_atividade>", methods=["PUT"])
+@atividades_bp.route("/atividades/<int:id_atividade>", methods=["PUT"])
 def alterar_atividade(id_atividade):
     """
     Atualiza os dados de uma atividade existente.
@@ -214,7 +216,7 @@ def alterar_atividade(id_atividade):
         conn.close()
 
 
-@app.route("/atividades/<int:id_atividade>", methods=["DELETE"])
+@atividades_bp.route("/atividades/<int:id_atividade>", methods=["DELETE"])
 def excluir_atividade(id_atividade):
     """
     Exclui uma atividade existente.
@@ -266,5 +268,5 @@ def excluir_atividade(id_atividade):
         conn.close()
 
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5005, debug=True)
+# if __name__ == "__main__":
+#     app.run(host="0.0.0.0", port=5005, debug=True)

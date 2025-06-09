@@ -1,10 +1,24 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, Blueprint
 import Util.bd as bd
 from flasgger import Swagger
+import logging
+from crudProfessores import professores_bp
+from crudAtividades import atividades_bp
+from crudTurmas import turmas_bp
 
+logging.basicConfig(
+    filename="escola_infantil.log",
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+)
+
+logger = logging.getLogger(__name__)
 app = Flask(__name__)
-
+alunos_bp = Blueprint("alunos", __name__)
 swagger = Swagger(app)
+app.register_blueprint(professores_bp)
+app.register_blueprint(atividades_bp)
+app.register_blueprint(turmas_bp)
 
 
 @app.route("/alunos", methods=["GET"])

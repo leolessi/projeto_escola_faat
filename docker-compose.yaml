@@ -15,8 +15,6 @@ services:
     build: ./bd
     container_name: postgres_db
     environment:
-      POSTGRES_USER: leonardo
-      POSTGRES_PASSWORD: leonardo
       POSTGRES_DB: escola
     ports:
       - "3000:5432"
@@ -35,37 +33,8 @@ services:
     networks:
       - monitoring_network
 
-  prometheus:
-    build: ./prometheus
-    container_name: prometheus
-    ports:
-      - "9090:9090"
-    volumes:
-      - ./prometheus.yml:/etc/prometheus/prometheus.yml
-    depends_on:
-      - postgres_exporter
-    networks:
-      - monitoring_network
-
-  grafana:
-    build:
-      context: ./grafana
-    container_name: grafana
-    ports:
-      - "3001:3000"
-    environment:
-      - GF_SECURITY_ADMIN_USER=admin
-      - GF_SECURITY_ADMIN_PASSWORD=admin
-    volumes:
-      - grafana_data:/var/lib/grafana
-    depends_on:
-      - prometheus
-    networks:
-      - monitoring_network
-
 volumes:
   postgres_data:
-  grafana_data:
 
 networks:
   monitoring_network:
