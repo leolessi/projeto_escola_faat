@@ -13,9 +13,13 @@ logging.basicConfig(
 )
 
 logger = logging.getLogger(__name__)
+
 app = Flask(__name__)
+
 alunos_bp = Blueprint("alunos", __name__)
+
 swagger = Swagger(app)
+
 app.register_blueprint(professores_bp)
 app.register_blueprint(atividades_bp)
 app.register_blueprint(turmas_bp)
