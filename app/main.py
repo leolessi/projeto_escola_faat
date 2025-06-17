@@ -1,12 +1,14 @@
 from flask import Flask
-from app.crudAlunos import alunos_bp
-from app.crudProfessores import professores_bp
-from app.crudAtividades import atividades_bp
-from app.crudTurmas import turmas_bp
+from flasgger import Swagger
+from crudAlunos import alunos_bp
+from crudProfessores import professores_bp
+from crudAtividades import atividades_bp
+from crudTurmas import turmas_bp
 
 app = Flask(__name__)
+swagger = Swagger(app)
 
-# Registra os Blueprints
+
 app.register_blueprint(alunos_bp, url_prefix="/api")
 app.register_blueprint(professores_bp, url_prefix="/api")
 app.register_blueprint(atividades_bp, url_prefix="/api")

@@ -2,9 +2,6 @@ from flask import Flask, request, jsonify, Blueprint
 import Util.bd as bd
 from flasgger import Swagger
 import logging
-from crudProfessores import professores_bp
-from crudAtividades import atividades_bp
-from crudTurmas import turmas_bp
 
 logging.basicConfig(
     filename="escola_infantil.log",
@@ -14,18 +11,10 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)
 
-app = Flask(__name__)
-
 alunos_bp = Blueprint("alunos", __name__)
 
-swagger = Swagger(app)
 
-app.register_blueprint(professores_bp)
-app.register_blueprint(atividades_bp)
-app.register_blueprint(turmas_bp)
-
-
-@app.route("/alunos", methods=["GET"])
+@alunos_bp.route("/alunos", methods=["GET"])
 def listar_alunos():
     """
     Lista todos os alunos.
@@ -97,7 +86,7 @@ def listar_alunos():
         conn.close()
 
 
-@app.route("/alunos", methods=["POST"])
+@alunos_bp.route("/alunos", methods=["POST"])
 def cadastrar_aluno():
     """
     Cadastra um novo aluno.
@@ -163,7 +152,7 @@ def cadastrar_aluno():
         conn.close()
 
 
-@app.route("/alunos/<int:id_aluno>", methods=["PUT"])
+@alunos_bp.route("/alunos/<int:id_aluno>", methods=["PUT"])
 def alterar_aluno(id_aluno):
     """
     Atualiza os dados de um aluno cadastrado.
@@ -236,7 +225,7 @@ def alterar_aluno(id_aluno):
         conn.close()
 
 
-@app.route("/alunos/<int:id_aluno>", methods=["DELETE"])
+@alunos_bp.route("/alunos/<int:id_aluno>", methods=["DELETE"])
 def excluir_aluno(id_aluno):
     """
     Exclui um aluno existente.
@@ -286,7 +275,3 @@ def excluir_aluno(id_aluno):
     finally:
         cursor.close()
         conn.close()
-
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)

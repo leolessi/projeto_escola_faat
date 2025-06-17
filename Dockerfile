@@ -1,11 +1,13 @@
 FROM python:3.9-slim
 
-WORKDIR /
+WORKDIR /app
 
-COPY /app/requirements.txt requirements.txt
+COPY app/requirements.txt requirements.txt
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 COPY ./app .
 
-CMD ["python", "crudAlunos.py"]
+ENV PYTHONPATH=/app
+
+CMD ["python", "main.py"]
