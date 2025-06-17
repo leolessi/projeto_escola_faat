@@ -32,3 +32,7 @@
 2025-06-17 00:00:31,225 - INFO -  * Restarting with stat
 2025-06-17 00:00:31,802 - WARNING -  * Debugger is active!
 2025-06-17 00:00:31,817 - INFO -  * Debugger PIN: 560-225-938
+2025-06-17 00:00:38,570 - INFO - 172.18.0.1 - - [17/Jun/2025 00:00:38] "GET /api/professores HTTP/1.1" 200 -
+2025-06-17 00:00:45,156 - INFO - 172.18.0.1 - - [17/Jun/2025 00:00:45] "GET /api/professores HTTP/1.1" 200 -
+2025-06-17 00:00:54,523 - INFO - 172.18.0.1 - - [17/Jun/2025 00:00:54] "GET /api/professores HTTP/1.1" 200 -
+2025-06-17 00:02:52,351 - INFO - 172.18.0.1 - - [17/Jun/2025 00:02:52] "GET /api/professores HTTP/1.1" 200 -
