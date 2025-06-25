@@ -1,13 +1,12 @@
-from flask import Flask, request, jsonify
+from flask import request, jsonify, Blueprint
 import Util.bd as bd
-from flasgger import Swagger
 
-app = Flask(__name__)
+# from flasgger import Swagger
 
-swagger = Swagger(app)
+pagamentos_bp = Blueprint("pagamentos", __name__)
 
 
-@app.route("/pagamentos", methods=["GET"])
+@pagamentos_bp.route("/pagamentos", methods=["GET"])
 def listar_pagamentos():
     """
     Lista todos os pagamentos cadastrados.
@@ -84,7 +83,7 @@ def listar_pagamentos():
         conn.close()
 
 
-@app.route("/pagamentos", methods=["POST"])
+@pagamentos_bp.route("/pagamentos", methods=["POST"])
 def cadastrar_pagamento():
     """
     Cadastra um novo pagamento.
@@ -165,7 +164,7 @@ def cadastrar_pagamento():
         conn.close()
 
 
-@app.route("/pagamentos/<int:id_pagamento>", methods=["PUT"])
+@pagamentos_bp.route("/pagamentos/<int:id_pagamento>", methods=["PUT"])
 def alterar_pagamento(id_pagamento):
     """
     Atualiza os dados de um pagamento existente.
@@ -253,7 +252,7 @@ def alterar_pagamento(id_pagamento):
         conn.close()
 
 
-@app.route("/pagamentos/<int:id_pagamento>", methods=["DELETE"])
+@pagamentos_bp.route("/pagamentos/<int:id_pagamento>", methods=["DELETE"])
 def excluir_pagamento(id_pagamento):
     """
     Exclui um pagamento existente.
@@ -303,7 +302,3 @@ def excluir_pagamento(id_pagamento):
     finally:
         cursor.close()
         conn.close()
-
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5003, debug=True)

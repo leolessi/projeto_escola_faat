@@ -4,15 +4,16 @@ from crudAlunos import alunos_bp
 from crudProfessores import professores_bp
 from crudAtividades import atividades_bp
 from crudTurmas import turmas_bp
+from crudPagamentos import pagamentos_bp
 
 app = Flask(__name__)
 swagger = Swagger(app)
 
-
-app.register_blueprint(alunos_bp, url_prefix="/api")
 app.register_blueprint(professores_bp, url_prefix="/api")
 app.register_blueprint(atividades_bp, url_prefix="/api")
 app.register_blueprint(turmas_bp, url_prefix="/api")
+app.register_blueprint(alunos_bp, url_prefix="/api")
+app.register_blueprint(pagamentos_bp, url_prefix="/api")
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)

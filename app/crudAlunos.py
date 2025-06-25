@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify, Blueprint
 import Util.bd as bd
 from flasgger import Swagger
 import logging
-
+ 
 logging.basicConfig(
     filename="escola_infantil.log",
     level=logging.INFO,
