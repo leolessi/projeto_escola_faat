@@ -448,3 +448,20 @@
 2025-06-25 18:27:46,502 - INFO - 172.18.0.1 - - [25/Jun/2025 18:27:46] "GET /api/usuarios/1 HTTP/1.1" 200 -
 2025-06-25 18:27:47,800 - INFO - 172.18.0.1 - - [25/Jun/2025 18:27:47] "GET /api/usuarios/3 HTTP/1.1" 200 -
 2025-06-25 18:27:50,682 - INFO - 172.18.0.1 - - [25/Jun/2025 18:27:50] "GET /api/usuarios/1 HTTP/1.1" 200 -
+2025-06-25 18:34:16,558 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-06-25 18:34:16,558 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-25 18:34:16,560 - INFO -  * Restarting with stat
+2025-06-25 18:34:17,032 - WARNING -  * Debugger is active!
+2025-06-25 18:34:17,032 - INFO -  * Debugger PIN: 138-588-257
+2025-06-25 18:34:43,492 - INFO - 172.18.0.1 - - [25/Jun/2025 18:34:43] "GET /api/disciplinas HTTP/1.1" 200 -
+2025-06-25 23:03:51,341 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-06-25 23:03:51,342 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-25 23:03:51,344 - INFO -  * Restarting with stat
+2025-06-25 23:03:51,763 - WARNING -  * Debugger is active!
+2025-06-25 23:03:51,764 - INFO -  * Debugger PIN: 575-033-179
