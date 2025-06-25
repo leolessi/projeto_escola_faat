@@ -5,6 +5,7 @@ from crudProfessores import professores_bp
 from crudAtividades import atividades_bp
 from crudTurmas import turmas_bp
 from crudPagamentos import pagamentos_bp
+from crudPresencas import presencas_bp
 
 import logging
 
@@ -22,6 +23,7 @@ app.register_blueprint(atividades_bp, url_prefix="/api")
 app.register_blueprint(turmas_bp, url_prefix="/api")
 app.register_blueprint(alunos_bp, url_prefix="/api")
 app.register_blueprint(pagamentos_bp, url_prefix="/api")
+app.register_blueprint(presencas_bp, url_prefix="/api")
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)

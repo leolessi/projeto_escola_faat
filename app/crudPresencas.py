@@ -1,13 +1,10 @@
-from flask import Flask, request, jsonify
+from flask import Blueprint, request, jsonify
 import Util.bd as bd
-from flasgger import Swagger
 
-app = Flask(__name__)
-
-swagger = Swagger(app)
+presencas_bp = Blueprint("presencas", __name__)
 
 
-@app.route("/presencas", methods=["GET"])
+@presencas_bp.route("/presencas", methods=["GET"])
 def listar_presencas():
     """
     Lista todas as presenças cadastradas.
@@ -74,7 +71,7 @@ def listar_presencas():
         conn.close()
 
 
-@app.route("/presencas", methods=["POST"])
+@presencas_bp.route("/presencas", methods=["POST"])
 def cadastrar_presenca():
     """
     Cadastra uma nova presença.
@@ -145,7 +142,7 @@ def cadastrar_presenca():
         conn.close()
 
 
-@app.route("/presencas/<int:id_presenca>", methods=["PUT"])
+@presencas_bp.route("/presencas/<int:id_presenca>", methods=["PUT"])
 def alterar_presenca(id_presenca):
     """
     Atualiza os dados de uma presença existente.
@@ -223,7 +220,7 @@ def alterar_presenca(id_presenca):
         conn.close()
 
 
-@app.route("/presencas/<int:id_presenca>", methods=["DELETE"])
+@presencas_bp.route("/presencas/<int:id_presenca>", methods=["DELETE"])
 def excluir_presenca(id_presenca):
     """
     Exclui uma presença existente.
@@ -273,7 +270,3 @@ def excluir_presenca(id_presenca):
     finally:
         cursor.close()
         conn.close()
-
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5004, debug=True)

@@ -1,10 +1,5 @@
-from flask import Flask, request, jsonify, Blueprint
+from flask import request, jsonify, Blueprint
 import Util.bd as bd
-from flasgger import Swagger
-
-# app = Flask(__name__)
-
-# swagger = Swagger(atividades_bp)
 
 atividades_bp = Blueprint("atividades", __name__)
 

@@ -57,3 +57,51 @@
 2025-06-25 00:44:31,666 - INFO - 172.19.0.1 - - [25/Jun/2025 00:44:31] "GET /api/professores HTTP/1.1" 200 -
 2025-06-25 00:45:13,382 - INFO - 172.19.0.1 - - [25/Jun/2025 00:45:13] "DELETE /api/professores/2 HTTP/1.1" 200 -
 2025-06-25 00:45:18,489 - INFO - 172.19.0.1 - - [25/Jun/2025 00:45:18] "GET /api/professores HTTP/1.1" 200 -
+2025-06-25 01:00:20,265 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.3:5000
+2025-06-25 01:00:20,266 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-25 01:00:20,268 - INFO -  * Restarting with stat
+2025-06-25 01:00:20,641 - WARNING -  * Debugger is active!
+2025-06-25 01:00:20,641 - INFO -  * Debugger PIN: 122-119-553
+2025-06-25 01:00:27,722 - INFO - 172.19.0.1 - - [25/Jun/2025 01:00:27] "GET /api/professores HTTP/1.1" 200 -
+2025-06-25 01:01:02,052 - INFO - 172.19.0.1 - - [25/Jun/2025 01:01:02] "[35m[1mPOST /api/professores HTTP/1.1[0m" 201 -
+2025-06-25 01:01:06,281 - INFO - 172.19.0.1 - - [25/Jun/2025 01:01:06] "GET /api/professores HTTP/1.1" 200 -
+2025-06-25 01:01:22,079 - INFO - 172.19.0.1 - - [25/Jun/2025 01:01:22] "PUT /api/professores/2 HTTP/1.1" 200 -
+2025-06-25 01:01:29,276 - INFO - 172.19.0.1 - - [25/Jun/2025 01:01:29] "DELETE /api/professores/2 HTTP/1.1" 200 -
+2025-06-25 01:01:32,048 - INFO - 172.19.0.1 - - [25/Jun/2025 01:01:32] "[35m[1mPOST /api/professores HTTP/1.1[0m" 201 -
+2025-06-25 01:01:33,802 - INFO - 172.19.0.1 - - [25/Jun/2025 01:01:33] "PUT /api/professores/2 HTTP/1.1" 200 -
+2025-06-25 01:01:36,853 - INFO - 172.19.0.1 - - [25/Jun/2025 01:01:36] "GET /api/professores HTTP/1.1" 200 -
+2025-06-25 01:05:25,506 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.3:5000
+2025-06-25 01:05:25,507 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-25 01:05:25,510 - INFO -  * Restarting with stat
+2025-06-25 01:05:25,991 - WARNING -  * Debugger is active!
+2025-06-25 01:05:25,992 - INFO -  * Debugger PIN: 100-834-177
+2025-06-25 01:06:16,080 - INFO - 172.19.0.1 - - [25/Jun/2025 01:06:16] "[33mGET /api/presenca HTTP/1.1[0m" 404 -
+2025-06-25 01:06:20,329 - INFO - 172.19.0.1 - - [25/Jun/2025 01:06:20] "GET /api/presencas HTTP/1.1" 200 -
+2025-06-25 01:06:48,443 - INFO - 172.19.0.1 - - [25/Jun/2025 01:06:48] "[31m[1mPOST /api/presencas HTTP/1.1[0m" 400 -
+2025-06-25 01:08:09,684 - INFO - 172.19.0.1 - - [25/Jun/2025 01:08:09] "GET /api/professores HTTP/1.1" 200 -
+2025-06-25 01:09:04,341 - INFO - 172.19.0.1 - - [25/Jun/2025 01:09:04] "PUT /api/professores/4 HTTP/1.1" 200 -
+2025-06-25 01:09:06,921 - INFO - 172.19.0.1 - - [25/Jun/2025 01:09:06] "GET /api/professores HTTP/1.1" 200 -
+2025-06-25 01:10:02,283 - INFO -  * Detected change in '/app/crudAtividades.py', reloading
+2025-06-25 01:10:02,338 - INFO -  * Restarting with stat
+2025-06-25 01:10:02,865 - WARNING -  * Debugger is active!
+2025-06-25 01:10:02,866 - INFO -  * Debugger PIN: 100-834-177
+2025-06-25 01:10:08,133 - INFO -  * Detected change in '/app/crudAtividades.py', reloading
+2025-06-25 01:10:08,174 - INFO -  * Restarting with stat
+2025-06-25 01:10:08,546 - WARNING -  * Debugger is active!
+2025-06-25 01:10:08,546 - INFO -  * Debugger PIN: 100-834-177
+2025-06-25 01:10:47,619 - INFO - 172.19.0.1 - - [25/Jun/2025 01:10:47] "GET /api/atividades HTTP/1.1" 200 -
+2025-06-25 01:11:08,116 - INFO - 172.19.0.1 - - [25/Jun/2025 01:11:08] "[35m[1mPOST /api/atividades HTTP/1.1[0m" 201 -
+2025-06-25 01:11:10,842 - INFO - 172.19.0.1 - - [25/Jun/2025 01:11:10] "GET /api/atividades HTTP/1.1" 200 -
+2025-06-25 01:11:32,885 - INFO - 172.19.0.1 - - [25/Jun/2025 01:11:32] "[35m[1mPOST /api/atividades HTTP/1.1[0m" 201 -
+2025-06-25 01:11:35,694 - INFO - 172.19.0.1 - - [25/Jun/2025 01:11:35] "GET /api/atividades HTTP/1.1" 200 -
+2025-06-25 01:12:14,071 - INFO - 172.19.0.1 - - [25/Jun/2025 01:12:14] "PUT /api/atividades/2 HTTP/1.1" 200 -
+2025-06-25 01:12:16,900 - INFO - 172.19.0.1 - - [25/Jun/2025 01:12:16] "GET /api/atividades HTTP/1.1" 200 -
+2025-06-25 01:12:45,152 - INFO - 172.19.0.1 - - [25/Jun/2025 01:12:45] "GET /api/atividades HTTP/1.1" 200 -
+2025-06-25 01:12:57,083 - INFO - 172.19.0.1 - - [25/Jun/2025 01:12:57] "DELETE /api/atividades/2 HTTP/1.1" 200 -
+2025-06-25 01:12:59,423 - INFO - 172.19.0.1 - - [25/Jun/2025 01:12:59] "GET /api/atividades HTTP/1.1" 200 -
