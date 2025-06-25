@@ -172,3 +172,149 @@
 2025-06-25 02:12:47,670 - INFO - 172.19.0.1 - - [25/Jun/2025 02:12:47] "GET /api/presencas HTTP/1.1" 200 -
 2025-06-25 02:12:59,640 - INFO - 172.19.0.1 - - [25/Jun/2025 02:12:59] "DELETE /api/presencas/1 HTTP/1.1" 200 -
 2025-06-25 02:13:02,114 - INFO - 172.19.0.1 - - [25/Jun/2025 02:13:02] "GET /api/presencas HTTP/1.1" 200 -
+2025-06-25 15:31:11,522 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.3:5000
+2025-06-25 15:31:11,522 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-25 15:31:11,523 - INFO -  * Restarting with stat
+2025-06-25 15:31:11,915 - WARNING -  * Debugger is active!
+2025-06-25 15:31:11,927 - INFO -  * Debugger PIN: 203-443-787
+2025-06-25 15:31:21,189 - INFO - 172.19.0.1 - - [25/Jun/2025 15:31:21] "GET /api/presencas HTTP/1.1" 200 -
+2025-06-25 15:32:51,963 - INFO - 172.19.0.1 - - [25/Jun/2025 15:32:51] "[33mGET /api/atividade HTTP/1.1[0m" 404 -
+2025-06-25 15:32:54,168 - INFO - 172.19.0.1 - - [25/Jun/2025 15:32:54] "GET /api/atividades HTTP/1.1" 200 -
+2025-06-25 15:34:48,114 - INFO - 172.19.0.1 - - [25/Jun/2025 15:34:48] "[35m[1mPOST /api/atividades HTTP/1.1[0m" 201 -
+2025-06-25 15:34:53,906 - INFO - 172.19.0.1 - - [25/Jun/2025 15:34:53] "GET /api/atividades HTTP/1.1" 200 -
+2025-06-25 15:36:22,007 - INFO -  * Detected change in '/app/crudAtividadeAluno.py', reloading
+2025-06-25 15:36:22,062 - INFO -  * Restarting with stat
+2025-06-25 15:36:22,675 - WARNING -  * Debugger is active!
+2025-06-25 15:36:22,676 - INFO -  * Debugger PIN: 203-443-787
+2025-06-25 15:36:27,964 - INFO -  * Detected change in '/app/crudAtividadeAluno.py', reloading
+2025-06-25 15:36:28,014 - INFO -  * Restarting with stat
+2025-06-25 15:36:28,403 - WARNING -  * Debugger is active!
+2025-06-25 15:36:28,404 - INFO -  * Debugger PIN: 203-443-787
+2025-06-25 15:36:38,494 - INFO -  * Detected change in '/app/crudAtividadeAluno.py', reloading
+2025-06-25 15:36:38,534 - INFO -  * Restarting with stat
+2025-06-25 15:36:38,864 - WARNING -  * Debugger is active!
+2025-06-25 15:36:38,865 - INFO -  * Debugger PIN: 203-443-787
+2025-06-25 15:36:47,201 - INFO -  * Detected change in '/app/crudAtividadeAluno.py', reloading
+2025-06-25 15:36:47,244 - INFO -  * Restarting with stat
+2025-06-25 15:36:47,671 - WARNING -  * Debugger is active!
+2025-06-25 15:36:47,672 - INFO -  * Debugger PIN: 203-443-787
+2025-06-25 15:36:58,116 - INFO -  * Detected change in '/app/crudAtividadeAluno.py', reloading
+2025-06-25 15:36:58,151 - INFO -  * Restarting with stat
+2025-06-25 15:36:58,500 - WARNING -  * Debugger is active!
+2025-06-25 15:36:58,501 - INFO -  * Debugger PIN: 203-443-787
+2025-06-25 15:37:08,568 - INFO -  * Detected change in '/app/crudAtividadeAluno.py', reloading
+2025-06-25 15:37:08,617 - INFO -  * Restarting with stat
+2025-06-25 15:37:09,034 - WARNING -  * Debugger is active!
+2025-06-25 15:37:09,034 - INFO -  * Debugger PIN: 203-443-787
+2025-06-25 15:37:11,166 - INFO -  * Detected change in '/app/crudAtividadeAluno.py', reloading
+2025-06-25 15:37:11,212 - INFO -  * Restarting with stat
+2025-06-25 15:37:11,642 - WARNING -  * Debugger is active!
+2025-06-25 15:37:11,643 - INFO -  * Debugger PIN: 203-443-787
+2025-06-25 15:37:13,790 - INFO -  * Detected change in '/app/crudAtividadeAluno.py', reloading
+2025-06-25 15:37:13,832 - INFO -  * Restarting with stat
+2025-06-25 15:37:14,274 - WARNING -  * Debugger is active!
+2025-06-25 15:37:14,275 - INFO -  * Debugger PIN: 203-443-787
+2025-06-25 15:37:29,869 - INFO -  * Detected change in '/app/main.py', reloading
+2025-06-25 15:37:29,918 - INFO -  * Restarting with stat
+2025-06-25 15:40:04,889 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-06-25 15:40:04,890 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-25 15:40:04,891 - INFO -  * Restarting with stat
+2025-06-25 15:40:05,386 - WARNING -  * Debugger is active!
+2025-06-25 15:40:05,387 - INFO -  * Debugger PIN: 104-555-529
+2025-06-25 15:40:16,943 - INFO - 172.18.0.1 - - [25/Jun/2025 15:40:16] "GET /api/atividades HTTP/1.1" 200 -
+2025-06-25 15:40:24,546 - INFO - 172.18.0.1 - - [25/Jun/2025 15:40:24] "[35m[1mPOST /api/atividades HTTP/1.1[0m" 201 -
+2025-06-25 15:40:26,525 - INFO - 172.18.0.1 - - [25/Jun/2025 15:40:26] "GET /api/atividades HTTP/1.1" 200 -
+2025-06-25 15:41:06,655 - INFO - 172.18.0.1 - - [25/Jun/2025 15:41:06] "[35m[1mPOST /api/atividades HTTP/1.1[0m" 201 -
+2025-06-25 15:41:08,729 - INFO - 172.18.0.1 - - [25/Jun/2025 15:41:08] "GET /api/atividades HTTP/1.1" 200 -
+2025-06-25 15:41:17,013 - INFO - 172.18.0.1 - - [25/Jun/2025 15:41:17] "[35m[1mPOST /api/atividades HTTP/1.1[0m" 201 -
+2025-06-25 15:41:19,836 - INFO - 172.18.0.1 - - [25/Jun/2025 15:41:19] "GET /api/atividades HTTP/1.1" 200 -
+2025-06-25 15:41:30,108 - INFO - 172.18.0.1 - - [25/Jun/2025 15:41:30] "PUT /api/atividades/3 HTTP/1.1" 200 -
+2025-06-25 15:41:32,586 - INFO - 172.18.0.1 - - [25/Jun/2025 15:41:32] "GET /api/atividades HTTP/1.1" 200 -
+2025-06-25 15:43:48,923 - INFO - 172.18.0.1 - - [25/Jun/2025 15:43:48] "GET /api/professores HTTP/1.1" 200 -
+2025-06-25 15:43:53,089 - INFO - 172.18.0.1 - - [25/Jun/2025 15:43:53] "[31m[1mPOST /api/atividades HTTP/1.1[0m" 400 -
+2025-06-25 15:44:02,188 - INFO - 172.18.0.1 - - [25/Jun/2025 15:44:02] "[35m[1mPOST /api/professores HTTP/1.1[0m" 201 -
+2025-06-25 15:44:04,843 - INFO - 172.18.0.1 - - [25/Jun/2025 15:44:04] "GET /api/professores HTTP/1.1" 200 -
+2025-06-25 15:44:31,250 - INFO - 172.18.0.1 - - [25/Jun/2025 15:44:31] "[35m[1mPOST /api/professores HTTP/1.1[0m" 201 -
+2025-06-25 15:44:37,992 - INFO - 172.18.0.1 - - [25/Jun/2025 15:44:37] "GET /api/professores HTTP/1.1" 200 -
+2025-06-25 15:45:04,311 - INFO - 172.18.0.1 - - [25/Jun/2025 15:45:04] "[31m[1mPUT /api/atividades/1 HTTP/1.1[0m" 400 -
+2025-06-25 15:45:08,748 - INFO - 172.18.0.1 - - [25/Jun/2025 15:45:08] "PUT /api/professores/1 HTTP/1.1" 200 -
+2025-06-25 15:45:11,375 - INFO - 172.18.0.1 - - [25/Jun/2025 15:45:11] "GET /api/professores HTTP/1.1" 200 -
+2025-06-25 15:45:57,470 - INFO - 172.18.0.1 - - [25/Jun/2025 15:45:57] "GET /api/atividades HTTP/1.1" 200 -
+2025-06-25 15:46:09,361 - INFO - 172.18.0.1 - - [25/Jun/2025 15:46:09] "GET /api/turmas HTTP/1.1" 200 -
+2025-06-25 15:46:39,503 - INFO - 172.18.0.1 - - [25/Jun/2025 15:46:39] "[35m[1mPOST /api/turmas HTTP/1.1[0m" 201 -
+2025-06-25 15:47:00,451 - INFO - 172.18.0.1 - - [25/Jun/2025 15:47:00] "[35m[1mPOST /api/turmas HTTP/1.1[0m" 201 -
+2025-06-25 15:47:02,755 - INFO - 172.18.0.1 - - [25/Jun/2025 15:47:02] "GET /api/turmas HTTP/1.1" 200 -
+2025-06-25 15:48:54,812 - INFO - 172.18.0.1 - - [25/Jun/2025 15:48:54] "GET /api/alunos HTTP/1.1" 200 -
+2025-06-25 15:49:08,496 - INFO - 172.18.0.1 - - [25/Jun/2025 15:49:08] "[35m[1mPOST /api/alunos HTTP/1.1[0m" 201 -
+2025-06-25 15:49:30,216 - INFO - 172.18.0.1 - - [25/Jun/2025 15:49:30] "[35m[1mPOST /api/alunos HTTP/1.1[0m" 201 -
+2025-06-25 15:49:32,481 - INFO - 172.18.0.1 - - [25/Jun/2025 15:49:32] "GET /api/alunos HTTP/1.1" 200 -
+2025-06-25 15:49:48,902 - INFO - 172.18.0.1 - - [25/Jun/2025 15:49:48] "GET /api/alunos HTTP/1.1" 200 -
+2025-06-25 15:50:05,178 - INFO - 172.18.0.1 - - [25/Jun/2025 15:50:05] "PUT /api/alunos/2 HTTP/1.1" 200 -
+2025-06-25 15:50:06,690 - INFO - 172.18.0.1 - - [25/Jun/2025 15:50:06] "GET /api/alunos HTTP/1.1" 200 -
+2025-06-25 15:54:53,953 - INFO - 172.18.0.1 - - [25/Jun/2025 15:54:53] "GET /api/alunos HTTP/1.1" 200 -
+2025-06-25 15:56:03,167 - INFO - 172.18.0.1 - - [25/Jun/2025 15:56:03] "GET /api/pagamentos HTTP/1.1" 200 -
+2025-06-25 15:56:17,008 - INFO - 172.18.0.1 - - [25/Jun/2025 15:56:17] "[35m[1mPOST /api/pagamentos HTTP/1.1[0m" 201 -
+2025-06-25 15:56:53,902 - INFO - 172.18.0.1 - - [25/Jun/2025 15:56:53] "[31m[1mPOST /api/pagamentos HTTP/1.1[0m" 400 -
+2025-06-25 15:57:00,942 - INFO - 172.18.0.1 - - [25/Jun/2025 15:57:00] "[35m[1mPOST /api/pagamentos HTTP/1.1[0m" 201 -
+2025-06-25 15:57:03,522 - INFO - 172.18.0.1 - - [25/Jun/2025 15:57:03] "GET /api/pagamentos HTTP/1.1" 200 -
+2025-06-25 15:58:40,627 - INFO - 172.18.0.1 - - [25/Jun/2025 15:58:40] "GET /api/presencas HTTP/1.1" 200 -
+2025-06-25 15:58:44,443 - INFO - 172.18.0.1 - - [25/Jun/2025 15:58:44] "[31m[1mPOST /api/presencas HTTP/1.1[0m" 400 -
+2025-06-25 15:58:47,881 - INFO - 172.18.0.1 - - [25/Jun/2025 15:58:47] "[35m[1mPOST /api/presencas HTTP/1.1[0m" 201 -
+2025-06-25 15:58:50,690 - INFO - 172.18.0.1 - - [25/Jun/2025 15:58:50] "[35m[1mPOST /api/presencas HTTP/1.1[0m" 201 -
+2025-06-25 15:58:56,294 - INFO - 172.18.0.1 - - [25/Jun/2025 15:58:56] "GET /api/presencas HTTP/1.1" 200 -
+2025-06-25 16:14:58,887 - INFO - 172.18.0.1 - - [25/Jun/2025 16:14:58] "GET /api/presencas HTTP/1.1" 200 -
+2025-06-25 16:23:44,182 - INFO - 172.18.0.1 - - [25/Jun/2025 16:23:44] "GET /api/atividade_aluno HTTP/1.1" 200 -
+2025-06-25 16:23:53,272 - INFO - 172.18.0.1 - - [25/Jun/2025 16:23:53] "[31m[1mPOST /api/atividade_aluno HTTP/1.1[0m" 400 -
+2025-06-25 16:24:13,692 - INFO - 172.18.0.1 - - [25/Jun/2025 16:24:13] "[35m[1mPOST /api/atividade_aluno HTTP/1.1[0m" 201 -
+2025-06-25 16:24:15,933 - INFO - 172.18.0.1 - - [25/Jun/2025 16:24:15] "GET /api/atividade_aluno HTTP/1.1" 200 -
+2025-06-25 16:24:30,229 - INFO - 172.18.0.1 - - [25/Jun/2025 16:24:30] "[35m[1mPOST /api/atividade_aluno HTTP/1.1[0m" 201 -
+2025-06-25 16:24:35,257 - INFO - 172.18.0.1 - - [25/Jun/2025 16:24:35] "GET /api/atividade_aluno HTTP/1.1" 200 -
+2025-06-25 16:24:59,340 - INFO - 172.18.0.1 - - [25/Jun/2025 16:24:59] "[35m[1mPOST /api/atividade_aluno HTTP/1.1[0m" 201 -
+2025-06-25 16:25:06,605 - INFO - 172.18.0.1 - - [25/Jun/2025 16:25:06] "[35m[1mPOST /api/atividade_aluno HTTP/1.1[0m" 201 -
+2025-06-25 16:25:08,736 - INFO - 172.18.0.1 - - [25/Jun/2025 16:25:08] "GET /api/atividade_aluno HTTP/1.1" 200 -
+2025-06-25 16:25:17,578 - INFO - 172.18.0.1 - - [25/Jun/2025 16:25:17] "[33mGET /api/atividade_aluno/aluno/1 HTTP/1.1[0m" 404 -
+2025-06-25 16:25:23,350 - INFO - 172.18.0.1 - - [25/Jun/2025 16:25:23] "[33mGET /api/atividade_aluno/alunos/1 HTTP/1.1[0m" 404 -
+2025-06-25 16:25:40,682 - INFO - 172.18.0.1 - - [25/Jun/2025 16:25:40] "[33mGET /api/atividade_aluno/atividade/1 HTTP/1.1[0m" 404 -
+2025-06-25 16:27:25,445 - INFO -  * Detected change in '/app/crudAtividadeAluno.py', reloading
+2025-06-25 16:27:25,566 - INFO -  * Restarting with stat
+2025-06-25 16:27:26,167 - WARNING -  * Debugger is active!
+2025-06-25 16:27:26,168 - INFO -  * Debugger PIN: 104-555-529
+2025-06-25 16:27:27,307 - INFO -  * Detected change in '/app/crudAtividadeAluno.py', reloading
+2025-06-25 16:27:27,346 - INFO -  * Restarting with stat
+2025-06-25 16:27:27,708 - WARNING -  * Debugger is active!
+2025-06-25 16:27:27,708 - INFO -  * Debugger PIN: 104-555-529
+2025-06-25 16:27:28,799 - INFO -  * Detected change in '/app/crudAtividadeAluno.py', reloading
+2025-06-25 16:27:28,833 - INFO -  * Restarting with stat
+2025-06-25 16:27:29,218 - WARNING -  * Debugger is active!
+2025-06-25 16:27:29,218 - INFO -  * Debugger PIN: 104-555-529
+2025-06-25 16:27:30,668 - INFO - 172.18.0.1 - - [25/Jun/2025 16:27:30] "GET /api/atividade_aluno/atividade/1 HTTP/1.1" 200 -
+2025-06-25 16:27:37,017 - INFO - 172.18.0.1 - - [25/Jun/2025 16:27:37] "[33mGET /api/atividade_aluno/aluno/1 HTTP/1.1[0m" 404 -
+2025-06-25 16:27:39,760 - INFO - 172.18.0.1 - - [25/Jun/2025 16:27:39] "[33mGET /api/atividade_aluno/alunos/1 HTTP/1.1[0m" 404 -
+2025-06-25 16:28:01,860 - INFO - 172.18.0.1 - - [25/Jun/2025 16:28:01] "GET /api/atividade_aluno/atividade/1 HTTP/1.1" 200 -
+2025-06-25 16:28:38,093 - INFO - 172.18.0.1 - - [25/Jun/2025 16:28:38] "GET /api/alunos HTTP/1.1" 200 -
+2025-06-25 16:28:40,150 - INFO - 172.18.0.1 - - [25/Jun/2025 16:28:40] "[33mGET /api/aluno HTTP/1.1[0m" 404 -
+2025-06-25 16:28:42,061 - INFO - 172.18.0.1 - - [25/Jun/2025 16:28:42] "GET /api/alunos HTTP/1.1" 200 -
+2025-06-25 16:29:12,659 - INFO -  * Detected change in '/app/crudAtividadeAluno.py', reloading
+2025-06-25 16:29:12,700 - INFO -  * Restarting with stat
+2025-06-25 16:29:13,100 - WARNING -  * Debugger is active!
+2025-06-25 16:29:13,101 - INFO -  * Debugger PIN: 104-555-529
+2025-06-25 16:29:16,264 - INFO -  * Detected change in '/app/crudAtividadeAluno.py', reloading
+2025-06-25 16:29:16,299 - INFO -  * Restarting with stat
+2025-06-25 16:29:16,682 - WARNING -  * Debugger is active!
+2025-06-25 16:29:16,683 - INFO -  * Debugger PIN: 104-555-529
+2025-06-25 16:29:17,778 - INFO -  * Detected change in '/app/crudAtividadeAluno.py', reloading
+2025-06-25 16:29:17,810 - INFO -  * Restarting with stat
+2025-06-25 16:29:18,214 - WARNING -  * Debugger is active!
+2025-06-25 16:29:18,215 - INFO -  * Debugger PIN: 104-555-529
+2025-06-25 16:29:28,952 - INFO - 172.18.0.1 - - [25/Jun/2025 16:29:28] "GET /api/atividade_aluno/alunos/1 HTTP/1.1" 200 -
+2025-06-25 16:29:39,118 - INFO - 172.18.0.1 - - [25/Jun/2025 16:29:39] "GET /api/atividade_aluno/alunos/2 HTTP/1.1" 200 -
+2025-06-25 16:29:42,869 - INFO -  * Detected change in '/app/crudAtividadeAluno.py', reloading
+2025-06-25 16:29:42,911 - INFO -  * Restarting with stat
+2025-06-25 16:29:43,291 - WARNING -  * Debugger is active!
+2025-06-25 16:29:43,292 - INFO -  * Debugger PIN: 104-555-529

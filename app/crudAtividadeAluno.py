@@ -1,13 +1,10 @@
-from flask import Flask, request, jsonify
+from flask import Blueprint, request, jsonify
 import Util.bd as bd
-from flasgger import Swagger
 
-app = Flask(__name__)
-
-swagger = Swagger(app)
+atividade_aluno_bp = Blueprint("atividade_aluno", __name__)
 
 
-@app.route("/atividade_aluno", methods=["GET"])
+@atividade_aluno_bp.route("/atividade_aluno", methods=["GET"])
 def listar_atividade_aluno():
     """
     Lista todas as associações entre atividades e alunos.
@@ -60,7 +57,100 @@ def listar_atividade_aluno():
         conn.close()
 
 
-@app.route("/atividade_aluno", methods=["POST"])
+@atividade_aluno_bp.route("/atividade_aluno/alunos/<int:id_aluno>", methods=["GET"])
+def listar_atividades_por_aluno(id_aluno):
+    """
+    Lista todas as atividades de um aluno específico.
+    ---
+    tags:
+      - Atividade_Aluno
+    parameters:
+      - name: id_aluno
+        in: path
+        required: true
+        type: integer
+        description: ID do aluno
+    responses:
+      200:
+        description: Lista de atividades retornada com sucesso.
+        schema:
+          type: array
+          items:
+            type: object
+            properties:
+              id_atividade:
+                type: integer
+      400:
+        description: Erro ao buscar as atividades.
+    """
+    conn = bd.create_connection()
+    if conn is None:
+        return jsonify({"error": "Erro de conexão com o banco de dados"}), 500
+    cursor = conn.cursor()
+    try:
+        cursor.execute(
+            "SELECT id_atividade FROM Atividade_Aluno WHERE id_aluno = %s",
+            (id_aluno,),
+        )
+        atividades = cursor.fetchall()
+        return (
+            jsonify([{"id_atividade": atividade[0]} for atividade in atividades]),
+            200,
+        )
+    except Exception as e:
+        return jsonify({"error": str(e)}), 400
+    finally:
+        cursor.close()
+        conn.close()
+
+
+@atividade_aluno_bp.route(
+    "/atividade_aluno/atividade/<int:id_atividade>", methods=["GET"]
+)
+def listar_alunos_por_atividade(id_atividade):
+    """
+    Lista todos os alunos de uma atividade específica.
+    ---
+    tags:
+      - Atividade_Aluno
+    parameters:
+      - name: id_atividade
+        in: path
+        required: true
+        type: integer
+        description: ID da atividade
+    responses:
+      200:
+        description: Lista de alunos retornada com sucesso.
+        schema:
+          type: array
+          items:
+            type: object
+            properties:
+              id_aluno:
+                type: integer
+      400:
+        description: Erro ao buscar os alunos.
+    """
+    conn = bd.create_connection()
+    if conn is None:
+        return jsonify({"error": "Erro de conexão com o banco de dados"}), 500
+    cursor = conn.cursor()
+    try:
+        cursor.execute(
+            "SELECT id_aluno FROM Atividade_Aluno WHERE id_atividade = %s",
+            (id_atividade,),
+        )
+        alunos = cursor.fetchall()
+        return jsonify([{"id_aluno": aluno[0]} for aluno in alunos]), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 400
+    finally:
+        cursor.close()
+        conn.close()
+
+
+@atividade_aluno_bp.route("/atividade_aluno", methods=["POST"])
 def cadastrar_atividade_aluno():
     """
     Associa uma atividade a um aluno.
@@ -120,7 +210,9 @@ def cadastrar_atividade_aluno():
         conn.close()
 
 
-@app.route("/atividade_aluno/<int:id_atividade>/<int:id_aluno>", methods=["PUT"])
+@atividade_aluno_bp.route(
+    "/atividade_aluno/<int:id_atividade>/<int:id_aluno>", methods=["PUT"]
+)
 def atualizar_atividade_aluno(id_atividade, id_aluno):
     """
     Atualiza a associação entre uma atividade e um aluno.
@@ -200,7 +292,9 @@ def atualizar_atividade_aluno(id_atividade, id_aluno):
         conn.close()
 
 
-@app.route("/atividade_aluno/<int:id_atividade>/<int:id_aluno>", methods=["DELETE"])
+@atividade_aluno_bp.route(
+    "/atividade_aluno/<int:id_atividade>/<int:id_aluno>", methods=["DELETE"]
+)
 def excluir_atividade_aluno(id_atividade, id_aluno):
     """
     Exclui a associação entre uma atividade e um aluno.
@@ -256,7 +350,3 @@ def excluir_atividade_aluno(id_atividade, id_aluno):
     finally:
         cursor.close()
         conn.close()
-
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5006, debug=True)
