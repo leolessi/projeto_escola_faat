@@ -404,3 +404,34 @@
 2025-06-25 18:21:47,670 - INFO -  * Debugger PIN: 144-034-385
 2025-06-25 18:21:51,089 - INFO - 172.18.0.1 - - [25/Jun/2025 18:21:51] "GET /api/alunos/1 HTTP/1.1" 200 -
 2025-06-25 18:21:55,088 - INFO - 172.18.0.1 - - [25/Jun/2025 18:21:55] "GET /api/alunos/2 HTTP/1.1" 200 -
+2025-06-25 18:24:44,645 - INFO -  * Detected change in '/app/crudUsuarios.py', reloading
+2025-06-25 18:24:44,691 - INFO -  * Restarting with stat
+2025-06-25 18:24:45,123 - WARNING -  * Debugger is active!
+2025-06-25 18:24:45,124 - INFO -  * Debugger PIN: 144-034-385
+2025-06-25 18:24:47,283 - INFO -  * Detected change in '/app/crudUsuarios.py', reloading
+2025-06-25 18:24:47,320 - INFO -  * Restarting with stat
+2025-06-25 18:24:47,707 - WARNING -  * Debugger is active!
+2025-06-25 18:24:47,708 - INFO -  * Debugger PIN: 144-034-385
+2025-06-25 18:24:49,846 - INFO -  * Detected change in '/app/crudUsuarios.py', reloading
+2025-06-25 18:24:49,880 - INFO -  * Restarting with stat
+2025-06-25 18:24:50,286 - WARNING -  * Debugger is active!
+2025-06-25 18:24:50,287 - INFO -  * Debugger PIN: 144-034-385
+2025-06-25 18:25:02,399 - INFO - 172.18.0.1 - - [25/Jun/2025 18:25:02] "[33mGET /api/usuarios/ HTTP/1.1[0m" 404 -
+2025-06-25 18:25:08,655 - INFO - 172.18.0.1 - - [25/Jun/2025 18:25:08] "GET /api/usuarios HTTP/1.1" 200 -
+2025-06-25 18:25:15,569 - INFO - 172.18.0.1 - - [25/Jun/2025 18:25:15] "[33mGET /api/usuarios/2 HTTP/1.1[0m" 404 -
+2025-06-25 18:25:17,914 - INFO - 172.18.0.1 - - [25/Jun/2025 18:25:17] "[33mGET /api/usuarios/ HTTP/1.1[0m" 404 -
+2025-06-25 18:25:21,232 - INFO - 172.18.0.1 - - [25/Jun/2025 18:25:21] "GET /api/usuarios HTTP/1.1" 200 -
+2025-06-25 18:25:26,380 - INFO - 172.18.0.1 - - [25/Jun/2025 18:25:26] "GET /api/usuarios/3 HTTP/1.1" 200 -
+2025-06-25 18:25:32,898 - INFO - 172.18.0.1 - - [25/Jun/2025 18:25:32] "[33mGET /api/usuarios/ HTTP/1.1[0m" 404 -
+2025-06-25 18:25:39,703 - INFO - 172.18.0.1 - - [25/Jun/2025 18:25:39] "[33mGET /api/usuarios/2 HTTP/1.1[0m" 404 -
+2025-06-25 18:25:42,029 - INFO - 172.18.0.1 - - [25/Jun/2025 18:25:42] "GET /api/usuarios/3 HTTP/1.1" 200 -
+2025-06-25 18:25:52,305 - INFO - 172.18.0.1 - - [25/Jun/2025 18:25:52] "[33mGET /api/usuarios/ HTTP/1.1[0m" 404 -
+2025-06-25 18:25:57,775 - INFO - 172.18.0.1 - - [25/Jun/2025 18:25:57] "GET /api/usuarios HTTP/1.1" 200 -
+2025-06-25 18:27:22,211 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-06-25 18:27:22,211 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-25 18:27:22,212 - INFO -  * Restarting with stat
+2025-06-25 18:27:22,628 - WARNING -  * Debugger is active!
+2025-06-25 18:27:22,629 - INFO -  * Debugger PIN: 336-906-512

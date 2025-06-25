@@ -73,6 +73,68 @@ def listar_usuarios():
         conn.close()
 
 
+@usuarios_bp.route("/usuarios/<int:id_usuario>", methods=["GET"])
+def buscar_usuario(id_usuario):
+    """
+    Busca um usuário pelo ID.
+    ---
+    tags:
+      - Usuarios
+    parameters:
+      - name: id_usuario
+        in: path
+        required: true
+        type: integer
+        description: ID do usuário a ser buscado.
+    responses:
+      200:
+        description: Usuário encontrado com sucesso.
+        schema:
+          type: object
+          properties:
+            id_usuario:
+              type: integer
+            login:
+              type: string
+            senha:
+              type: string
+            nivel_acesso:
+              type: string
+            id_professor:
+              type: integer
+      404:
+        description: Usuário não encontrado.
+      500:
+        description: Erro de conexão com o banco de dados.
+    """
+    conn = bd.create_connection()
+    if conn is None:
+        return jsonify({"error": "Failed to connect to the database"}), 500
+    cursor = conn.cursor()
+    try:
+        cursor.execute("SELECT * FROM Usuario WHERE id_usuario = %s", (id_usuario,))
+        usuario = cursor.fetchone()
+        if usuario is None:
+            return jsonify({"error": "Usuário não encontrado"}), 404
+        return (
+            jsonify(
+                {
+                    "id_usuario": usuario[0],
+                    "login": usuario[1],
+                    "senha": usuario[2],
+                    "nivel_acesso": usuario[3],
+                    "id_professor": usuario[4],
+                }
+            ),
+            200,
+        )
+    except Exception as e:
+        return jsonify({"error": str(e)}), 400
+    finally:
+        cursor.close()
+        conn.close()
+
+
 @usuarios_bp.route("/usuarios", methods=["POST"])
 def cadastrar_usuario():
     """
