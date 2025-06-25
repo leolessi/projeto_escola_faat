@@ -1,16 +1,9 @@
-from flask import Flask, request, jsonify, Blueprint
+from flask import request, jsonify, Blueprint
 import Util.bd as bd
 from flasgger import Swagger
 import logging
- 
-logging.basicConfig(
-    filename="escola_infantil.log",
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s",
-)
 
 logger = logging.getLogger(__name__)
-
 alunos_bp = Blueprint("alunos", __name__)
 
 

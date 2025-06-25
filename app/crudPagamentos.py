@@ -1,8 +1,10 @@
 from flask import request, jsonify, Blueprint
 import Util.bd as bd
+import logging
 
 # from flasgger import Swagger
 
+logger = logging.getLogger(__name__)
 pagamentos_bp = Blueprint("pagamentos", __name__)
 
 

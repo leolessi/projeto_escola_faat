@@ -1,8 +1,10 @@
 from flask import Blueprint, request, jsonify
-import Util.bd as bd
 from flasgger import Swagger
+import Util.bd as bd
+import logging
 
-# Criação do Blueprint para Professores
+
+logger = logging.getLogger(__name__)
 professores_bp = Blueprint("professores", __name__)
 swagger = Swagger()
 

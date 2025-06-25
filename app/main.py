@@ -6,6 +6,14 @@ from crudAtividades import atividades_bp
 from crudTurmas import turmas_bp
 from crudPagamentos import pagamentos_bp
 
+import logging
+
+logging.basicConfig(
+    filename="escola_infantil.log",
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+)
+
 app = Flask(__name__)
 swagger = Swagger(app)
 
