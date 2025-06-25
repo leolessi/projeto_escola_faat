@@ -1,13 +1,10 @@
-from flask import Flask, request, jsonify
+from flask import Blueprint, request, jsonify
 import Util.bd as bd
-from flasgger import Swagger
 
-app = Flask(__name__)
-
-swagger = Swagger(app)
+usuarios_bp = Blueprint("usuarios", __name__)
 
 
-@app.route("/usuarios", methods=["GET"])
+@usuarios_bp.route("/usuarios", methods=["GET"])
 def listar_usuarios():
     """
     Lista todos os usuários cadastrados.
@@ -76,7 +73,7 @@ def listar_usuarios():
         conn.close()
 
 
-@app.route("/usuarios", methods=["POST"])
+@usuarios_bp.route("/usuarios", methods=["POST"])
 def cadastrar_usuario():
     """
     Cadastra um novo usuário.
@@ -149,7 +146,7 @@ def cadastrar_usuario():
         conn.close()
 
 
-@app.route("/usuarios/<int:id_usuario>", methods=["PUT"])
+@usuarios_bp.route("/usuarios/<int:id_usuario>", methods=["PUT"])
 def alterar_usuario(id_usuario):
     """
     Atualiza os dados de um usuário existente.
@@ -229,7 +226,7 @@ def alterar_usuario(id_usuario):
         conn.close()
 
 
-@app.route("/usuarios/<int:id_usuario>", methods=["DELETE"])
+@usuarios_bp.route("/usuarios/<int:id_usuario>", methods=["DELETE"])
 def excluir_usuario(id_usuario):
     """
     Exclui um usuário existente.
@@ -279,7 +276,3 @@ def excluir_usuario(id_usuario):
     finally:
         cursor.close()
         conn.close()
-
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5007, debug=True)
