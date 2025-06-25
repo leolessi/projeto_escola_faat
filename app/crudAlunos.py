@@ -1,6 +1,5 @@
 from flask import request, jsonify, Blueprint
 import Util.bd as bd
-from flasgger import Swagger
 import logging
 
 logger = logging.getLogger(__name__)
@@ -69,6 +68,78 @@ def listar_alunos():
                     }
                     for aluno in alunos
                 ]
+            ),
+            200,
+        )
+    except Exception as e:
+        return jsonify({"error": str(e)}), 400
+    finally:
+        cursor.close()
+        conn.close()
+
+
+@alunos_bp.route("/alunos/<int:id_aluno>", methods=["GET"])
+def buscar_aluno(id_aluno):
+    """
+    Busca um aluno pelo ID.
+    ---
+    tags:
+      - Alunos
+    parameters:
+      - name: id_aluno
+        in: path
+        required: true
+        type: integer
+        description: ID do aluno a ser buscado.
+    responses:
+      200:
+        description: Aluno encontrado com sucesso.
+        schema:
+          type: object
+          properties:
+            id_aluno:
+              type: integer
+            nome_completo:
+              type: string
+            data_nascimento:
+              type: string
+              format: date
+            id_turma:
+              type: integer
+            nome_responsavel:
+              type: string
+            telefone_responsavel:
+              type: string
+            email_responsavel:
+              type: string
+            informacoes_adicionais:
+              type: string
+      404:
+        description: Aluno não encontrado.
+      500:
+        description: Erro de conexão com o banco de dados.
+    """
+    conn = bd.create_connection()
+    if conn is None:
+        return jsonify({"error": "Failed to connect to the database"}), 500
+    cursor = conn.cursor()
+    try:
+        cursor.execute("SELECT * FROM Aluno WHERE id_aluno = %s", (id_aluno,))
+        aluno = cursor.fetchone()
+        if aluno is None:
+            return jsonify({"error": "Aluno não encontrado"}), 404
+        return (
+            jsonify(
+                {
+                    "id_aluno": aluno[0],
+                    "nome_completo": aluno[1],
+                    "data_nascimento": aluno[2],
+                    "id_turma": aluno[3],
+                    "nome_responsavel": aluno[4],
+                    "telefone_responsavel": aluno[5],
+                    "email_responsavel": aluno[6],
+                    "informacoes_adicionais": aluno[7],
+                }
             ),
             200,
         )
