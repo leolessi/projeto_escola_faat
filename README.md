@@ -39,8 +39,7 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
 
 5. **Exemplos de requisições para os Endpoints CRUD**
 
-   Utilize a ferramenta de testes de sua preferência (Postman, Insomnia, etc)
-   OBS: As tabelas dependem de chaves estrangeiras (foreign keys). Com isso, teste os endpoints conforme a ordem de criação das tabelas (\projeto_escola_faat\bd\escola.sql) ou conforme a seguinte ordem:
+   As tabelas dependem de chaves estrangeiras (foreign keys). Com isso, teste os endpoints conforme a ordem de criação das tabelas (\projeto_escola_faat\bd\escola.sql) ou conforme a seguinte ordem:
 
    - Professor<br>
    - Atividade<br>
@@ -54,52 +53,96 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
    - Nota<br>
    - Frequencia<br>
 
+   Utilize a ferramenta de testes de sua preferência (Postman, Insomnia, etc)<br>
+
+   - Tabela Professor (crudProfessores.py)
+
+     - Listar professores (método GET)
+
+     ```
+        GET http://localhost:5000/api/professores
+     ```
+
+     - Cadastrar um professor (método POST)
+
+     ```
+        POST http://localhost:5000/api/professores
+     ```
+
+     ```json
+     {
+       "nome_completo": "Carlos Souza",
+       "email": "carlos@email.com",
+       "telefone": "11988887777"
+     }
+     ```
+
+     - Atualiaz o cadastro de um professor (método PUT)
+
+     ```
+     PUT http://localhost:5000/api/professores/1
+     ```
+
+     ```json
+     {
+       "nome_completo": "Carlos Souza",
+       "email": "carlos@email.com",
+       "telefone": "11988887777"
+     }
+     ```
+
+     - Excluir o cadastro de um professor (método DELETE)
+
+     ```
+        DELETE http://localhost:5000/api/professores/1
+     ```
+
    - Tabela Alunos (crudAlunos.py)
 
      - Listar alunos (método GET)
 
      ```
-     GET http://localhost:5000/api/alunos
+        GET http://localhost:5000/api/alunos
      ```
 
      - Cadastrar um aluno (método POST)
 
      ```
-     POST http://localhost:5000/api/alunos
+        POST http://localhost:5000/api/alunos
      ```
 
      ```
-     {
-     "nome_completo": "João da Silva",
-     "data_nascimento": "2010-05-10",
-     "id_turma": 2,
-     "nome_responsavel": "Maria Silva",
-     "telefone_responsavel": "11999999999",
-     "email_responsavel": "maria@email.com",
-     "informacoes_adicionais": "Nenhuma"
-     }
+        {
+            "nome_completo": "João da Silva",
+            "data_nascimento": "2010-05-10",
+            "id_turma": 2,
+            "nome_responsavel": "Maria Silva",
+            "telefone_responsavel": "11999999999",
+            "email_responsavel": "maria@email.com",
+            "informacoes_adicionais": "Nenhuma"
+        }
      ```
 
      - Atualizar um aluno (método PUT)
 
      ```
-     PUT http://localhost:5000/api/alunos/1
+        PUT http://localhost:5000/api/alunos/1
      ```
 
      ```
-     {
-        "nome_completo": "João da Silva",
-        "data_nascimento": "2010-05-10",
-        "id_turma": 2,
-        "nome_responsavel": "Maria Silva",
-        "telefone_responsavel": "11999999999",
-        "email_responsavel": "maria@email.com",
-        "informacoes_adicionais": "Atualizado"
-     }
+        {
+            "nome_completo": "João da Silva",
+            "data_nascimento": "2010-05-10",
+            "id_turma": 2,
+            "nome_responsavel": "Maria Silva",
+            "telefone_responsavel": "11999999999",
+            "email_responsavel": "maria@email.com",
+            "informacoes_adicionais": "Atualizado"
+        }
      ```
 
      - Excluir um aluno cadastrado (método DELETE)
 
      ```
-     DELETE http://localhost:5000/api/alunos/1
+        DELETE http://localhost:5000/api/alunos/1
      ```
