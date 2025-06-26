@@ -59,7 +59,7 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
 
     Utilize a ferramenta de testes de sua preferência (Postman, Insomnia, etc)<br>
 
-    - **Tabela Professor (crudProfessores.py)**
+    - **TABELA Professor (crudProfessores.py)**
 
       - Listar professores (método GET)
 
@@ -101,7 +101,7 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
          DELETE http://localhost:5000/api/professores/1
       ```
 
-    - **Tabela Atividade (crudAtividades.py)**
+    - **TABELA Atividade (crudAtividades.py)**
 
       - Listar atividades (método GET)
 
@@ -141,7 +141,7 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
          DELETE http://localhost:5000/api/atividades/1
       ```
 
-    - **Tabela Turma (crudTurmas.py)**
+    - **TABELA Turma (crudTurmas.py)**
 
       - Listar turmas (método GET)
 
@@ -183,7 +183,7 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
          DELETE http://localhost:5000/api/turmas/1
       ```
 
-    - **Tabela Alunos (crudAlunos.py)**
+    - **TABELA Alunos (crudAlunos.py)**
 
       - Listar alunos (método GET)
 
@@ -233,7 +233,7 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
          DELETE http://localhost:5000/api/alunos/1
       ```
 
-    - **Tabela Pagamento (crudPagamentos.py)**
+    - **TABELA Pagamento (crudPagamentos.py)**
 
       - Listar pagamentos (método GET)
 
@@ -281,7 +281,7 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
         DELETE http://localhost:5000/api/pagamentos/1
       ```
 
-    - **Tabela Presenca (crudPresencas.py)**
+    - **TABELA Presenca (crudPresencas.py)**
 
       - Listar presenças (método GET)
 
