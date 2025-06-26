@@ -347,11 +347,55 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
 
     - Excluir uma associação entre atividade e aluno (método DELETE)
 
-    No caso a seguir (api/atividade_aluno/1/2), '1' é o id_atividade e '2' é o id_aluno
+      No caso a seguir (api/atividade_aluno/1/2), '1' é o id_atividade e '2' é o id_aluno
 
     ```
       DELETE http://localhost:5000/api/atividade_aluno/1/2
     ```
+
+    - **TABELA Usuario (crudUsuarios.py)**
+
+      - Listar usuários (método GET)
+
+      ```
+        GET http://localhost:5000/api/usuarios
+      ```
+
+      - Cadastrar um usuário (método POST)
+
+      ```
+        POST http://localhost:5000/api/usuarios
+      ```
+
+      ```json
+      {
+        "login": "admin",
+        "senha": "123456",
+        "nivel_acesso": "admin",
+        "id_professor": 1
+      }
+      ```
+
+      - Atualizar um usuário (método PUT)
+
+      ```
+        PUT http://localhost:5000/api/usuarios/1
+      ```
+
+      ```json
+      {
+        "login": "admin",
+        "senha": "nova_senha",
+        "nivel_acesso": "admin",
+        "id_professor": 1
+      }
+      ```
+
+      - Excluir um usuário (método DELETE)
+
+      ```
+        DELETE http://localhost:5000/api/usuarios/1
+      ```
 
 6.  **Observações**
 
