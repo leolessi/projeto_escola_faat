@@ -235,4 +235,8 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
 
     - O backend faz log das operações em escola_infantil.log.
 
-    - Para atualizar dependências Python, edite o requirements.txt e reconstrua a imagem com docker-compose up --build.
+    - Para atualizar dependências Python, edite o requirements.txt e reconstrua a imagem com:
+
+    ```
+        docker-compose up --build
+    ```
