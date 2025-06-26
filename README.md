@@ -25,7 +25,14 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
 3. **Build e execução dos containers**
 
    - Com o Docker e o Docker-compose instalados, faça a build e a execução dos containers
+   - OBS: Certifique-se de estar dentro da pasta raíz do projeto após fazer o clone do repositório
 
    ```sh
    docker-compose up --build
    ```
+
+4. **Acessar a documentação Swagger**
+
+```
+http://localhost:5000/apidocs
+```
