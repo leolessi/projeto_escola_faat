@@ -324,6 +324,35 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
         DELETE http://localhost:5000/api/presencas/1
       ```
 
+    **- TABELA Atividade_Aluno (crudAtividadeAluno.py)**
+
+    - Listar associações entre atividades e alunos (método GET)
+
+    ```
+      GET http://localhost:5000/api/atividade_aluno
+    ```
+
+    - Cadastrar uma associação entre atividade e aluno (método POST)
+
+    ```
+      POST http://localhost:5000/api/atividade_aluno
+    ```
+
+    ```json
+    {
+      "id_atividade": 1,
+      "id_aluno": 2
+    }
+    ```
+
+    - Excluir uma associação entre atividade e aluno (método DELETE)
+
+    No caso a seguir (api/atividade_aluno/1/2), '1' é o id_atividade e '2' é o id_aluno
+
+    ```
+      DELETE http://localhost:5000/api/atividade_aluno/1/2
+    ```
+
 6.  **Observações**
 
     - O backend faz log das operações em escola_infantil.log.
