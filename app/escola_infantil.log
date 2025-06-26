@@ -547,3 +547,58 @@
 2025-06-26 00:07:42,056 - INFO - 172.18.0.1 - - [26/Jun/2025 00:07:42] "GET /api/alunos HTTP/1.1" 200 -
 2025-06-26 00:07:51,366 - INFO - 172.18.0.1 - - [26/Jun/2025 00:07:51] "GET /api/notas/aluno/1 HTTP/1.1" 200 -
 2025-06-26 00:07:53,200 - INFO - 172.18.0.1 - - [26/Jun/2025 00:07:53] "GET /api/notas/aluno/2 HTTP/1.1" 200 -
+2025-06-26 00:39:23,342 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-06-26 00:39:23,342 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-26 00:39:23,344 - INFO -  * Restarting with stat
+2025-06-26 00:39:23,825 - WARNING -  * Debugger is active!
+2025-06-26 00:39:23,826 - INFO -  * Debugger PIN: 256-842-968
+2025-06-26 01:24:13,174 - INFO - 172.18.0.1 - - [26/Jun/2025 01:24:13] "GET /api/frequencias HTTP/1.1" 200 -
+2025-06-26 01:24:24,246 - INFO - 172.18.0.1 - - [26/Jun/2025 01:24:24] "[31m[1mPOST /api/frequencias HTTP/1.1[0m" 400 -
+2025-06-26 01:24:29,805 - INFO - 172.18.0.1 - - [26/Jun/2025 01:24:29] "[31m[1mPOST /api/frequencias HTTP/1.1[0m" 400 -
+2025-06-26 01:24:45,456 - INFO - 172.18.0.1 - - [26/Jun/2025 01:24:45] "[35m[1mPOST /api/frequencias HTTP/1.1[0m" 201 -
+2025-06-26 01:24:47,906 - INFO - 172.18.0.1 - - [26/Jun/2025 01:24:47] "GET /api/frequencias HTTP/1.1" 200 -
+2025-06-26 01:25:00,668 - INFO - 172.18.0.1 - - [26/Jun/2025 01:25:00] "GET /api/disciplinas HTTP/1.1" 200 -
+2025-06-26 01:25:09,340 - INFO - 172.18.0.1 - - [26/Jun/2025 01:25:09] "[35m[1mPOST /api/frequencias HTTP/1.1[0m" 201 -
+2025-06-26 01:25:13,761 - INFO - 172.18.0.1 - - [26/Jun/2025 01:25:13] "GET /api/alunos HTTP/1.1" 200 -
+2025-06-26 01:25:21,096 - INFO - 172.18.0.1 - - [26/Jun/2025 01:25:21] "GET /api/disciplinas HTTP/1.1" 200 -
+2025-06-26 01:25:26,055 - INFO - 172.18.0.1 - - [26/Jun/2025 01:25:26] "[33mGET /api/frequencia HTTP/1.1[0m" 404 -
+2025-06-26 01:25:28,077 - INFO - 172.18.0.1 - - [26/Jun/2025 01:25:28] "GET /api/frequencias HTTP/1.1" 200 -
+2025-06-26 01:25:35,307 - INFO - 172.18.0.1 - - [26/Jun/2025 01:25:35] "[35m[1mPOST /api/frequencias HTTP/1.1[0m" 201 -
+2025-06-26 01:25:38,548 - INFO - 172.18.0.1 - - [26/Jun/2025 01:25:38] "[35m[1mPOST /api/frequencias HTTP/1.1[0m" 201 -
+2025-06-26 01:25:40,590 - INFO - 172.18.0.1 - - [26/Jun/2025 01:25:40] "GET /api/frequencias HTTP/1.1" 200 -
+2025-06-26 01:26:10,307 - INFO - 172.18.0.1 - - [26/Jun/2025 01:26:10] "PUT /api/frequencias/5 HTTP/1.1" 200 -
+2025-06-26 01:26:12,633 - INFO - 172.18.0.1 - - [26/Jun/2025 01:26:12] "GET /api/frequencias HTTP/1.1" 200 -
+2025-06-26 01:26:24,415 - INFO - 172.18.0.1 - - [26/Jun/2025 01:26:24] "DELETE /api/frequencias/5 HTTP/1.1" 200 -
+2025-06-26 01:26:26,589 - INFO - 172.18.0.1 - - [26/Jun/2025 01:26:26] "GET /api/frequencias HTTP/1.1" 200 -
+2025-06-26 01:26:34,429 - INFO - 172.18.0.1 - - [26/Jun/2025 01:26:34] "[35m[1mPOST /api/frequencias HTTP/1.1[0m" 201 -
+2025-06-26 01:26:36,559 - INFO - 172.18.0.1 - - [26/Jun/2025 01:26:36] "GET /api/frequencias HTTP/1.1" 200 -
+2025-06-26 01:26:40,501 - INFO - 172.18.0.1 - - [26/Jun/2025 01:26:40] "[33mGET /api/frequencias/1 HTTP/1.1[0m" 404 -
+2025-06-26 01:26:42,389 - INFO - 172.18.0.1 - - [26/Jun/2025 01:26:42] "GET /api/frequencias/2 HTTP/1.1" 200 -
+2025-06-26 01:26:44,251 - INFO - 172.18.0.1 - - [26/Jun/2025 01:26:44] "GET /api/frequencias/4 HTTP/1.1" 200 -
+2025-06-26 01:26:45,901 - INFO - 172.18.0.1 - - [26/Jun/2025 01:26:45] "[33mGET /api/frequencias/5 HTTP/1.1[0m" 404 -
+2025-06-26 01:26:48,720 - INFO - 172.18.0.1 - - [26/Jun/2025 01:26:48] "GET /api/frequencias HTTP/1.1" 200 -
+2025-06-26 01:26:52,175 - INFO - 172.18.0.1 - - [26/Jun/2025 01:26:52] "GET /api/frequencias/6 HTTP/1.1" 200 -
+2025-06-26 01:26:57,207 - INFO - 172.18.0.1 - - [26/Jun/2025 01:26:57] "GET /api/frequencias HTTP/1.1" 200 -
+2025-06-26 01:27:57,969 - INFO -  * Detected change in '/app/crudFrequencias.py', reloading
+2025-06-26 01:27:58,123 - INFO -  * Restarting with stat
+2025-06-26 01:27:57,776 - WARNING -  * Debugger is active!
+2025-06-26 01:27:57,778 - INFO -  * Debugger PIN: 256-842-968
+2025-06-26 01:28:03,768 - INFO -  * Detected change in '/app/crudFrequencias.py', reloading
+2025-06-26 01:28:03,804 - INFO -  * Restarting with stat
+2025-06-26 01:28:04,188 - WARNING -  * Debugger is active!
+2025-06-26 01:28:04,189 - INFO -  * Debugger PIN: 256-842-968
+2025-06-26 01:28:05,296 - INFO -  * Detected change in '/app/crudFrequencias.py', reloading
+2025-06-26 01:28:05,338 - INFO -  * Restarting with stat
+2025-06-26 01:28:05,703 - WARNING -  * Debugger is active!
+2025-06-26 01:28:05,704 - INFO -  * Debugger PIN: 256-842-968
+2025-06-26 01:28:12,291 - INFO - 172.18.0.1 - - [26/Jun/2025 01:28:12] "GET /api/frequencias/aluno/1 HTTP/1.1" 200 -
+2025-06-26 01:28:14,573 - INFO - 172.18.0.1 - - [26/Jun/2025 01:28:14] "GET /api/frequencias/aluno/2 HTTP/1.1" 200 -
+2025-06-26 01:28:16,332 - INFO - 172.18.0.1 - - [26/Jun/2025 01:28:16] "[33mGET /api/frequencias/aluno/3 HTTP/1.1[0m" 404 -
+2025-06-26 01:28:18,140 - INFO - 172.18.0.1 - - [26/Jun/2025 01:28:18] "GET /api/frequencias/aluno/2 HTTP/1.1" 200 -
+2025-06-26 01:28:23,379 - INFO -  * Detected change in '/app/crudFrequencias.py', reloading
+2025-06-26 01:28:23,432 - INFO -  * Restarting with stat
+2025-06-26 01:28:23,806 - WARNING -  * Debugger is active!
+2025-06-26 01:28:23,807 - INFO -  * Debugger PIN: 256-842-968
