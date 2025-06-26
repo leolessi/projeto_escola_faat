@@ -39,6 +39,18 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
 
 5. Exemplos de requisições para os Endpoints CRUD
    Utilize a ferramenta de testes de sua preferência (Postman, Insomnia, etc)
+   OBS: As tabelas dependem de chaves estrangeiras (foreign keys). Com isso, teste os endpoints conforme a ordem de criação das tabelas (\projeto_escola_faat\bd\escola.sql) ou conforme a seguinte ordem:
+   Professor<br>
+   Atividade<br>
+   Turma<br>
+   Aluno<br>
+   Pagamento<br>
+   Presença<br>
+   Atividade_Aluno<br>
+   Usuário<br>
+   Disciplina<br>
+   Nota<br>
+   Frequencia<br>
 
    - Tabela Alunos (crudAlunos.py)
 
