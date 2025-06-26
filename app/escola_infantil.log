@@ -923,3 +923,640 @@ expected <block end>, but found '?'
       201:
       ^
 2025-06-26 15:24:54,999 - INFO - 172.18.0.1 - - [26/Jun/2025 15:24:54] "[35m[1mGET /apispec_1.json HTTP/1.1[0m" 500 -
+2025-06-26 15:28:20,760 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-06-26 15:28:20,760 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-26 15:28:20,761 - INFO -  * Restarting with stat
+2025-06-26 15:28:21,175 - WARNING -  * Debugger is active!
+2025-06-26 15:28:21,175 - INFO -  * Debugger PIN: 189-753-144
+2025-06-26 15:28:26,216 - INFO - 172.18.0.1 - - [26/Jun/2025 15:28:26] "[32mGET /apidocs HTTP/1.1[0m" 308 -
+2025-06-26 15:28:26,254 - INFO - 172.18.0.1 - - [26/Jun/2025 15:28:26] "GET /apidocs/ HTTP/1.1" 200 -
+2025-06-26 15:28:26,332 - INFO - 172.18.0.1 - - [26/Jun/2025 15:28:26] "GET /flasgger_static/swagger-ui-bundle.js HTTP/1.1" 200 -
+2025-06-26 15:28:26,334 - INFO - 172.18.0.1 - - [26/Jun/2025 15:28:26] "GET /flasgger_static/swagger-ui.css HTTP/1.1" 200 -
+2025-06-26 15:28:26,334 - INFO - 172.18.0.1 - - [26/Jun/2025 15:28:26] "GET /flasgger_static/lib/jquery.min.js HTTP/1.1" 200 -
+2025-06-26 15:28:26,337 - INFO - 172.18.0.1 - - [26/Jun/2025 15:28:26] "GET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+2025-06-26 15:28:26,583 - ERROR - jsonify failure; defaulting to json.dumps
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flasgger/base.py", line 164, in get
+    return jsonify(self.loader())
+  File "/usr/local/lib/python3.9/site-packages/flasgger/base.py", line 438, in get_apispecs
+    specs = get_specs(
+  File "/usr/local/lib/python3.9/site-packages/flasgger/utils.py", line 180, in get_specs
+    doc_summary, doc_description, doc_swag = parse_docstring(
+  File "/usr/local/lib/python3.9/site-packages/flasgger/utils.py", line 675, in parse_docstring
+    swag = yaml.safe_load(full_doc[yaml_sep + 4:])
+  File "/usr/local/lib/python3.9/site-packages/yaml/__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+  File "/usr/local/lib/python3.9/site-packages/yaml/__init__.py", line 81, in load
+    return loader.get_single_data()
+  File "/usr/local/lib/python3.9/site-packages/yaml/constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 82, in compose_node
+    node = self.compose_sequence_node(anchor)
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 110, in compose_sequence_node
+    while not self.check_event(SequenceEndEvent):
+  File "/usr/local/lib/python3.9/site-packages/yaml/parser.py", line 98, in check_event
+    self.current_event = self.state()
+  File "/usr/local/lib/python3.9/site-packages/yaml/parser.py", line 392, in parse_block_sequence_entry
+    raise ParserError("while parsing a block collection", self.marks[-1],
+yaml.parser.ParserError: while parsing a block collection
+  in "<unicode string>", line 4, column 3:
+      - name: body
+      ^
+expected <block end>, but found '?'
+  in "<unicode string>", line 26, column 3:
+      201:
+      ^
+2025-06-26 15:28:26,649 - INFO - 172.18.0.1 - - [26/Jun/2025 15:28:26] "[35m[1mGET /apispec_1.json HTTP/1.1[0m" 500 -
+2025-06-26 15:35:32,423 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-06-26 15:35:32,423 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-26 15:35:32,425 - INFO -  * Restarting with stat
+2025-06-26 15:35:32,842 - WARNING -  * Debugger is active!
+2025-06-26 15:35:32,842 - INFO -  * Debugger PIN: 413-518-160
+2025-06-26 15:35:34,492 - INFO - 172.18.0.1 - - [26/Jun/2025 15:35:34] "GET /apidocs/ HTTP/1.1" 200 -
+2025-06-26 15:35:34,568 - INFO - 172.18.0.1 - - [26/Jun/2025 15:35:34] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-06-26 15:35:34,568 - INFO - 172.18.0.1 - - [26/Jun/2025 15:35:34] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-06-26 15:35:34,570 - INFO - 172.18.0.1 - - [26/Jun/2025 15:35:34] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2025-06-26 15:35:34,571 - INFO - 172.18.0.1 - - [26/Jun/2025 15:35:34] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-06-26 15:35:34,746 - INFO - 172.18.0.1 - - [26/Jun/2025 15:35:34] "GET /apispec_1.json HTTP/1.1" 200 -
+2025-06-26 15:35:40,762 - INFO - 172.18.0.1 - - [26/Jun/2025 15:35:40] "GET /apidocs/ HTTP/1.1" 200 -
+2025-06-26 15:35:43,068 - INFO - 172.18.0.1 - - [26/Jun/2025 15:35:43] "GET /apidocs/ HTTP/1.1" 200 -
+2025-06-26 15:35:43,119 - INFO - 172.18.0.1 - - [26/Jun/2025 15:35:43] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-06-26 15:35:43,123 - INFO - 172.18.0.1 - - [26/Jun/2025 15:35:43] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2025-06-26 15:35:43,123 - INFO - 172.18.0.1 - - [26/Jun/2025 15:35:43] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-06-26 15:35:43,124 - INFO - 172.18.0.1 - - [26/Jun/2025 15:35:43] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-06-26 15:35:43,262 - INFO - 172.18.0.1 - - [26/Jun/2025 15:35:43] "GET /apispec_1.json HTTP/1.1" 200 -
+2025-06-26 15:36:01,201 - INFO - 172.18.0.1 - - [26/Jun/2025 15:36:01] "GET /apidocs/ HTTP/1.1" 200 -
+2025-06-26 15:36:01,283 - INFO - 172.18.0.1 - - [26/Jun/2025 15:36:01] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-06-26 15:36:01,284 - INFO - 172.18.0.1 - - [26/Jun/2025 15:36:01] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-06-26 15:36:01,285 - INFO - 172.18.0.1 - - [26/Jun/2025 15:36:01] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-06-26 15:36:01,286 - INFO - 172.18.0.1 - - [26/Jun/2025 15:36:01] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2025-06-26 15:36:01,456 - INFO - 172.18.0.1 - - [26/Jun/2025 15:36:01] "GET /apispec_1.json HTTP/1.1" 200 -
+2025-06-26 15:37:21,449 - INFO -  * Detected change in '/app/crudAlunos.py', reloading
+2025-06-26 15:37:21,495 - INFO -  * Restarting with stat
+2025-06-26 15:37:22,037 - WARNING -  * Debugger is active!
+2025-06-26 15:37:22,038 - INFO -  * Debugger PIN: 413-518-160
+2025-06-26 15:37:23,118 - INFO -  * Detected change in '/app/crudAlunos.py', reloading
+2025-06-26 15:37:23,157 - INFO -  * Restarting with stat
+2025-06-26 15:37:23,570 - WARNING -  * Debugger is active!
+2025-06-26 15:37:23,571 - INFO -  * Debugger PIN: 413-518-160
+2025-06-26 15:37:39,114 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-06-26 15:37:39,114 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-26 15:37:39,116 - INFO -  * Restarting with stat
+2025-06-26 15:37:39,564 - WARNING -  * Debugger is active!
+2025-06-26 15:37:39,565 - INFO -  * Debugger PIN: 931-099-127
+2025-06-26 15:37:40,649 - INFO - 172.18.0.1 - - [26/Jun/2025 15:37:40] "GET /apidocs/ HTTP/1.1" 200 -
+2025-06-26 15:37:40,708 - INFO - 172.18.0.1 - - [26/Jun/2025 15:37:40] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-06-26 15:37:40,709 - INFO - 172.18.0.1 - - [26/Jun/2025 15:37:40] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-06-26 15:37:40,710 - INFO - 172.18.0.1 - - [26/Jun/2025 15:37:40] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2025-06-26 15:37:40,712 - INFO - 172.18.0.1 - - [26/Jun/2025 15:37:40] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-06-26 15:37:40,874 - INFO - 172.18.0.1 - - [26/Jun/2025 15:37:40] "GET /apispec_1.json HTTP/1.1" 200 -
+2025-06-26 15:45:01,819 - INFO -  * Detected change in '/app/crudAlunos.py', reloading
+2025-06-26 15:45:01,892 - INFO -  * Restarting with stat
+2025-06-26 15:45:02,599 - WARNING -  * Debugger is active!
+2025-06-26 15:45:02,601 - INFO -  * Debugger PIN: 931-099-127
+2025-06-26 15:45:07,900 - INFO -  * Detected change in '/app/crudAlunos.py', reloading
+2025-06-26 15:45:07,941 - INFO -  * Restarting with stat
+2025-06-26 15:45:08,349 - WARNING -  * Debugger is active!
+2025-06-26 15:45:08,350 - INFO -  * Debugger PIN: 931-099-127
+2025-06-26 15:45:12,577 - INFO -  * Detected change in '/app/crudAlunos.py', reloading
+2025-06-26 15:45:12,616 - INFO -  * Restarting with stat
+2025-06-26 15:45:13,014 - WARNING -  * Debugger is active!
+2025-06-26 15:45:13,015 - INFO -  * Debugger PIN: 931-099-127
+2025-06-26 15:45:17,248 - INFO -  * Detected change in '/app/crudAlunos.py', reloading
+2025-06-26 15:45:17,298 - INFO -  * Restarting with stat
+2025-06-26 15:45:17,727 - WARNING -  * Debugger is active!
+2025-06-26 15:45:17,728 - INFO -  * Debugger PIN: 931-099-127
+2025-06-26 15:45:27,976 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-06-26 15:45:27,977 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-26 15:45:27,978 - INFO -  * Restarting with stat
+2025-06-26 15:45:28,380 - WARNING -  * Debugger is active!
+2025-06-26 15:45:28,381 - INFO -  * Debugger PIN: 846-683-781
+2025-06-26 15:45:28,925 - INFO - 172.18.0.1 - - [26/Jun/2025 15:45:28] "GET /apidocs/ HTTP/1.1" 200 -
+2025-06-26 15:45:28,987 - INFO - 172.18.0.1 - - [26/Jun/2025 15:45:28] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-06-26 15:45:28,992 - INFO - 172.18.0.1 - - [26/Jun/2025 15:45:28] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-06-26 15:45:28,993 - INFO - 172.18.0.1 - - [26/Jun/2025 15:45:28] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-06-26 15:45:28,994 - INFO - 172.18.0.1 - - [26/Jun/2025 15:45:28] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2025-06-26 15:45:29,113 - ERROR - jsonify failure; defaulting to json.dumps
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flasgger/base.py", line 164, in get
+    return jsonify(self.loader())
+  File "/usr/local/lib/python3.9/site-packages/flasgger/base.py", line 438, in get_apispecs
+    specs = get_specs(
+  File "/usr/local/lib/python3.9/site-packages/flasgger/utils.py", line 180, in get_specs
+    doc_summary, doc_description, doc_swag = parse_docstring(
+  File "/usr/local/lib/python3.9/site-packages/flasgger/utils.py", line 675, in parse_docstring
+    swag = yaml.safe_load(full_doc[yaml_sep + 4:])
+  File "/usr/local/lib/python3.9/site-packages/yaml/__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+  File "/usr/local/lib/python3.9/site-packages/yaml/__init__.py", line 81, in load
+    return loader.get_single_data()
+  File "/usr/local/lib/python3.9/site-packages/yaml/constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 82, in compose_node
+    node = self.compose_sequence_node(anchor)
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 110, in compose_sequence_node
+    while not self.check_event(SequenceEndEvent):
+  File "/usr/local/lib/python3.9/site-packages/yaml/parser.py", line 98, in check_event
+    self.current_event = self.state()
+  File "/usr/local/lib/python3.9/site-packages/yaml/parser.py", line 392, in parse_block_sequence_entry
+    raise ParserError("while parsing a block collection", self.marks[-1],
+yaml.parser.ParserError: while parsing a block collection
+  in "<unicode string>", line 4, column 3:
+      - name: body
+      ^
+expected <block end>, but found '?'
+  in "<unicode string>", line 26, column 3:
+      201:
+      ^
+2025-06-26 15:45:29,143 - INFO - 172.18.0.1 - - [26/Jun/2025 15:45:29] "[35m[1mGET /apispec_1.json HTTP/1.1[0m" 500 -
+2025-06-26 15:45:35,822 - INFO -  * Detected change in '/app/crudAlunos.py', reloading
+2025-06-26 15:45:35,857 - INFO -  * Restarting with stat
+2025-06-26 15:45:36,267 - WARNING -  * Debugger is active!
+2025-06-26 15:45:36,268 - INFO -  * Debugger PIN: 846-683-781
+2025-06-26 15:45:48,612 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-06-26 15:45:48,612 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-26 15:45:48,614 - INFO -  * Restarting with stat
+2025-06-26 15:45:49,030 - WARNING -  * Debugger is active!
+2025-06-26 15:45:49,031 - INFO -  * Debugger PIN: 116-329-106
+2025-06-26 15:45:50,364 - INFO - 172.18.0.1 - - [26/Jun/2025 15:45:50] "GET /apidocs/ HTTP/1.1" 200 -
+2025-06-26 15:45:50,414 - INFO - 172.18.0.1 - - [26/Jun/2025 15:45:50] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-06-26 15:45:50,414 - INFO - 172.18.0.1 - - [26/Jun/2025 15:45:50] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-06-26 15:45:50,415 - INFO - 172.18.0.1 - - [26/Jun/2025 15:45:50] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2025-06-26 15:45:50,416 - INFO - 172.18.0.1 - - [26/Jun/2025 15:45:50] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-06-26 15:45:50,524 - INFO - 172.18.0.1 - - [26/Jun/2025 15:45:50] "GET /apispec_1.json HTTP/1.1" 200 -
+2025-06-26 15:46:08,185 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-06-26 15:46:08,185 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-26 15:46:08,186 - INFO -  * Restarting with stat
+2025-06-26 15:46:08,616 - WARNING -  * Debugger is active!
+2025-06-26 15:46:08,616 - INFO -  * Debugger PIN: 928-890-946
+2025-06-26 15:46:09,604 - INFO - 172.18.0.1 - - [26/Jun/2025 15:46:09] "GET /apidocs/ HTTP/1.1" 200 -
+2025-06-26 15:46:09,656 - INFO - 172.18.0.1 - - [26/Jun/2025 15:46:09] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-06-26 15:46:09,657 - INFO - 172.18.0.1 - - [26/Jun/2025 15:46:09] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-06-26 15:46:09,658 - INFO - 172.18.0.1 - - [26/Jun/2025 15:46:09] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2025-06-26 15:46:09,660 - INFO - 172.18.0.1 - - [26/Jun/2025 15:46:09] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-06-26 15:46:09,765 - ERROR - jsonify failure; defaulting to json.dumps
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flasgger/base.py", line 164, in get
+    return jsonify(self.loader())
+  File "/usr/local/lib/python3.9/site-packages/flasgger/base.py", line 438, in get_apispecs
+    specs = get_specs(
+  File "/usr/local/lib/python3.9/site-packages/flasgger/utils.py", line 180, in get_specs
+    doc_summary, doc_description, doc_swag = parse_docstring(
+  File "/usr/local/lib/python3.9/site-packages/flasgger/utils.py", line 675, in parse_docstring
+    swag = yaml.safe_load(full_doc[yaml_sep + 4:])
+  File "/usr/local/lib/python3.9/site-packages/yaml/__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+  File "/usr/local/lib/python3.9/site-packages/yaml/__init__.py", line 81, in load
+    return loader.get_single_data()
+  File "/usr/local/lib/python3.9/site-packages/yaml/constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 82, in compose_node
+    node = self.compose_sequence_node(anchor)
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 110, in compose_sequence_node
+    while not self.check_event(SequenceEndEvent):
+  File "/usr/local/lib/python3.9/site-packages/yaml/parser.py", line 98, in check_event
+    self.current_event = self.state()
+  File "/usr/local/lib/python3.9/site-packages/yaml/parser.py", line 392, in parse_block_sequence_entry
+    raise ParserError("while parsing a block collection", self.marks[-1],
+yaml.parser.ParserError: while parsing a block collection
+  in "<unicode string>", line 4, column 3:
+      - name: body
+      ^
+expected <block end>, but found '?'
+  in "<unicode string>", line 26, column 3:
+      201:
+      ^
+2025-06-26 15:46:09,791 - INFO - 172.18.0.1 - - [26/Jun/2025 15:46:09] "[35m[1mGET /apispec_1.json HTTP/1.1[0m" 500 -
+2025-06-26 15:47:16,564 - INFO -  * Detected change in '/app/crudAlunos.py', reloading
+2025-06-26 15:47:16,610 - INFO -  * Restarting with stat
+2025-06-26 15:47:17,127 - WARNING -  * Debugger is active!
+2025-06-26 15:47:17,129 - INFO -  * Debugger PIN: 928-890-946
+2025-06-26 15:47:18,212 - INFO -  * Detected change in '/app/crudAlunos.py', reloading
+2025-06-26 15:47:18,248 - INFO -  * Restarting with stat
+2025-06-26 15:47:35,334 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-06-26 15:47:35,334 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-26 15:47:35,335 - INFO -  * Restarting with stat
+2025-06-26 15:47:35,774 - WARNING -  * Debugger is active!
+2025-06-26 15:47:35,775 - INFO -  * Debugger PIN: 902-883-443
+2025-06-26 15:47:37,175 - INFO - 172.18.0.1 - - [26/Jun/2025 15:47:37] "GET /apidocs/ HTTP/1.1" 200 -
+2025-06-26 15:47:37,230 - INFO - 172.18.0.1 - - [26/Jun/2025 15:47:37] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-06-26 15:47:37,232 - INFO - 172.18.0.1 - - [26/Jun/2025 15:47:37] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-06-26 15:47:37,232 - INFO - 172.18.0.1 - - [26/Jun/2025 15:47:37] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-06-26 15:47:37,233 - INFO - 172.18.0.1 - - [26/Jun/2025 15:47:37] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2025-06-26 15:47:37,346 - INFO - 172.18.0.1 - - [26/Jun/2025 15:47:37] "GET /apispec_1.json HTTP/1.1" 200 -
+2025-06-26 15:47:46,252 - INFO -  * Detected change in '/app/crudAlunos.py', reloading
+2025-06-26 15:47:46,287 - INFO -  * Restarting with stat
+2025-06-26 15:47:46,712 - WARNING -  * Debugger is active!
+2025-06-26 15:47:46,713 - INFO -  * Debugger PIN: 902-883-443
+2025-06-26 15:50:28,772 - INFO -  * Detected change in '/app/crudAlunos.py', reloading
+2025-06-26 15:50:28,815 - INFO -  * Restarting with stat
+2025-06-26 15:50:29,325 - WARNING -  * Debugger is active!
+2025-06-26 15:50:29,326 - INFO -  * Debugger PIN: 902-883-443
+2025-06-26 15:50:39,640 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-06-26 15:50:39,640 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-26 15:50:39,642 - INFO -  * Restarting with stat
+2025-06-26 15:50:40,073 - WARNING -  * Debugger is active!
+2025-06-26 15:50:40,074 - INFO -  * Debugger PIN: 743-465-793
+2025-06-26 15:50:40,859 - INFO - 172.18.0.1 - - [26/Jun/2025 15:50:40] "GET /apidocs/ HTTP/1.1" 200 -
+2025-06-26 15:50:40,912 - INFO - 172.18.0.1 - - [26/Jun/2025 15:50:40] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-06-26 15:50:40,913 - INFO - 172.18.0.1 - - [26/Jun/2025 15:50:40] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-06-26 15:50:40,914 - INFO - 172.18.0.1 - - [26/Jun/2025 15:50:40] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-06-26 15:50:40,915 - INFO - 172.18.0.1 - - [26/Jun/2025 15:50:40] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2025-06-26 15:50:41,038 - INFO - 172.18.0.1 - - [26/Jun/2025 15:50:41] "GET /apispec_1.json HTTP/1.1" 200 -
+2025-06-26 15:51:12,575 - INFO - 172.18.0.1 - - [26/Jun/2025 15:51:12] "[31m[1mPOST /api/alunos HTTP/1.1[0m" 400 -
+2025-06-26 15:51:34,624 - INFO - 172.18.0.1 - - [26/Jun/2025 15:51:34] "GET /api/alunos HTTP/1.1" 200 -
+2025-06-26 15:51:47,044 - INFO - 172.18.0.1 - - [26/Jun/2025 15:51:47] "GET /api/alunos HTTP/1.1" 200 -
+2025-06-26 15:52:17,318 - INFO - 172.18.0.1 - - [26/Jun/2025 15:52:17] "[33mGET /api/alunos/1 HTTP/1.1[0m" 404 -
+2025-06-26 15:52:30,632 - INFO - 172.18.0.1 - - [26/Jun/2025 15:52:30] "GET /api/alunos HTTP/1.1" 200 -
+2025-06-26 15:53:34,177 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-06-26 15:53:34,178 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-26 15:53:34,180 - INFO -  * Restarting with stat
+2025-06-26 15:53:34,596 - WARNING -  * Debugger is active!
+2025-06-26 15:53:34,597 - INFO -  * Debugger PIN: 492-533-594
+2025-06-26 15:53:35,383 - INFO - 172.18.0.1 - - [26/Jun/2025 15:53:35] "GET /apidocs/ HTTP/1.1" 200 -
+2025-06-26 15:53:35,441 - INFO - 172.18.0.1 - - [26/Jun/2025 15:53:35] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-06-26 15:53:35,441 - INFO - 172.18.0.1 - - [26/Jun/2025 15:53:35] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2025-06-26 15:53:35,442 - INFO - 172.18.0.1 - - [26/Jun/2025 15:53:35] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-06-26 15:53:35,444 - INFO - 172.18.0.1 - - [26/Jun/2025 15:53:35] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-06-26 15:53:35,593 - INFO - 172.18.0.1 - - [26/Jun/2025 15:53:35] "GET /apispec_1.json HTTP/1.1" 200 -
+2025-06-26 15:53:54,513 - INFO -  * Detected change in '/app/crudAlunos.py', reloading
+2025-06-26 15:53:54,552 - INFO -  * Restarting with stat
+2025-06-26 15:53:54,938 - WARNING -  * Debugger is active!
+2025-06-26 15:53:54,939 - INFO -  * Debugger PIN: 492-533-594
+2025-06-26 15:54:02,334 - INFO -  * Detected change in '/app/crudAlunos.py', reloading
+2025-06-26 15:54:02,377 - INFO -  * Restarting with stat
+2025-06-26 15:54:02,773 - WARNING -  * Debugger is active!
+2025-06-26 15:54:02,773 - INFO -  * Debugger PIN: 492-533-594
+2025-06-26 15:54:08,057 - INFO -  * Detected change in '/app/crudAlunos.py', reloading
+2025-06-26 15:54:08,090 - INFO -  * Restarting with stat
+2025-06-26 15:54:08,614 - WARNING -  * Debugger is active!
+2025-06-26 15:54:08,615 - INFO -  * Debugger PIN: 492-533-594
+2025-06-26 15:54:12,866 - INFO -  * Detected change in '/app/crudAlunos.py', reloading
+2025-06-26 15:54:12,901 - INFO -  * Restarting with stat
+2025-06-26 15:54:13,321 - WARNING -  * Debugger is active!
+2025-06-26 15:54:13,322 - INFO -  * Debugger PIN: 492-533-594
+2025-06-26 15:54:17,569 - INFO -  * Detected change in '/app/crudAlunos.py', reloading
+2025-06-26 15:54:17,613 - INFO -  * Restarting with stat
+2025-06-26 15:54:18,021 - WARNING -  * Debugger is active!
+2025-06-26 15:54:18,022 - INFO -  * Debugger PIN: 492-533-594
+2025-06-26 15:54:25,474 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-06-26 15:54:25,474 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-26 15:54:25,476 - INFO -  * Restarting with stat
+2025-06-26 15:54:25,873 - WARNING -  * Debugger is active!
+2025-06-26 15:54:25,873 - INFO -  * Debugger PIN: 301-192-639
+2025-06-26 15:54:26,567 - INFO - 172.18.0.1 - - [26/Jun/2025 15:54:26] "GET /apidocs/ HTTP/1.1" 200 -
+2025-06-26 15:54:26,624 - INFO - 172.18.0.1 - - [26/Jun/2025 15:54:26] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-06-26 15:54:26,625 - INFO - 172.18.0.1 - - [26/Jun/2025 15:54:26] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2025-06-26 15:54:26,626 - INFO - 172.18.0.1 - - [26/Jun/2025 15:54:26] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-06-26 15:54:26,627 - INFO - 172.18.0.1 - - [26/Jun/2025 15:54:26] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-06-26 15:54:26,759 - INFO - 172.18.0.1 - - [26/Jun/2025 15:54:26] "GET /apispec_1.json HTTP/1.1" 200 -
+2025-06-26 15:54:30,735 - INFO - 172.18.0.1 - - [26/Jun/2025 15:54:30] "GET /api/professores HTTP/1.1" 200 -
+2025-06-26 15:54:42,985 - INFO - 172.18.0.1 - - [26/Jun/2025 15:54:42] "[35m[1mPOST /api/professores HTTP/1.1[0m" 201 -
+2025-06-26 15:54:50,299 - INFO - 172.18.0.1 - - [26/Jun/2025 15:54:50] "GET /api/professores HTTP/1.1" 200 -
+2025-06-26 15:55:33,460 - INFO - 172.18.0.1 - - [26/Jun/2025 15:55:33] "[35m[1mPOST /api/professores HTTP/1.1[0m" 201 -
+2025-06-26 15:55:39,149 - INFO - 172.18.0.1 - - [26/Jun/2025 15:55:39] "GET /api/professores HTTP/1.1" 200 -
+2025-06-26 15:55:46,588 - INFO - 172.18.0.1 - - [26/Jun/2025 15:55:46] "GET /apidocs/ HTTP/1.1" 200 -
+2025-06-26 15:55:46,644 - INFO - 172.18.0.1 - - [26/Jun/2025 15:55:46] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-06-26 15:55:46,644 - INFO - 172.18.0.1 - - [26/Jun/2025 15:55:46] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-06-26 15:55:46,646 - INFO - 172.18.0.1 - - [26/Jun/2025 15:55:46] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2025-06-26 15:55:46,648 - INFO - 172.18.0.1 - - [26/Jun/2025 15:55:46] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-06-26 15:55:46,838 - INFO - 172.18.0.1 - - [26/Jun/2025 15:55:46] "GET /apispec_1.json HTTP/1.1" 200 -
+2025-06-26 15:55:50,054 - INFO - 172.18.0.1 - - [26/Jun/2025 15:55:50] "GET /api/professores HTTP/1.1" 200 -
+2025-06-26 15:56:02,962 - INFO -  * Detected change in '/app/crudAlunos.py', reloading
+2025-06-26 15:56:03,024 - INFO -  * Restarting with stat
+2025-06-26 15:56:03,555 - WARNING -  * Debugger is active!
+2025-06-26 15:56:03,556 - INFO -  * Debugger PIN: 301-192-639
+2025-06-26 15:56:06,724 - INFO -  * Detected change in '/app/crudAlunos.py', reloading
+2025-06-26 15:56:06,766 - INFO -  * Restarting with stat
+2025-06-26 15:56:07,165 - WARNING -  * Debugger is active!
+2025-06-26 15:56:07,166 - INFO -  * Debugger PIN: 301-192-639
+2025-06-26 15:56:08,281 - INFO -  * Detected change in '/app/crudAlunos.py', reloading
+2025-06-26 15:56:08,323 - INFO -  * Restarting with stat
+2025-06-26 15:56:08,731 - WARNING -  * Debugger is active!
+2025-06-26 15:56:08,732 - INFO -  * Debugger PIN: 301-192-639
+2025-06-26 15:56:09,824 - INFO -  * Detected change in '/app/crudAlunos.py', reloading
+2025-06-26 15:56:09,859 - INFO -  * Restarting with stat
+2025-06-26 15:56:10,302 - WARNING -  * Debugger is active!
+2025-06-26 15:56:10,303 - INFO -  * Debugger PIN: 301-192-639
+2025-06-26 15:56:26,028 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-06-26 15:56:26,028 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-26 15:56:26,029 - INFO -  * Restarting with stat
+2025-06-26 15:56:26,471 - WARNING -  * Debugger is active!
+2025-06-26 15:56:26,471 - INFO -  * Debugger PIN: 262-333-538
+2025-06-26 15:56:26,905 - INFO - 172.18.0.1 - - [26/Jun/2025 15:56:26] "GET /apidocs/ HTTP/1.1" 200 -
+2025-06-26 15:56:26,959 - INFO - 172.18.0.1 - - [26/Jun/2025 15:56:26] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-06-26 15:56:26,959 - INFO - 172.18.0.1 - - [26/Jun/2025 15:56:26] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-06-26 15:56:26,960 - INFO - 172.18.0.1 - - [26/Jun/2025 15:56:26] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-06-26 15:56:26,960 - INFO - 172.18.0.1 - - [26/Jun/2025 15:56:26] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2025-06-26 15:56:27,094 - INFO - 172.18.0.1 - - [26/Jun/2025 15:56:27] "GET /apispec_1.json HTTP/1.1" 200 -
+2025-06-26 15:56:36,422 - INFO - 172.18.0.1 - - [26/Jun/2025 15:56:36] "GET /api/professores HTTP/1.1" 200 -
+2025-06-26 15:57:34,201 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-06-26 15:57:34,202 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-26 15:57:34,203 - INFO -  * Restarting with stat
+2025-06-26 15:57:34,617 - WARNING -  * Debugger is active!
+2025-06-26 15:57:34,618 - INFO -  * Debugger PIN: 490-776-191
+2025-06-26 15:57:36,652 - INFO - 172.18.0.1 - - [26/Jun/2025 15:57:36] "GET /apidocs/ HTTP/1.1" 200 -
+2025-06-26 15:57:36,712 - INFO - 172.18.0.1 - - [26/Jun/2025 15:57:36] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-06-26 15:57:36,714 - INFO - 172.18.0.1 - - [26/Jun/2025 15:57:36] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-06-26 15:57:36,715 - INFO - 172.18.0.1 - - [26/Jun/2025 15:57:36] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-06-26 15:57:36,716 - INFO - 172.18.0.1 - - [26/Jun/2025 15:57:36] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2025-06-26 15:57:36,887 - INFO - 172.18.0.1 - - [26/Jun/2025 15:57:36] "GET /apispec_1.json HTTP/1.1" 200 -
+2025-06-26 15:58:05,002 - INFO -  * Detected change in '/app/crudTurmas.py', reloading
+2025-06-26 15:58:05,048 - INFO -  * Restarting with stat
+2025-06-26 15:58:05,475 - WARNING -  * Debugger is active!
+2025-06-26 15:58:05,475 - INFO -  * Debugger PIN: 490-776-191
+2025-06-26 15:58:09,708 - INFO -  * Detected change in '/app/crudTurmas.py', reloading
+2025-06-26 15:58:09,744 - INFO -  * Restarting with stat
+2025-06-26 15:58:10,136 - WARNING -  * Debugger is active!
+2025-06-26 15:58:10,137 - INFO -  * Debugger PIN: 490-776-191
+2025-06-26 15:58:25,924 - INFO -  * Detected change in '/app/crudTurmas.py', reloading
+2025-06-26 15:58:25,959 - INFO -  * Restarting with stat
+2025-06-26 15:58:26,473 - WARNING -  * Debugger is active!
+2025-06-26 15:58:26,473 - INFO -  * Debugger PIN: 490-776-191
+2025-06-26 15:58:30,724 - INFO -  * Detected change in '/app/crudTurmas.py', reloading
+2025-06-26 15:58:30,777 - INFO -  * Restarting with stat
+2025-06-26 15:58:31,313 - WARNING -  * Debugger is active!
+2025-06-26 15:58:31,314 - INFO -  * Debugger PIN: 490-776-191
+2025-06-26 15:58:32,459 - INFO -  * Detected change in '/app/crudTurmas.py', reloading
+2025-06-26 15:58:32,498 - INFO -  * Restarting with stat
+2025-06-26 15:58:32,932 - WARNING -  * Debugger is active!
+2025-06-26 15:58:32,933 - INFO -  * Debugger PIN: 490-776-191
+2025-06-26 15:58:34,062 - INFO -  * Detected change in '/app/crudTurmas.py', reloading
+2025-06-26 15:58:34,097 - INFO -  * Restarting with stat
+2025-06-26 15:58:34,535 - WARNING -  * Debugger is active!
+2025-06-26 15:58:34,536 - INFO -  * Debugger PIN: 490-776-191
+2025-06-26 15:58:42,986 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-06-26 15:58:42,986 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-26 15:58:42,988 - INFO -  * Restarting with stat
+2025-06-26 15:58:43,437 - WARNING -  * Debugger is active!
+2025-06-26 15:58:43,438 - INFO -  * Debugger PIN: 107-570-916
+2025-06-26 15:58:43,991 - INFO - 172.18.0.1 - - [26/Jun/2025 15:58:43] "GET /apidocs/ HTTP/1.1" 200 -
+2025-06-26 15:58:44,058 - INFO - 172.18.0.1 - - [26/Jun/2025 15:58:44] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-06-26 15:58:44,059 - INFO - 172.18.0.1 - - [26/Jun/2025 15:58:44] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-06-26 15:58:44,059 - INFO - 172.18.0.1 - - [26/Jun/2025 15:58:44] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2025-06-26 15:58:44,060 - INFO - 172.18.0.1 - - [26/Jun/2025 15:58:44] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-06-26 15:58:44,241 - INFO - 172.18.0.1 - - [26/Jun/2025 15:58:44] "GET /apispec_1.json HTTP/1.1" 200 -
+2025-06-26 15:59:20,136 - INFO -  * Detected change in '/app/crudPagamentos.py', reloading
+2025-06-26 15:59:20,181 - INFO -  * Restarting with stat
+2025-06-26 15:59:20,583 - WARNING -  * Debugger is active!
+2025-06-26 15:59:20,584 - INFO -  * Debugger PIN: 107-570-916
+2025-06-26 15:59:27,920 - INFO -  * Detected change in '/app/crudPagamentos.py', reloading
+2025-06-26 15:59:27,962 - INFO -  * Restarting with stat
+2025-06-26 15:59:28,613 - WARNING -  * Debugger is active!
+2025-06-26 15:59:28,614 - INFO -  * Debugger PIN: 107-570-916
+2025-06-26 15:59:32,928 - INFO -  * Detected change in '/app/crudPagamentos.py', reloading
+2025-06-26 15:59:32,966 - INFO -  * Restarting with stat
+2025-06-26 15:59:33,348 - WARNING -  * Debugger is active!
+2025-06-26 15:59:33,349 - INFO -  * Debugger PIN: 107-570-916
+2025-06-26 15:59:38,606 - INFO -  * Detected change in '/app/crudPagamentos.py', reloading
+2025-06-26 15:59:38,652 - INFO -  * Restarting with stat
+2025-06-26 15:59:39,080 - WARNING -  * Debugger is active!
+2025-06-26 15:59:39,080 - INFO -  * Debugger PIN: 107-570-916
+2025-06-26 15:59:40,191 - INFO -  * Detected change in '/app/crudPagamentos.py', reloading
+2025-06-26 15:59:40,234 - INFO -  * Restarting with stat
+2025-06-26 15:59:40,623 - WARNING -  * Debugger is active!
+2025-06-26 15:59:40,623 - INFO -  * Debugger PIN: 107-570-916
+2025-06-26 15:59:47,318 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-06-26 15:59:47,319 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-26 15:59:47,322 - INFO -  * Restarting with stat
+2025-06-26 15:59:47,773 - WARNING -  * Debugger is active!
+2025-06-26 15:59:47,774 - INFO -  * Debugger PIN: 125-418-404
+2025-06-26 15:59:48,082 - INFO - 172.18.0.1 - - [26/Jun/2025 15:59:48] "GET /apidocs/ HTTP/1.1" 200 -
+2025-06-26 15:59:48,144 - INFO - 172.18.0.1 - - [26/Jun/2025 15:59:48] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-06-26 15:59:48,145 - INFO - 172.18.0.1 - - [26/Jun/2025 15:59:48] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2025-06-26 15:59:48,146 - INFO - 172.18.0.1 - - [26/Jun/2025 15:59:48] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-06-26 15:59:48,146 - INFO - 172.18.0.1 - - [26/Jun/2025 15:59:48] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-06-26 15:59:48,352 - INFO - 172.18.0.1 - - [26/Jun/2025 15:59:48] "GET /apispec_1.json HTTP/1.1" 200 -
+2025-06-26 16:00:03,497 - INFO -  * Detected change in '/app/crudPresencas.py', reloading
+2025-06-26 16:00:03,549 - INFO -  * Restarting with stat
+2025-06-26 16:00:03,986 - WARNING -  * Debugger is active!
+2025-06-26 16:00:03,987 - INFO -  * Debugger PIN: 125-418-404
+2025-06-26 16:00:10,334 - INFO -  * Detected change in '/app/crudPresencas.py', reloading
+2025-06-26 16:00:10,377 - INFO -  * Restarting with stat
+2025-06-26 16:00:10,756 - WARNING -  * Debugger is active!
+2025-06-26 16:00:10,757 - INFO -  * Debugger PIN: 125-418-404
+2025-06-26 16:00:15,979 - INFO -  * Detected change in '/app/crudPresencas.py', reloading
+2025-06-26 16:00:16,015 - INFO -  * Restarting with stat
+2025-06-26 16:00:16,414 - WARNING -  * Debugger is active!
+2025-06-26 16:00:16,415 - INFO -  * Debugger PIN: 125-418-404
+2025-06-26 16:00:20,728 - INFO -  * Detected change in '/app/crudPresencas.py', reloading
+2025-06-26 16:00:20,765 - INFO -  * Restarting with stat
+2025-06-26 16:00:21,171 - WARNING -  * Debugger is active!
+2025-06-26 16:00:21,172 - INFO -  * Debugger PIN: 125-418-404
+2025-06-26 16:00:23,318 - INFO -  * Detected change in '/app/crudPresencas.py', reloading
+2025-06-26 16:00:23,357 - INFO -  * Restarting with stat
+2025-06-26 16:00:23,773 - WARNING -  * Debugger is active!
+2025-06-26 16:00:23,774 - INFO -  * Debugger PIN: 125-418-404
+2025-06-26 16:00:24,881 - INFO -  * Detected change in '/app/crudPresencas.py', reloading
+2025-06-26 16:00:24,917 - INFO -  * Restarting with stat
+2025-06-26 16:00:36,258 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-06-26 16:00:36,258 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-26 16:00:36,260 - INFO -  * Restarting with stat
+2025-06-26 16:00:36,699 - WARNING -  * Debugger is active!
+2025-06-26 16:00:36,699 - INFO -  * Debugger PIN: 855-160-107
+2025-06-26 16:00:37,065 - INFO - 172.18.0.1 - - [26/Jun/2025 16:00:37] "GET /apidocs/ HTTP/1.1" 200 -
+2025-06-26 16:00:37,121 - INFO - 172.18.0.1 - - [26/Jun/2025 16:00:37] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-06-26 16:00:37,123 - INFO - 172.18.0.1 - - [26/Jun/2025 16:00:37] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-06-26 16:00:37,126 - INFO - 172.18.0.1 - - [26/Jun/2025 16:00:37] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-06-26 16:00:37,127 - INFO - 172.18.0.1 - - [26/Jun/2025 16:00:37] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2025-06-26 16:00:37,383 - INFO - 172.18.0.1 - - [26/Jun/2025 16:00:37] "GET /apispec_1.json HTTP/1.1" 200 -
+2025-06-26 16:01:33,167 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-06-26 16:01:33,167 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-26 16:01:33,169 - INFO -  * Restarting with stat
+2025-06-26 16:01:33,661 - WARNING -  * Debugger is active!
+2025-06-26 16:01:33,662 - INFO -  * Debugger PIN: 417-126-290
+2025-06-26 16:01:34,604 - INFO - 172.18.0.1 - - [26/Jun/2025 16:01:34] "GET /apidocs/ HTTP/1.1" 200 -
+2025-06-26 16:01:34,650 - INFO - 172.18.0.1 - - [26/Jun/2025 16:01:34] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-06-26 16:01:34,656 - INFO - 172.18.0.1 - - [26/Jun/2025 16:01:34] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2025-06-26 16:01:34,658 - INFO - 172.18.0.1 - - [26/Jun/2025 16:01:34] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-06-26 16:01:34,659 - INFO - 172.18.0.1 - - [26/Jun/2025 16:01:34] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-06-26 16:01:34,972 - INFO - 172.18.0.1 - - [26/Jun/2025 16:01:34] "GET /apispec_1.json HTTP/1.1" 200 -
+2025-06-26 16:01:57,779 - INFO -  * Detected change in '/app/crudUsuarios.py', reloading
+2025-06-26 16:01:57,838 - INFO -  * Restarting with stat
+2025-06-26 16:01:58,226 - WARNING -  * Debugger is active!
+2025-06-26 16:01:58,227 - INFO -  * Debugger PIN: 417-126-290
+2025-06-26 16:02:03,541 - INFO -  * Detected change in '/app/crudUsuarios.py', reloading
+2025-06-26 16:02:03,575 - INFO -  * Restarting with stat
+2025-06-26 16:02:03,988 - WARNING -  * Debugger is active!
+2025-06-26 16:02:03,988 - INFO -  * Debugger PIN: 417-126-290
+2025-06-26 16:02:08,233 - INFO -  * Detected change in '/app/crudUsuarios.py', reloading
+2025-06-26 16:02:08,267 - INFO -  * Restarting with stat
+2025-06-26 16:02:08,789 - WARNING -  * Debugger is active!
+2025-06-26 16:02:08,789 - INFO -  * Debugger PIN: 417-126-290
+2025-06-26 16:02:11,989 - INFO -  * Detected change in '/app/crudUsuarios.py', reloading
+2025-06-26 16:02:12,024 - INFO -  * Restarting with stat
+2025-06-26 16:02:12,427 - WARNING -  * Debugger is active!
+2025-06-26 16:02:12,428 - INFO -  * Debugger PIN: 417-126-290
+2025-06-26 16:02:16,663 - INFO -  * Detected change in '/app/crudUsuarios.py', reloading
+2025-06-26 16:02:16,698 - INFO -  * Restarting with stat
+2025-06-26 16:02:17,113 - WARNING -  * Debugger is active!
+2025-06-26 16:02:17,114 - INFO -  * Debugger PIN: 417-126-290
+2025-06-26 16:02:18,220 - INFO -  * Detected change in '/app/crudUsuarios.py', reloading
+2025-06-26 16:02:18,255 - INFO -  * Restarting with stat
+2025-06-26 16:02:18,660 - WARNING -  * Debugger is active!
+2025-06-26 16:02:18,661 - INFO -  * Debugger PIN: 417-126-290
+2025-06-26 16:02:19,774 - INFO -  * Detected change in '/app/crudUsuarios.py', reloading
+2025-06-26 16:02:19,807 - INFO -  * Restarting with stat
+2025-06-26 16:02:20,192 - WARNING -  * Debugger is active!
+2025-06-26 16:02:20,193 - INFO -  * Debugger PIN: 417-126-290
+2025-06-26 16:02:33,001 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-06-26 16:02:33,002 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-26 16:02:33,003 - INFO -  * Restarting with stat
+2025-06-26 16:02:33,403 - WARNING -  * Debugger is active!
+2025-06-26 16:02:33,404 - INFO -  * Debugger PIN: 119-615-689
+2025-06-26 16:02:36,258 - INFO - 172.18.0.1 - - [26/Jun/2025 16:02:36] "GET /apidocs/ HTTP/1.1" 200 -
+2025-06-26 16:02:36,321 - INFO - 172.18.0.1 - - [26/Jun/2025 16:02:36] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-06-26 16:02:36,322 - INFO - 172.18.0.1 - - [26/Jun/2025 16:02:36] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2025-06-26 16:02:36,323 - INFO - 172.18.0.1 - - [26/Jun/2025 16:02:36] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-06-26 16:02:36,324 - INFO - 172.18.0.1 - - [26/Jun/2025 16:02:36] "GET /flasgger_static/swagger-ui.css HTTP/1.1" 200 -
+2025-06-26 16:02:36,710 - INFO - 172.18.0.1 - - [26/Jun/2025 16:02:36] "GET /apispec_1.json HTTP/1.1" 200 -
+2025-06-26 16:02:59,715 - INFO -  * Detected change in '/app/crudDisciplinas.py', reloading
+2025-06-26 16:02:59,758 - INFO -  * Restarting with stat
+2025-06-26 16:03:00,156 - WARNING -  * Debugger is active!
+2025-06-26 16:03:00,156 - INFO -  * Debugger PIN: 119-615-689
+2025-06-26 16:03:06,479 - INFO -  * Detected change in '/app/crudDisciplinas.py', reloading
+2025-06-26 16:03:06,515 - INFO -  * Restarting with stat
+2025-06-26 16:03:06,951 - WARNING -  * Debugger is active!
+2025-06-26 16:03:06,952 - INFO -  * Debugger PIN: 119-615-689
+2025-06-26 16:03:11,201 - INFO -  * Detected change in '/app/crudDisciplinas.py', reloading
+2025-06-26 16:03:11,253 - INFO -  * Restarting with stat
+2025-06-26 16:03:11,709 - WARNING -  * Debugger is active!
+2025-06-26 16:03:11,709 - INFO -  * Debugger PIN: 119-615-689
+2025-06-26 16:03:14,922 - INFO -  * Detected change in '/app/crudDisciplinas.py', reloading
+2025-06-26 16:03:14,964 - INFO -  * Restarting with stat
+2025-06-26 16:03:15,430 - WARNING -  * Debugger is active!
+2025-06-26 16:03:15,431 - INFO -  * Debugger PIN: 119-615-689
+2025-06-26 16:03:19,667 - INFO -  * Detected change in '/app/crudDisciplinas.py', reloading
+2025-06-26 16:03:19,705 - INFO -  * Restarting with stat
+2025-06-26 16:03:20,123 - WARNING -  * Debugger is active!
+2025-06-26 16:03:20,124 - INFO -  * Debugger PIN: 119-615-689
+2025-06-26 16:03:21,232 - INFO -  * Detected change in '/app/crudDisciplinas.py', reloading
+2025-06-26 16:03:21,265 - INFO -  * Restarting with stat
+2025-06-26 16:03:21,637 - WARNING -  * Debugger is active!
+2025-06-26 16:03:21,638 - INFO -  * Debugger PIN: 119-615-689
+2025-06-26 16:04:51,561 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-06-26 16:04:51,561 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-26 16:04:51,563 - INFO -  * Restarting with stat
+2025-06-26 16:04:51,965 - WARNING -  * Debugger is active!
+2025-06-26 16:04:51,966 - INFO -  * Debugger PIN: 135-963-492
+2025-06-26 16:04:53,401 - INFO - 172.18.0.1 - - [26/Jun/2025 16:04:53] "GET /apidocs/ HTTP/1.1" 200 -
+2025-06-26 16:04:53,451 - INFO - 172.18.0.1 - - [26/Jun/2025 16:04:53] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-06-26 16:04:53,452 - INFO - 172.18.0.1 - - [26/Jun/2025 16:04:53] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-06-26 16:04:53,453 - INFO - 172.18.0.1 - - [26/Jun/2025 16:04:53] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-06-26 16:04:53,453 - INFO - 172.18.0.1 - - [26/Jun/2025 16:04:53] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2025-06-26 16:04:53,715 - INFO - 172.18.0.1 - - [26/Jun/2025 16:04:53] "GET /apispec_1.json HTTP/1.1" 200 -
+2025-06-26 16:04:56,152 - INFO - 172.18.0.1 - - [26/Jun/2025 16:04:56] "[32mGET /apidocs HTTP/1.1[0m" 308 -
+2025-06-26 16:04:56,169 - INFO - 172.18.0.1 - - [26/Jun/2025 16:04:56] "GET /apidocs/ HTTP/1.1" 200 -
+2025-06-26 16:04:56,238 - INFO - 172.18.0.1 - - [26/Jun/2025 16:04:56] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2025-06-26 16:04:56,239 - INFO - 172.18.0.1 - - [26/Jun/2025 16:04:56] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-06-26 16:04:56,240 - INFO - 172.18.0.1 - - [26/Jun/2025 16:04:56] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-06-26 16:04:56,241 - INFO - 172.18.0.1 - - [26/Jun/2025 16:04:56] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-06-26 16:04:56,479 - INFO - 172.18.0.1 - - [26/Jun/2025 16:04:56] "GET /apispec_1.json HTTP/1.1" 200 -
+2025-06-26 16:05:45,890 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-06-26 16:05:45,891 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-26 16:05:45,893 - INFO -  * Restarting with stat
+2025-06-26 16:05:46,379 - WARNING -  * Debugger is active!
+2025-06-26 16:05:46,380 - INFO -  * Debugger PIN: 630-586-580
+2025-06-26 16:05:48,274 - INFO - 172.18.0.1 - - [26/Jun/2025 16:05:48] "GET /apidocs/ HTTP/1.1" 200 -
+2025-06-26 16:05:48,319 - INFO - 172.18.0.1 - - [26/Jun/2025 16:05:48] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-06-26 16:05:48,323 - INFO - 172.18.0.1 - - [26/Jun/2025 16:05:48] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-06-26 16:05:48,324 - INFO - 172.18.0.1 - - [26/Jun/2025 16:05:48] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-06-26 16:05:48,325 - INFO - 172.18.0.1 - - [26/Jun/2025 16:05:48] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2025-06-26 16:05:48,602 - INFO - 172.18.0.1 - - [26/Jun/2025 16:05:48] "GET /apispec_1.json HTTP/1.1" 200 -
+2025-06-26 16:07:00,785 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-06-26 16:07:00,785 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-26 16:07:00,787 - INFO -  * Restarting with stat
+2025-06-26 16:07:01,246 - WARNING -  * Debugger is active!
+2025-06-26 16:07:01,247 - INFO -  * Debugger PIN: 102-501-819
+2025-06-26 16:07:02,333 - INFO - 172.18.0.1 - - [26/Jun/2025 16:07:02] "GET /apidocs/ HTTP/1.1" 200 -
+2025-06-26 16:07:02,392 - INFO - 172.18.0.1 - - [26/Jun/2025 16:07:02] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-06-26 16:07:02,394 - INFO - 172.18.0.1 - - [26/Jun/2025 16:07:02] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2025-06-26 16:07:02,396 - INFO - 172.18.0.1 - - [26/Jun/2025 16:07:02] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-06-26 16:07:02,398 - INFO - 172.18.0.1 - - [26/Jun/2025 16:07:02] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-06-26 16:07:02,681 - INFO - 172.18.0.1 - - [26/Jun/2025 16:07:02] "GET /apispec_1.json HTTP/1.1" 200 -
+2025-06-26 16:07:22,229 - INFO -  * Detected change in '/app/crudFrequencias.py', reloading
+2025-06-26 16:07:22,280 - INFO -  * Restarting with stat

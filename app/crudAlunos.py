@@ -179,7 +179,7 @@ def cadastrar_aluno():
               type: string
             informacoes_adicionais:
               type: string
-        responses:
+    responses:
       201:
         description: Aluno cadastrado com sucesso.
       400:
