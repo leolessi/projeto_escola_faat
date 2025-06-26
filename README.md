@@ -31,6 +31,8 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
     docker-compose up --build
     ```
 
+## Como Testar a Aplicação (APIS, CRUDS, etc)
+
 4.  **Acessar a documentação Swagger**
 
     Você encontrará a documentação interativa de todos os endpoints, podendo testar as requisições diretamente pela interface.
@@ -57,7 +59,7 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
 
     Utilize a ferramenta de testes de sua preferência (Postman, Insomnia, etc)<br>
 
-    - **_Tabela Professor (crudProfessores.py)_**
+    - **Tabela Professor (crudProfessores.py)**
 
       - Listar professores (método GET)
 
@@ -99,7 +101,7 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
          DELETE http://localhost:5000/api/professores/1
       ```
 
-    - **_Tabela Atividade (crudAtividades.py)_**
+    - **Tabela Atividade (crudAtividades.py)**
 
       - Listar atividades (método GET)
 
@@ -139,7 +141,7 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
          DELETE http://localhost:5000/api/atividades/1
       ```
 
-    - **_Tabela Turma (crudTurmas.py)_**
+    - **Tabela Turma (crudTurmas.py)**
 
       - Listar turmas (método GET)
 
@@ -181,7 +183,7 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
          DELETE http://localhost:5000/api/turmas/1
       ```
 
-    - **_Tabela Alunos (crudAlunos.py)_**
+    - **Tabela Alunos (crudAlunos.py)**
 
       - Listar alunos (método GET)
 
@@ -231,7 +233,7 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
          DELETE http://localhost:5000/api/alunos/1
       ```
 
-    - **_Tabela Pagamento (crudPagamentos.py)_**
+    - **Tabela Pagamento (crudPagamentos.py)**
 
       - Listar pagamentos (método GET)
 
