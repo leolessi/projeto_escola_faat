@@ -41,7 +41,7 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
    Utilize a ferramenta de testes de sua preferência (Postman, Insomnia, etc)
 
    - Tabela Alunos (crudAlunos.py)
-     -- Listar alunos (método GET)
+     -> Listar alunos (método GET)
      /api/alunos
      -- Cadastrar um aluno (método POST)
      /api/alunos
