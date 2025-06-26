@@ -8,6 +8,35 @@ frequencias_bp = Blueprint("frequencias", __name__)
 def listar_frequencias():
     """
     Lista todas as frequências cadastradas.
+    ---
+    tags:
+      - Frequencias
+    responses:
+      200:
+        description: Lista de frequências retornada com sucesso.
+        schema:
+          type: array
+          items:
+            type: object
+            properties:
+              id_frequencia:
+                type: integer
+              id_aluno:
+                type: integer
+              id_disciplina:
+                type: integer
+              data_aula:
+                type: string
+                format: date
+              presente:
+                type: boolean
+      400:
+        description: Erro ao buscar as frequências.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
     """
     conn = bd.create_connection()
     if conn is None:
@@ -42,6 +71,38 @@ def listar_frequencias():
 def buscar_frequencias_por_aluno(id_aluno):
     """
     Busca todas as frequências de um aluno pelo ID do aluno.
+    ---
+    tags:
+      - Frequencias
+    parameters:
+      - name: id_aluno
+        in: path
+        required: true
+        type: integer
+        description: ID do aluno a ser buscado.
+    responses:
+      200:
+        description: Lista de frequências do aluno retornada com sucesso.
+        schema:
+          type: array
+          items:
+            type: object
+            properties:
+              id_frequencia:
+                type: integer
+              id_aluno:
+                type: integer
+              id_disciplina:
+                type: integer
+              data_aula:
+                type: string
+                format: date
+              presente:
+                type: boolean
+      404:
+        description: Nenhuma frequência encontrada para este aluno.
+      400:
+        description: Erro ao buscar as frequências.
     """
     conn = bd.create_connection()
     if conn is None:
@@ -81,6 +142,36 @@ def buscar_frequencias_por_aluno(id_aluno):
 def buscar_frequencia(id_frequencia):
     """
     Busca uma frequência pelo ID.
+    ---
+    tags:
+      - Frequencias
+    parameters:
+      - name: id_frequencia
+        in: path
+        required: true
+        type: integer
+        description: ID da frequência a ser buscada.
+    responses:
+      200:
+        description: Frequência encontrada com sucesso.
+        schema:
+          type: object
+          properties:
+            id_frequencia:
+              type: integer
+            id_aluno:
+              type: integer
+            id_disciplina:
+              type: integer
+            data_aula:
+              type: string
+              format: date
+            presente:
+              type: boolean
+      404:
+        description: Frequência não encontrada.
+      400:
+        description: Erro ao buscar a frequência.
     """
     conn = bd.create_connection()
     if conn is None:
@@ -116,6 +207,30 @@ def buscar_frequencia(id_frequencia):
 def cadastrar_frequencia():
     """
     Cadastra uma nova frequência.
+    ---
+    tags:
+      - Frequencias
+    parameters:
+      - name: body
+        in: body
+        required: true
+        schema:
+          type: object
+          properties:
+            id_aluno:
+              type: integer
+            id_disciplina:
+              type: integer
+            data_aula:
+              type: string
+              format: date
+            presente:
+              type: boolean
+    responses:
+      201:
+        description: Frequência cadastrada com sucesso.
+      400:
+        description: Erro ao criar frequência.
     """
     data = request.get_json()
     conn = bd.create_connection()
@@ -146,6 +261,35 @@ def cadastrar_frequencia():
 def alterar_frequencia(id_frequencia):
     """
     Atualiza os dados de uma frequência existente.
+    ---
+    tags:
+      - Frequencias
+    parameters:
+      - name: id_frequencia
+        in: path
+        required: true
+        type: integer
+        description: ID da frequência a ser atualizada.
+      - name: body
+        in: body
+        required: true
+        schema:
+          type: object
+          properties:
+            id_aluno:
+              type: integer
+            id_disciplina:
+              type: integer
+            data_aula:
+              type: string
+              format: date
+            presente:
+              type: boolean
+    responses:
+      200:
+        description: Dados da frequência atualizados com sucesso.
+      400:
+        description: Erro ao atualizar os dados da frequência.
     """
     data = request.get_json()
     conn = bd.create_connection()
@@ -177,6 +321,30 @@ def alterar_frequencia(id_frequencia):
 def excluir_frequencia(id_frequencia):
     """
     Exclui uma frequência existente.
+    ---
+    tags:
+      - Frequencias
+    parameters:
+      - name: id_frequencia
+        in: path
+        required: true
+        type: integer
+        description: ID da frequência a ser excluída.
+    responses:
+      200:
+        description: Frequência excluída com sucesso.
+        schema:
+          type: object
+          properties:
+            message:
+              type: string
+      400:
+        description: Erro ao excluir a frequência.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
     """
     conn = bd.create_connection()
     if conn is None:

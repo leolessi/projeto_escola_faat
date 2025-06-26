@@ -602,3 +602,59 @@
 2025-06-26 01:28:23,432 - INFO -  * Restarting with stat
 2025-06-26 01:28:23,806 - WARNING -  * Debugger is active!
 2025-06-26 01:28:23,807 - INFO -  * Debugger PIN: 256-842-968
+2025-06-26 14:12:44,738 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-06-26 14:12:44,738 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-26 14:12:44,740 - INFO -  * Restarting with stat
+2025-06-26 14:12:45,192 - WARNING -  * Debugger is active!
+2025-06-26 14:12:45,193 - INFO -  * Debugger PIN: 280-911-752
+2025-06-26 14:12:49,535 - INFO - 172.18.0.1 - - [26/Jun/2025 14:12:49] "[32mGET /apidocs HTTP/1.1[0m" 308 -
+2025-06-26 14:12:49,577 - INFO - 172.18.0.1 - - [26/Jun/2025 14:12:49] "GET /apidocs/ HTTP/1.1" 200 -
+2025-06-26 14:12:49,664 - INFO - 172.18.0.1 - - [26/Jun/2025 14:12:49] "GET /flasgger_static/swagger-ui-bundle.js HTTP/1.1" 200 -
+2025-06-26 14:12:49,665 - INFO - 172.18.0.1 - - [26/Jun/2025 14:12:49] "GET /flasgger_static/swagger-ui.css HTTP/1.1" 200 -
+2025-06-26 14:12:49,665 - INFO - 172.18.0.1 - - [26/Jun/2025 14:12:49] "GET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+2025-06-26 14:12:49,666 - INFO - 172.18.0.1 - - [26/Jun/2025 14:12:49] "GET /flasgger_static/lib/jquery.min.js HTTP/1.1" 200 -
+2025-06-26 14:12:50,122 - ERROR - jsonify failure; defaulting to json.dumps
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flasgger/base.py", line 164, in get
+    return jsonify(self.loader())
+  File "/usr/local/lib/python3.9/site-packages/flasgger/base.py", line 438, in get_apispecs
+    specs = get_specs(
+  File "/usr/local/lib/python3.9/site-packages/flasgger/utils.py", line 180, in get_specs
+    doc_summary, doc_description, doc_swag = parse_docstring(
+  File "/usr/local/lib/python3.9/site-packages/flasgger/utils.py", line 675, in parse_docstring
+    swag = yaml.safe_load(full_doc[yaml_sep + 4:])
+  File "/usr/local/lib/python3.9/site-packages/yaml/__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+  File "/usr/local/lib/python3.9/site-packages/yaml/__init__.py", line 81, in load
+    return loader.get_single_data()
+  File "/usr/local/lib/python3.9/site-packages/yaml/constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 82, in compose_node
+    node = self.compose_sequence_node(anchor)
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 110, in compose_sequence_node
+    while not self.check_event(SequenceEndEvent):
+  File "/usr/local/lib/python3.9/site-packages/yaml/parser.py", line 98, in check_event
+    self.current_event = self.state()
+  File "/usr/local/lib/python3.9/site-packages/yaml/parser.py", line 392, in parse_block_sequence_entry
+    raise ParserError("while parsing a block collection", self.marks[-1],
+yaml.parser.ParserError: while parsing a block collection
+  in "<unicode string>", line 4, column 3:
+      - name: body
+      ^
+expected <block end>, but found '?'
+  in "<unicode string>", line 26, column 3:
+      201:
+      ^
+2025-06-26 14:12:50,173 - INFO - 172.18.0.1 - - [26/Jun/2025 14:12:50] "GET /flasgger_static/favicon-32x32.png HTTP/1.1" 200 -
+2025-06-26 14:12:50,191 - INFO - 172.18.0.1 - - [26/Jun/2025 14:12:50] "[35m[1mGET /apispec_1.json HTTP/1.1[0m" 500 -

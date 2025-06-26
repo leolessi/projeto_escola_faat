@@ -1,10 +1,6 @@
-from flask import Flask, request, jsonify, Blueprint
+from flask import request, jsonify, Blueprint
 import Util.bd as bd
-from flasgger import Swagger
 
-# app = Flask(__name__)
-
-# swagger = Swagger(app)
 turmas_bp = Blueprint("turmas", __name__)
 
 
