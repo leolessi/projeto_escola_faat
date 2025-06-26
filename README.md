@@ -59,47 +59,47 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
 
     Utilize a ferramenta de testes de sua preferência (Postman, Insomnia, etc)<br>
 
-    - **Tabela Professor (crudProfessores.py)**
+    --> **Tabela Professor (crudProfessores.py)**
 
-      - Listar professores (método GET)
+    - Listar professores (método GET)
 
-      ```
-         GET http://localhost:5000/api/professores
-      ```
+    ```
+       GET http://localhost:5000/api/professores
+    ```
 
-      - Cadastrar um professor (método POST)
+    - Cadastrar um professor (método POST)
 
-      ```
-         POST http://localhost:5000/api/professores
-      ```
+    ```
+       POST http://localhost:5000/api/professores
+    ```
 
-      ```json
-      {
-        "nome_completo": "Carlos Souza",
-        "email": "carlos@email.com",
-        "telefone": "11988887777"
-      }
-      ```
+    ```json
+    {
+      "nome_completo": "Carlos Souza",
+      "email": "carlos@email.com",
+      "telefone": "11988887777"
+    }
+    ```
 
-      - Atualizar o cadastro de um professor (método PUT)
+    - Atualizar o cadastro de um professor (método PUT)
 
-      ```
-         PUT http://localhost:5000/api/professores/1
-      ```
+    ```
+       PUT http://localhost:5000/api/professores/1
+    ```
 
-      ```json
-      {
-        "nome_completo": "Carlos Souza",
-        "email": "carlos@email.com",
-        "telefone": "11988887777"
-      }
-      ```
+    ```json
+    {
+      "nome_completo": "Carlos Souza",
+      "email": "carlos@email.com",
+      "telefone": "11988887777"
+    }
+    ```
 
-      - Excluir o cadastro de um professor (método DELETE)
+    - Excluir o cadastro de um professor (método DELETE)
 
-      ```
-         DELETE http://localhost:5000/api/professores/1
-      ```
+    ```
+       DELETE http://localhost:5000/api/professores/1
+    ```
 
     - **Tabela Atividade (crudAtividades.py)**
 
