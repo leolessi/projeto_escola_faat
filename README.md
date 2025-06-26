@@ -33,6 +33,37 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
 
 4. **Acessar a documentação Swagger**
 
-```
-http://localhost:5000/apidocs
-```
+   ```
+   http://localhost:5000/apidocs
+   ```
+
+5. Exemplos de requisições para os Endpoints CRUD
+   Utilize a ferramenta de testes de sua preferência (Postman, Insomnia, etc)
+
+   - Tabela Alunos (crudAlunos.py)
+     -- Listar alunos (método GET)
+     /api/alunos
+     -- Cadastrar um aluno (método POST)
+     /api/alunos
+     {
+     "nome_completo": "João da Silva",
+     "data_nascimento": "2010-05-10",
+     "id_turma": 2,
+     "nome_responsavel": "Maria Silva",
+     "telefone_responsavel": "11999999999",
+     "email_responsavel": "maria@email.com",
+     "informacoes_adicionais": "Nenhuma"
+     }
+     -- Atualizar cadastro do aluno (método PUT)
+     /api/alunos/1
+     {
+     "nome_completo": "João da Silva",
+     "data_nascimento": "2010-05-10",
+     "id_turma": 2,
+     "nome_responsavel": "Maria Silva",
+     "telefone_responsavel": "11999999999",
+     "email_responsavel": "maria@email.com",
+     "informacoes_adicionais": "Atualizado"
+     }
+     -- Excluir um aluno cadastrado (método DELETE)
+     /api/alunos/1
