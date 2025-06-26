@@ -815,3 +815,111 @@ expected <block end>, but found '?'
 2025-06-26 14:59:46,050 - INFO -  * Restarting with stat
 2025-06-26 14:59:46,466 - WARNING -  * Debugger is active!
 2025-06-26 14:59:46,467 - INFO -  * Debugger PIN: 974-688-348
+2025-06-26 15:14:42,978 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-06-26 15:14:42,979 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-26 15:14:42,981 - INFO -  * Restarting with stat
+2025-06-26 15:14:43,459 - WARNING -  * Debugger is active!
+2025-06-26 15:14:43,460 - INFO -  * Debugger PIN: 157-229-632
+2025-06-26 15:15:16,196 - INFO - 172.18.0.1 - - [26/Jun/2025 15:15:16] "GET /apidocs/ HTTP/1.1" 200 -
+2025-06-26 15:15:16,336 - INFO - 172.18.0.1 - - [26/Jun/2025 15:15:16] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-06-26 15:15:16,338 - INFO - 172.18.0.1 - - [26/Jun/2025 15:15:16] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2025-06-26 15:15:16,338 - INFO - 172.18.0.1 - - [26/Jun/2025 15:15:16] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-06-26 15:15:16,339 - INFO - 172.18.0.1 - - [26/Jun/2025 15:15:16] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-06-26 15:15:16,536 - ERROR - jsonify failure; defaulting to json.dumps
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flasgger/base.py", line 164, in get
+    return jsonify(self.loader())
+  File "/usr/local/lib/python3.9/site-packages/flasgger/base.py", line 438, in get_apispecs
+    specs = get_specs(
+  File "/usr/local/lib/python3.9/site-packages/flasgger/utils.py", line 180, in get_specs
+    doc_summary, doc_description, doc_swag = parse_docstring(
+  File "/usr/local/lib/python3.9/site-packages/flasgger/utils.py", line 675, in parse_docstring
+    swag = yaml.safe_load(full_doc[yaml_sep + 4:])
+  File "/usr/local/lib/python3.9/site-packages/yaml/__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+  File "/usr/local/lib/python3.9/site-packages/yaml/__init__.py", line 81, in load
+    return loader.get_single_data()
+  File "/usr/local/lib/python3.9/site-packages/yaml/constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 82, in compose_node
+    node = self.compose_sequence_node(anchor)
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 110, in compose_sequence_node
+    while not self.check_event(SequenceEndEvent):
+  File "/usr/local/lib/python3.9/site-packages/yaml/parser.py", line 98, in check_event
+    self.current_event = self.state()
+  File "/usr/local/lib/python3.9/site-packages/yaml/parser.py", line 392, in parse_block_sequence_entry
+    raise ParserError("while parsing a block collection", self.marks[-1],
+yaml.parser.ParserError: while parsing a block collection
+  in "<unicode string>", line 4, column 3:
+      - name: body
+      ^
+expected <block end>, but found '?'
+  in "<unicode string>", line 26, column 3:
+      201:
+      ^
+2025-06-26 15:15:16,611 - INFO - 172.18.0.1 - - [26/Jun/2025 15:15:16] "[35m[1mGET /apispec_1.json HTTP/1.1[0m" 500 -
+2025-06-26 15:24:50,282 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-06-26 15:24:50,283 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-26 15:24:50,284 - INFO -  * Restarting with stat
+2025-06-26 15:24:50,768 - WARNING -  * Debugger is active!
+2025-06-26 15:24:50,769 - INFO -  * Debugger PIN: 679-544-407
+2025-06-26 15:24:54,695 - INFO - 172.18.0.1 - - [26/Jun/2025 15:24:54] "GET /apidocs/ HTTP/1.1" 200 -
+2025-06-26 15:24:54,770 - INFO - 172.18.0.1 - - [26/Jun/2025 15:24:54] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-06-26 15:24:54,771 - INFO - 172.18.0.1 - - [26/Jun/2025 15:24:54] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2025-06-26 15:24:54,771 - INFO - 172.18.0.1 - - [26/Jun/2025 15:24:54] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-06-26 15:24:54,772 - INFO - 172.18.0.1 - - [26/Jun/2025 15:24:54] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-06-26 15:24:54,932 - ERROR - jsonify failure; defaulting to json.dumps
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flasgger/base.py", line 164, in get
+    return jsonify(self.loader())
+  File "/usr/local/lib/python3.9/site-packages/flasgger/base.py", line 438, in get_apispecs
+    specs = get_specs(
+  File "/usr/local/lib/python3.9/site-packages/flasgger/utils.py", line 180, in get_specs
+    doc_summary, doc_description, doc_swag = parse_docstring(
+  File "/usr/local/lib/python3.9/site-packages/flasgger/utils.py", line 675, in parse_docstring
+    swag = yaml.safe_load(full_doc[yaml_sep + 4:])
+  File "/usr/local/lib/python3.9/site-packages/yaml/__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+  File "/usr/local/lib/python3.9/site-packages/yaml/__init__.py", line 81, in load
+    return loader.get_single_data()
+  File "/usr/local/lib/python3.9/site-packages/yaml/constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 82, in compose_node
+    node = self.compose_sequence_node(anchor)
+  File "/usr/local/lib/python3.9/site-packages/yaml/composer.py", line 110, in compose_sequence_node
+    while not self.check_event(SequenceEndEvent):
+  File "/usr/local/lib/python3.9/site-packages/yaml/parser.py", line 98, in check_event
+    self.current_event = self.state()
+  File "/usr/local/lib/python3.9/site-packages/yaml/parser.py", line 392, in parse_block_sequence_entry
+    raise ParserError("while parsing a block collection", self.marks[-1],
+yaml.parser.ParserError: while parsing a block collection
+  in "<unicode string>", line 4, column 3:
+      - name: body
+      ^
+expected <block end>, but found '?'
+  in "<unicode string>", line 26, column 3:
+      201:
+      ^
+2025-06-26 15:24:54,999 - INFO - 172.18.0.1 - - [26/Jun/2025 15:24:54] "[35m[1mGET /apispec_1.json HTTP/1.1[0m" 500 -
