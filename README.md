@@ -55,7 +55,7 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
 
    Utilize a ferramenta de testes de sua preferência (Postman, Insomnia, etc)<br>
 
-   - Tabela Professor (crudProfessores.py)
+   - **_Tabela Professor (crudProfessores.py)_**
 
      - Listar professores (método GET)
 
@@ -97,7 +97,7 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
         DELETE http://localhost:5000/api/professores/1
      ```
 
-   - Tabela Alunos (crudAlunos.py)
+   - **_Tabela Alunos (crudAlunos.py)_**
 
      - Listar alunos (método GET)
 
