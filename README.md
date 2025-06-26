@@ -77,10 +77,10 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
      }
      ```
 
-     - Atualiaz o cadastro de um professor (método PUT)
+     - Atualizar o cadastro de um professor (método PUT)
 
      ```
-     PUT http://localhost:5000/api/professores/1
+        PUT http://localhost:5000/api/professores/1
      ```
 
      ```json
@@ -111,16 +111,16 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
         POST http://localhost:5000/api/alunos
      ```
 
-     ```
-        {
-            "nome_completo": "João da Silva",
-            "data_nascimento": "2010-05-10",
-            "id_turma": 2,
-            "nome_responsavel": "Maria Silva",
-            "telefone_responsavel": "11999999999",
-            "email_responsavel": "maria@email.com",
-            "informacoes_adicionais": "Nenhuma"
-        }
+     ```json
+     {
+       "nome_completo": "João da Silva",
+       "data_nascimento": "2010-05-10",
+       "id_turma": 2,
+       "nome_responsavel": "Maria Silva",
+       "telefone_responsavel": "11999999999",
+       "email_responsavel": "maria@email.com",
+       "informacoes_adicionais": "Nenhuma"
+     }
      ```
 
      - Atualizar um aluno (método PUT)
@@ -129,16 +129,16 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
         PUT http://localhost:5000/api/alunos/1
      ```
 
-     ```
-        {
-            "nome_completo": "João da Silva",
-            "data_nascimento": "2010-05-10",
-            "id_turma": 2,
-            "nome_responsavel": "Maria Silva",
-            "telefone_responsavel": "11999999999",
-            "email_responsavel": "maria@email.com",
-            "informacoes_adicionais": "Atualizado"
-        }
+     ```json
+     {
+       "nome_completo": "João da Silva",
+       "data_nascimento": "2010-05-10",
+       "id_turma": 2,
+       "nome_responsavel": "Maria Silva",
+       "telefone_responsavel": "11999999999",
+       "email_responsavel": "maria@email.com",
+       "informacoes_adicionais": "Atualizado"
+     }
      ```
 
      - Excluir um aluno cadastrado (método DELETE)
