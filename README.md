@@ -41,19 +41,20 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
    Utilize a ferramenta de testes de sua preferência (Postman, Insomnia, etc)
 
    - Tabela Alunos (crudAlunos.py)
-     -- Listar alunos (método GET)
 
-     ```
-     /api/alunos
-     ```
+     - Listar alunos (método GET)
 
-     -- Cadastrar um aluno (método POST)
-
-     ```
-     /api/alunos
+     ```sh
+     GET http://localhost:5000/api/alunos
      ```
 
+     - Cadastrar um aluno (método POST)
+
+     ```sh
+     POST http://localhost:5000/api/alunos
      ```
+
+     ```sh
      {
      "nome_completo": "João da Silva",
      "data_nascimento": "2010-05-10",
@@ -65,20 +66,26 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
      }
      ```
 
-     -- Atualizar cadastro do aluno (método PUT)
-     /api/alunos/1
-     {
-     "nome_completo": "João da Silva",
-     "data_nascimento": "2010-05-10",
-     "id_turma": 2,
-     "nome_responsavel": "Maria Silva",
-     "telefone_responsavel": "11999999999",
-     "email_responsavel": "maria@email.com",
-     "informacoes_adicionais": "Atualizado"
-     }
-     -- Excluir um aluno cadastrado (método DELETE)
-     /api/alunos/1
+   - Atualizar cadastro do aluno (método PUT)
 
-     ```
+   ```
+     PUT http://localhost:5000/api/alunos
+   ```
 
-     ```
+   ```
+   {
+   "nome_completo": "João da Silva",
+   "data_nascimento": "2010-05-10",
+   "id_turma": 2,
+   "nome_responsavel": "Maria Silva",
+   "telefone_responsavel": "11999999999",
+   "email_responsavel": "maria@email.com",
+   "informacoes_adicionais": "Atualizado"
+   }
+   ```
+
+   -- Excluir um aluno cadastrado (método DELETE)
+
+   ```
+   DELETE http://localhost:5000/api/alunos
+   ```
