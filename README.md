@@ -58,6 +58,7 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
     - Frequencia<br>
 
     Utilize a ferramenta de testes de sua preferência (Postman, Insomnia, etc)<br>
+    OBS: A inserção de dados (métodos POST e PUT), são feitos no formato JSON. Na hora de inserir esses dados, certifique-se de que eles estejam no formato correto dentro da ferramenta.<br>
 
     - **TABELA Professor (crudProfessores.py)**
 
