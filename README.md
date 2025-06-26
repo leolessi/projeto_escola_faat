@@ -231,6 +231,54 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
          DELETE http://localhost:5000/api/alunos/1
       ```
 
+    - **_Tabela Pagamento (crudPagamentos.py)_**
+
+      - Listar pagamentos (método GET)
+
+      ```
+        GET http://localhost:5000/api/pagamentos
+      ```
+
+      - Cadastrar um pagamento (método POST)
+
+      ```
+        POST http://localhost:5000/api/pagamentos
+      ```
+
+      ```json
+      {
+        "id_aluno": 1,
+        "data_pagamento": "2024-06-25",
+        "valor_pago": 500.0,
+        "forma_pagamento": "boleto",
+        "referencia": "junho/2024",
+        "status": "pago"
+      }
+      ```
+
+      - Atualizar um pagamento (método PUT)
+
+      ```
+        PUT http://localhost:5000/api/pagamentos/1
+      ```
+
+      ```json
+      {
+        "id_aluno": 1,
+        "data_pagamento": "2024-06-26",
+        "valor_pago": 550.0,
+        "forma_pagamento": "cartao",
+        "referencia": "junho/2024",
+        "status": "pago"
+      }
+      ```
+
+      - Excluir um pagamento cadastrado (método DELETE)
+
+      ```
+        DELETE http://localhost:5000/api/pagamentos/1
+      ```
+
 6.  **Observações**
 
     - O backend faz log das operações em escola_infantil.log.
@@ -238,5 +286,5 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
     - Para atualizar dependências Python, edite o requirements.txt e reconstrua a imagem com:
 
     ```
-        docker-compose up --build
+    docker-compose up --build
     ```
