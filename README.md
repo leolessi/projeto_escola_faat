@@ -6,225 +6,233 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
 
 ## Como Executar a Aplicação no Docker
 
-1. **Pré-requisitos**
+1.  **Pré-requisitos**
 
-   - Certifique-se de ter o Docker e o Docker-compose instalados na sua máquina.
+    - Certifique-se de ter o Docker e o Docker-compose instalados na sua máquina.
 
-   ```
-   docker --version
-   docker-compose --version
-   ```
+    ```
+    docker --version
+    docker-compose --version
+    ```
 
-2. **Clone o repositório**
+2.  **Clone o repositório**
 
-   ```sh
-   git clone <url-do-repositorio>
-   cd projeto_escola_faat
-   ```
+    ```sh
+    git clone <url-do-repositorio>
+    cd projeto_escola_faat
+    ```
 
-3. **Build e execução dos containers**
+3.  **Build e execução dos containers**
 
-   - Com o Docker e o Docker-compose instalados, faça a build e a execução dos containers
-   - OBS: Certifique-se de estar dentro da pasta raíz do projeto após fazer o clone do repositório
+    - Com o Docker e o Docker-compose instalados, faça a build e a execução dos containers
+    - OBS: Certifique-se de estar dentro da pasta raíz do projeto após fazer o clone do repositório
 
-   ```
-   docker-compose up --build
-   ```
+    ```
+    docker-compose up --build
+    ```
 
-4. **Acessar a documentação Swagger**
+4.  **Acessar a documentação Swagger**
 
-   ```
-   http://localhost:5000/apidocs
-   ```
+    Você encontrará a documentação interativa de todos os endpoints, podendo testar as requisições diretamente pela interface.
 
-5. **Exemplos de requisições para os Endpoints CRUD**
+    ```
+    http://localhost:5000/apidocs
+    ```
 
-   As tabelas dependem de chaves estrangeiras (foreign keys). Com isso, teste os endpoints conforme a ordem de criação das tabelas (\projeto_escola_faat\bd\escola.sql) ou conforme a seguinte ordem:
+5.  **Exemplos de requisições para os Endpoints CRUD**
 
-   - Professor<br>
-   - Atividade<br>
-   - Turma<br>
-   - Aluno<br>
-   - Pagamento<br>
-   - Presença<br>
-   - Atividade_Aluno<br>
-   - Usuário<br>
-   - Disciplina<br>
-   - Nota<br>
-   - Frequencia<br>
+    As tabelas dependem de chaves estrangeiras (foreign keys). Com isso, teste os endpoints conforme a ordem de criação das tabelas (\projeto_escola_faat\bd\escola.sql) ou conforme a seguinte ordem:
 
-   Utilize a ferramenta de testes de sua preferência (Postman, Insomnia, etc)<br>
+    - Professor<br>
+    - Atividade<br>
+    - Turma<br>
+    - Aluno<br>
+    - Pagamento<br>
+    - Presença<br>
+    - Atividade_Aluno<br>
+    - Usuário<br>
+    - Disciplina<br>
+    - Nota<br>
+    - Frequencia<br>
 
-   - **_Tabela Professor (crudProfessores.py)_**
+    Utilize a ferramenta de testes de sua preferência (Postman, Insomnia, etc)<br>
 
-     - Listar professores (método GET)
+    - **_Tabela Professor (crudProfessores.py)_**
 
-     ```
-        GET http://localhost:5000/api/professores
-     ```
+      - Listar professores (método GET)
 
-     - Cadastrar um professor (método POST)
+      ```
+         GET http://localhost:5000/api/professores
+      ```
 
-     ```
-        POST http://localhost:5000/api/professores
-     ```
+      - Cadastrar um professor (método POST)
 
-     ```json
-     {
-       "nome_completo": "Carlos Souza",
-       "email": "carlos@email.com",
-       "telefone": "11988887777"
-     }
-     ```
+      ```
+         POST http://localhost:5000/api/professores
+      ```
 
-     - Atualizar o cadastro de um professor (método PUT)
+      ```json
+      {
+        "nome_completo": "Carlos Souza",
+        "email": "carlos@email.com",
+        "telefone": "11988887777"
+      }
+      ```
 
-     ```
-        PUT http://localhost:5000/api/professores/1
-     ```
+      - Atualizar o cadastro de um professor (método PUT)
 
-     ```json
-     {
-       "nome_completo": "Carlos Souza",
-       "email": "carlos@email.com",
-       "telefone": "11988887777"
-     }
-     ```
+      ```
+         PUT http://localhost:5000/api/professores/1
+      ```
 
-     - Excluir o cadastro de um professor (método DELETE)
+      ```json
+      {
+        "nome_completo": "Carlos Souza",
+        "email": "carlos@email.com",
+        "telefone": "11988887777"
+      }
+      ```
 
-     ```
-        DELETE http://localhost:5000/api/professores/1
-     ```
+      - Excluir o cadastro de um professor (método DELETE)
 
-   - **_Tabela Atividade (crudAtividades.py)_**
+      ```
+         DELETE http://localhost:5000/api/professores/1
+      ```
 
-     - Listar atividades (método GET)
+    - **_Tabela Atividade (crudAtividades.py)_**
 
-     ```
-        GET http://localhost:5000/api/atividades
-     ```
+      - Listar atividades (método GET)
 
-     - Cadastrar uma atividade (método POST)
+      ```
+         GET http://localhost:5000/api/atividades
+      ```
 
-     ```
-        POST http://localhost:5000/api/atividades
-     ```
+      - Cadastrar uma atividade (método POST)
 
-     ```json
-     {
-       "descricao": "Passeio ao museu",
-       "data_realizacao": "2024-07-10"
-     }
-     ```
+      ```
+         POST http://localhost:5000/api/atividades
+      ```
 
-     - Atualizar uma atividade (método PUT)
+      ```json
+      {
+        "descricao": "Passeio ao museu",
+        "data_realizacao": "2024-07-10"
+      }
+      ```
 
-     ```
-        PUT http://localhost:5000/api/atividades/1
-     ```
+      - Atualizar uma atividade (método PUT)
 
-     ```json
-     {
-       "descricao": "Passeio ao parque",
-       "data_realizacao": "2024-07-15"
-     }
-     ```
+      ```
+         PUT http://localhost:5000/api/atividades/1
+      ```
 
-     - Excluir uma atividade (método DELETE)
+      ```json
+      {
+        "descricao": "Passeio ao parque",
+        "data_realizacao": "2024-07-15"
+      }
+      ```
 
-     ```
-        DELETE http://localhost:5000/api/atividades/1
-     ```
+      - Excluir uma atividade (método DELETE)
 
-   - **_Tabela Turma (crudTurmas.py)_**
+      ```
+         DELETE http://localhost:5000/api/atividades/1
+      ```
 
-     - Listar turmas (método GET)
+    - **_Tabela Turma (crudTurmas.py)_**
 
-     ```
-        GET http://localhost:5000/api/turmas
-     ```
+      - Listar turmas (método GET)
 
-     - Cadastrar uma turma (método POST)
+      ```
+         GET http://localhost:5000/api/turmas
+      ```
 
-     ```
-        POST http://localhost:5000/api/turmas
-     ```
+      - Cadastrar uma turma (método POST)
 
-     ```json
-     {
-       "nome_turma": "Turma A",
-       "id_professor": 1,
-       "horario": "08:00-12:00"
-     }
-     ```
+      ```
+         POST http://localhost:5000/api/turmas
+      ```
 
-     - Atualizar uma turma (método PUT)
+      ```json
+      {
+        "nome_turma": "Turma A",
+        "id_professor": 1,
+        "horario": "08:00-12:00"
+      }
+      ```
 
-     ```
-        PUT http://localhost:5000/api/turmas/1
-     ```
+      - Atualizar uma turma (método PUT)
 
-     ```json
-     {
-       "nome_turma": "Turma A - Atualizada",
-       "id_professor": 1,
-       "horario": "13:00-17:00"
-     }
-     ```
+      ```
+         PUT http://localhost:5000/api/turmas/1
+      ```
 
-     - Excluir uma turma cadastrada (método DELETE)
+      ```json
+      {
+        "nome_turma": "Turma A - Atualizada",
+        "id_professor": 1,
+        "horario": "13:00-17:00"
+      }
+      ```
 
-     ```
-        DELETE http://localhost:5000/api/turmas/1
-     ```
+      - Excluir uma turma cadastrada (método DELETE)
 
-   - **_Tabela Alunos (crudAlunos.py)_**
+      ```
+         DELETE http://localhost:5000/api/turmas/1
+      ```
 
-     - Listar alunos (método GET)
+    - **_Tabela Alunos (crudAlunos.py)_**
 
-     ```
-        GET http://localhost:5000/api/alunos
-     ```
+      - Listar alunos (método GET)
 
-     - Cadastrar um aluno (método POST)
+      ```
+         GET http://localhost:5000/api/alunos
+      ```
 
-     ```
-        POST http://localhost:5000/api/alunos
-     ```
+      - Cadastrar um aluno (método POST)
 
-     ```json
-     {
-       "nome_completo": "João da Silva",
-       "data_nascimento": "2010-05-10",
-       "id_turma": 2,
-       "nome_responsavel": "Maria Silva",
-       "telefone_responsavel": "11999999999",
-       "email_responsavel": "maria@email.com",
-       "informacoes_adicionais": "Nenhuma"
-     }
-     ```
+      ```
+         POST http://localhost:5000/api/alunos
+      ```
 
-     - Atualizar um aluno (método PUT)
+      ```json
+      {
+        "nome_completo": "João da Silva",
+        "data_nascimento": "2010-05-10",
+        "id_turma": 2,
+        "nome_responsavel": "Maria Silva",
+        "telefone_responsavel": "11999999999",
+        "email_responsavel": "maria@email.com",
+        "informacoes_adicionais": "Nenhuma"
+      }
+      ```
 
-     ```
-        PUT http://localhost:5000/api/alunos/1
-     ```
+      - Atualizar um aluno (método PUT)
 
-     ```json
-     {
-       "nome_completo": "João da Silva",
-       "data_nascimento": "2010-05-10",
-       "id_turma": 2,
-       "nome_responsavel": "Maria Silva",
-       "telefone_responsavel": "11999999999",
-       "email_responsavel": "maria@email.com",
-       "informacoes_adicionais": "Atualizado"
-     }
-     ```
+      ```
+         PUT http://localhost:5000/api/alunos/1
+      ```
 
-     - Excluir um aluno cadastrado (método DELETE)
+      ```json
+      {
+        "nome_completo": "João da Silva",
+        "data_nascimento": "2010-05-10",
+        "id_turma": 2,
+        "nome_responsavel": "Maria Silva",
+        "telefone_responsavel": "11999999999",
+        "email_responsavel": "maria@email.com",
+        "informacoes_adicionais": "Atualizado"
+      }
+      ```
 
-     ```
-        DELETE http://localhost:5000/api/alunos/1
-     ```
+      - Excluir um aluno cadastrado (método DELETE)
+
+      ```
+         DELETE http://localhost:5000/api/alunos/1
+      ```
+
+6.  **Observações**
+
+    - O backend faz log das operações em escola_infantil.log.
+
+    - Para atualizar dependências Python, edite o requirements.txt e reconstrua a imagem com docker-compose up --build.
