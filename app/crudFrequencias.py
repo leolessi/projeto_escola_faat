@@ -103,6 +103,11 @@ def buscar_frequencias_por_aluno(id_aluno):
         description: Nenhuma frequência encontrada para este aluno.
       400:
         description: Erro ao buscar as frequências.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
     """
     conn = bd.create_connection()
     if conn is None:
@@ -172,6 +177,11 @@ def buscar_frequencia(id_frequencia):
         description: Frequência não encontrada.
       400:
         description: Erro ao buscar a frequência.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
     """
     conn = bd.create_connection()
     if conn is None:
@@ -229,8 +239,18 @@ def cadastrar_frequencia():
     responses:
       201:
         description: Frequência cadastrada com sucesso.
+        schema:
+          type: object
+          properties:
+            message:
+              type: string
       400:
         description: Erro ao criar frequência.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
     """
     data = request.get_json()
     conn = bd.create_connection()
@@ -288,8 +308,18 @@ def alterar_frequencia(id_frequencia):
     responses:
       200:
         description: Dados da frequência atualizados com sucesso.
+        schema:
+          type: object
+          properties:
+            message:
+              type: string
       400:
         description: Erro ao atualizar os dados da frequência.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
     """
     data = request.get_json()
     conn = bd.create_connection()
