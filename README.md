@@ -27,7 +27,7 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
    - Com o Docker e o Docker-compose instalados, faça a build e a execução dos containers
    - OBS: Certifique-se de estar dentro da pasta raíz do projeto após fazer o clone do repositório
 
-   ```sh
+   ```
    docker-compose up --build
    ```
 
@@ -44,17 +44,17 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
 
      - Listar alunos (método GET)
 
-     ```sh
+     ```s
      GET http://localhost:5000/api/alunos
      ```
 
      - Cadastrar um aluno (método POST)
 
-     ```sh
+     ```
      POST http://localhost:5000/api/alunos
      ```
 
-     ```sh
+     ```
      {
      "nome_completo": "João da Silva",
      "data_nascimento": "2010-05-10",
@@ -69,7 +69,7 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
    - Atualizar cadastro do aluno (método PUT)
 
    ```
-     PUT http://localhost:5000/api/alunos
+       PUT http://localhost:5000/api/alunos
    ```
 
    ```
@@ -84,7 +84,7 @@ A aplicação backend da Escola FAAT é uma API RESTful desenvolvida em Python (
    }
    ```
 
-   -- Excluir um aluno cadastrado (método DELETE)
+   - Excluir um aluno cadastrado (método DELETE)
 
    ```
    DELETE http://localhost:5000/api/alunos
