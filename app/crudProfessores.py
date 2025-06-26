@@ -1,12 +1,10 @@
 from flask import Blueprint, request, jsonify
-from flasgger import Swagger
 import Util.bd as bd
 import logging
 
 
 logger = logging.getLogger(__name__)
 professores_bp = Blueprint("professores", __name__)
-swagger = Swagger()
 
 
 @professores_bp.route("/professores", methods=["GET"])
@@ -19,6 +17,26 @@ def listar_professores():
     responses:
       200:
         description: Lista de professores retornada com sucesso.
+        schema:
+          type: array
+          items:
+            type: object
+            properties:
+              id_professor:
+                type: integer
+              nome_completo:
+                type: string
+              email:
+                type: string
+              telefone:
+                type: string
+      400:
+        description: Erro ao buscar os professores.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
     """
     conn = bd.create_connection()
     if conn is None:
@@ -55,6 +73,34 @@ def cadastrar_professor():
     ---
     tags:
       - Professores
+    parameters:
+      - name: body
+        in: body
+        required: true
+        schema:
+          type: object
+          properties:
+            nome_completo:
+              type: string
+            email:
+              type: string
+            telefone:
+              type: string
+    responses:
+      201:
+        description: Professor cadastrado com sucesso.
+        schema:
+          type: object
+          properties:
+            message:
+              type: string
+      400:
+        description: Erro ao criar professor.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
     """
     data = request.get_json()
     conn = bd.create_connection()
@@ -90,6 +136,39 @@ def alterar_professor(id_professor):
     ---
     tags:
       - Professores
+    parameters:
+      - name: id_professor
+        in: path
+        required: true
+        type: integer
+        description: ID do professor a ser atualizado.
+      - name: body
+        in: body
+        required: true
+        schema:
+          type: object
+          properties:
+            nome_completo:
+              type: string
+            email:
+              type: string
+            telefone:
+              type: string
+    responses:
+      200:
+        description: Dados do professor atualizados com sucesso.
+        schema:
+          type: object
+          properties:
+            message:
+              type: string
+      400:
+        description: Erro ao atualizar os dados do professor.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
     """
     data = request.get_json()
     conn = bd.create_connection()
@@ -127,6 +206,27 @@ def excluir_professor(id_professor):
     ---
     tags:
       - Professores
+    parameters:
+      - name: id_professor
+        in: path
+        required: true
+        type: integer
+        description: ID do professor a ser excluído.
+    responses:
+      200:
+        description: Professor excluído com sucesso.
+        schema:
+          type: object
+          properties:
+            message:
+              type: string
+      400:
+        description: Erro ao excluir o professor.
+        schema:
+          type: object
+          properties:
+            error:
+              type: string
     """
     conn = bd.create_connection()
     if conn is None:
