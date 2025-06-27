@@ -1,24 +1,24 @@
-CREATE TABLE Professor (
+CREATE TABLE Professores (
     id_professor SERIAL PRIMARY KEY,
     nome_completo VARCHAR(255) NOT NULL,
     email VARCHAR(100) NOT NULL,
     telefone VARCHAR(20) NOT NULL
 );
 
-CREATE TABLE Atividade (
+CREATE TABLE Atividades (
     id_atividade SERIAL PRIMARY KEY,
     descricao TEXT NOT NULL,
     data_realizacao DATE NOT NULL
 );
 
-CREATE TABLE Turma (
+CREATE TABLE Turmas (
     id_turma SERIAL PRIMARY KEY,
     nome_turma VARCHAR(50) NOT NULL,
     id_professor INT REFERENCES Professor(id_professor),
     horario VARCHAR(100) NOT NULL
 );
 
-CREATE TABLE Aluno (
+CREATE TABLE Alunos (
     id_aluno SERIAL PRIMARY KEY,
     nome_completo VARCHAR(255) NOT NULL,
     data_nascimento DATE NOT NULL,
@@ -29,7 +29,7 @@ CREATE TABLE Aluno (
     informacoes_adicionais TEXT
 );
 
-CREATE TABLE Pagamento (
+CREATE TABLE Pagamentos (
     id_pagamento SERIAL PRIMARY KEY,
     id_aluno INT REFERENCES Aluno(id_aluno),
     data_pagamento DATE NOT NULL,
@@ -39,20 +39,20 @@ CREATE TABLE Pagamento (
     status VARCHAR(20) NOT NULL
 );
 
-CREATE TABLE Presenca (
+CREATE TABLE Presencas (
     id_presenca SERIAL PRIMARY KEY,
     id_aluno INT REFERENCES Aluno(id_aluno),
     data_presenca DATE NOT NULL,
     presente BOOLEAN NOT NULL
 );
 
-CREATE TABLE Atividade_Aluno (
+CREATE TABLE Atividades_Alunos (
     id_atividade INT REFERENCES Atividade(id_atividade),
     id_aluno INT REFERENCES Aluno(id_aluno),
     PRIMARY KEY (id_atividade, id_aluno)
 );
 
-CREATE TABLE Usuario (
+CREATE TABLE Usuarios (
     id_usuario SERIAL PRIMARY KEY,
     login VARCHAR(50) UNIQUE NOT NULL,
     senha VARCHAR(255) NOT NULL,
@@ -60,13 +60,13 @@ CREATE TABLE Usuario (
     id_professor INT REFERENCES Professor(id_professor)
 );
 
-CREATE TABLE Disciplina (
+CREATE TABLE Disciplinas (
     id_disciplina SERIAL PRIMARY KEY,
     nome_disciplina VARCHAR(100) NOT NULL,
     id_professor INT REFERENCES Professor(id_professor)
 );
 
-CREATE TABLE Nota (
+CREATE TABLE Notas (
     id_nota SERIAL PRIMARY KEY,
     id_aluno INT REFERENCES Aluno(id_aluno),
     id_disciplina INT REFERENCES Disciplina(id_disciplina),
@@ -74,7 +74,7 @@ CREATE TABLE Nota (
     data_avaliacao DATE NOT NULL
 );
 
-CREATE TABLE Frequencia (
+CREATE TABLE Frequencias (
     id_frequencia SERIAL PRIMARY KEY,
     id_aluno INT REFERENCES Aluno(id_aluno),
     id_disciplina INT REFERENCES Disciplina(id_disciplina),
