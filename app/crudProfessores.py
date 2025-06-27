@@ -43,7 +43,7 @@ def listar_professores():
         return jsonify({"error": "Failed to connect to the database"}), 500
     cursor = conn.cursor()
     try:
-        cursor.execute("SELECT * FROM Professor")
+        cursor.execute("SELECT * FROM Professores")
         professores = cursor.fetchall()
         return (
             jsonify(
@@ -110,7 +110,7 @@ def cadastrar_professor():
     try:
         cursor.execute(
             """
-            INSERT INTO Professor (nome_completo, email, telefone)
+            INSERT INTO Professores (nome_completo, email, telefone)
             VALUES (%s, %s, %s)
             """,
             (
@@ -178,7 +178,7 @@ def alterar_professor(id_professor):
     try:
         cursor.execute(
             """
-            UPDATE Professor
+            UPDATE Professores
             SET nome_completo = %s, email = %s, telefone = %s
             WHERE id_professor = %s
             """,
@@ -233,7 +233,9 @@ def excluir_professor(id_professor):
         return jsonify({"error": "Failed to connect to the database"}), 500
     cursor = conn.cursor()
     try:
-        cursor.execute("DELETE FROM Professor WHERE id_professor = %s", (id_professor,))
+        cursor.execute(
+            "DELETE FROM Professores WHERE id_professor = %s", (id_professor,)
+        )
         conn.commit()
         return jsonify({"message": "Professor excluído com sucesso"}), 200
     except Exception as e:

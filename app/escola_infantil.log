@@ -1628,3 +1628,64 @@ expected <block end>, but found '?'
 2025-06-27 16:25:38,247 - INFO - 172.19.0.1 - - [27/Jun/2025 16:25:38] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
 2025-06-27 16:25:38,249 - INFO - 172.19.0.1 - - [27/Jun/2025 16:25:38] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
 2025-06-27 16:25:38,700 - INFO - 172.19.0.1 - - [27/Jun/2025 16:25:38] "GET /apispec_1.json HTTP/1.1" 200 -
+2025-06-27 16:30:34,896 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-06-27 16:30:34,897 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-27 16:30:34,899 - INFO -  * Restarting with stat
+2025-06-27 16:30:35,688 - WARNING -  * Debugger is active!
+2025-06-27 16:30:35,689 - INFO -  * Debugger PIN: 878-090-588
+2025-06-27 16:33:02,135 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-06-27 16:33:02,136 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-27 16:33:02,138 - INFO -  * Restarting with stat
+2025-06-27 16:33:02,811 - WARNING -  * Debugger is active!
+2025-06-27 16:33:02,813 - INFO -  * Debugger PIN: 756-633-487
+2025-06-27 16:34:00,819 - INFO - 172.18.0.1 - - [27/Jun/2025 16:34:00] "[31m[1mGET /api/professores HTTP/1.1[0m" 400 -
+2025-06-27 16:34:08,952 - INFO - 172.18.0.1 - - [27/Jun/2025 16:34:08] "[31m[1mGET /api/professores HTTP/1.1[0m" 400 -
+2025-06-27 16:34:23,875 - INFO -  * Detected change in '/app/crudProfessores.py', reloading
+2025-06-27 16:34:23,937 - INFO -  * Restarting with stat
+2025-06-27 16:34:24,675 - WARNING -  * Debugger is active!
+2025-06-27 16:34:24,676 - INFO -  * Debugger PIN: 756-633-487
+2025-06-27 16:35:30,400 - INFO -  * Detected change in '/app/crudProfessores.py', reloading
+2025-06-27 16:35:30,466 - INFO -  * Restarting with stat
+2025-06-27 16:35:31,144 - WARNING -  * Debugger is active!
+2025-06-27 16:35:31,145 - INFO -  * Debugger PIN: 756-633-487
+2025-06-27 16:35:39,139 - INFO -  * Detected change in '/app/crudProfessores.py', reloading
+2025-06-27 16:35:39,193 - INFO -  * Restarting with stat
+2025-06-27 16:35:39,822 - WARNING -  * Debugger is active!
+2025-06-27 16:35:39,822 - INFO -  * Debugger PIN: 756-633-487
+2025-06-27 16:35:47,536 - INFO -  * Detected change in '/app/crudProfessores.py', reloading
+2025-06-27 16:35:47,604 - INFO -  * Restarting with stat
+2025-06-27 16:35:48,384 - WARNING -  * Debugger is active!
+2025-06-27 16:35:48,385 - INFO -  * Debugger PIN: 756-633-487
+2025-06-27 16:35:57,552 - INFO -  * Detected change in '/app/crudProfessores.py', reloading
+2025-06-27 16:35:57,600 - INFO -  * Restarting with stat
+2025-06-27 16:35:58,265 - WARNING -  * Debugger is active!
+2025-06-27 16:35:58,266 - INFO -  * Debugger PIN: 756-633-487
+2025-06-27 16:36:05,325 - INFO -  * Detected change in '/app/crudProfessores.py', reloading
+2025-06-27 16:36:05,385 - INFO -  * Restarting with stat
+2025-06-27 16:36:06,124 - WARNING -  * Debugger is active!
+2025-06-27 16:36:06,125 - INFO -  * Debugger PIN: 756-633-487
+2025-06-27 16:36:25,060 - INFO -  * Detected change in '/app/crudProfessores.py', reloading
+2025-06-27 16:36:25,121 - INFO -  * Restarting with stat
+2025-06-27 16:36:25,794 - WARNING -  * Debugger is active!
+2025-06-27 16:36:25,795 - INFO -  * Debugger PIN: 756-633-487
+2025-06-27 16:36:50,374 - INFO -  * Detected change in '/app/crudProfessores.py', reloading
+2025-06-27 16:36:50,420 - INFO -  * Restarting with stat
+2025-06-27 16:36:51,108 - WARNING -  * Debugger is active!
+2025-06-27 16:36:51,109 - INFO -  * Debugger PIN: 756-633-487
+2025-06-27 18:13:19,022 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.3:5000
+2025-06-27 18:13:19,022 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-27 18:13:19,025 - INFO -  * Restarting with stat
+2025-06-27 18:13:19,714 - WARNING -  * Debugger is active!
+2025-06-27 18:13:19,715 - INFO -  * Debugger PIN: 571-885-892
+2025-06-27 18:14:27,187 - INFO - 172.19.0.1 - - [27/Jun/2025 18:14:27] "GET /api/professores HTTP/1.1" 200 -
+2025-06-27 18:14:50,546 - INFO - 172.19.0.1 - - [27/Jun/2025 18:14:50] "[35m[1mPOST /api/professores HTTP/1.1[0m" 201 -
+2025-06-27 18:14:53,896 - INFO - 172.19.0.1 - - [27/Jun/2025 18:14:53] "GET /api/professores HTTP/1.1" 200 -
