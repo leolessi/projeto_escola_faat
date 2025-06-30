@@ -1785,3 +1785,33 @@ expected <block end>, but found '?'
 2025-06-30 20:20:18,537 - INFO - 172.18.0.1 - - [30/Jun/2025 20:20:18] "GET /api/alunos HTTP/1.1" 200 -
 2025-06-30 20:20:27,816 - INFO - 172.18.0.1 - - [30/Jun/2025 20:20:27] "GET /api/professores HTTP/1.1" 200 -
 2025-06-30 20:20:32,968 - INFO - 172.18.0.1 - - [30/Jun/2025 20:20:32] "GET /api/atividades HTTP/1.1" 200 -
+2025-06-30 22:08:50,509 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.3:5000
+2025-06-30 22:08:50,509 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-30 22:08:50,510 - INFO -  * Restarting with stat
+2025-06-30 22:08:50,911 - WARNING -  * Debugger is active!
+2025-06-30 22:08:50,911 - INFO -  * Debugger PIN: 666-404-563
+2025-06-30 22:08:55,053 - INFO - 172.19.0.1 - - [30/Jun/2025 22:08:55] "GET /api/professores HTTP/1.1" 200 -
+2025-06-30 22:09:21,573 - INFO - 172.19.0.1 - - [30/Jun/2025 22:09:21] "[35m[1mPOST /api/professores HTTP/1.1[0m" 201 -
+2025-06-30 22:09:24,979 - INFO - 172.19.0.1 - - [30/Jun/2025 22:09:24] "GET /api/professores HTTP/1.1" 200 -
+2025-06-30 22:09:48,537 - INFO - 172.19.0.1 - - [30/Jun/2025 22:09:48] "PUT /api/professores/4 HTTP/1.1" 200 -
+2025-06-30 22:09:51,164 - INFO - 172.19.0.1 - - [30/Jun/2025 22:09:51] "GET /api/professores HTTP/1.1" 200 -
+2025-06-30 22:09:56,714 - INFO - 172.19.0.1 - - [30/Jun/2025 22:09:56] "DELETE /api/professores/4 HTTP/1.1" 200 -
+2025-06-30 22:09:59,580 - INFO - 172.19.0.1 - - [30/Jun/2025 22:09:59] "GET /api/professores HTTP/1.1" 200 -
+2025-06-30 22:10:02,517 - INFO - 172.19.0.1 - - [30/Jun/2025 22:10:02] "GET /apidocs/ HTTP/1.1" 200 -
+2025-06-30 22:10:02,642 - INFO - 172.19.0.1 - - [30/Jun/2025 22:10:02] "GET /flasgger_static/swagger-ui.css HTTP/1.1" 200 -
+2025-06-30 22:10:02,643 - INFO - 172.19.0.1 - - [30/Jun/2025 22:10:02] "GET /flasgger_static/lib/jquery.min.js HTTP/1.1" 200 -
+2025-06-30 22:10:02,644 - INFO - 172.19.0.1 - - [30/Jun/2025 22:10:02] "GET /flasgger_static/swagger-ui-bundle.js HTTP/1.1" 200 -
+2025-06-30 22:10:02,644 - INFO - 172.19.0.1 - - [30/Jun/2025 22:10:02] "GET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+2025-06-30 22:10:03,217 - INFO - 172.19.0.1 - - [30/Jun/2025 22:10:03] "GET /apispec_1.json HTTP/1.1" 200 -
+2025-06-30 22:10:24,659 - INFO - 172.19.0.1 - - [30/Jun/2025 22:10:24] "GET /apidocs/ HTTP/1.1" 200 -
+2025-06-30 22:10:24,716 - INFO - 172.19.0.1 - - [30/Jun/2025 22:10:24] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2025-06-30 22:10:24,717 - INFO - 172.19.0.1 - - [30/Jun/2025 22:10:24] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-06-30 22:10:24,718 - INFO - 172.19.0.1 - - [30/Jun/2025 22:10:24] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-06-30 22:10:24,719 - INFO - 172.19.0.1 - - [30/Jun/2025 22:10:24] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-06-30 22:10:25,059 - INFO - 172.19.0.1 - - [30/Jun/2025 22:10:25] "GET /apispec_1.json HTTP/1.1" 200 -
+2025-06-30 22:10:52,806 - INFO - 172.19.0.1 - - [30/Jun/2025 22:10:52] "[35m[1mPOST /api/professores HTTP/1.1[0m" 201 -
+2025-06-30 22:11:01,638 - INFO - 172.19.0.1 - - [30/Jun/2025 22:11:01] "PUT /api/professores/5 HTTP/1.1" 200 -
+2025-06-30 22:11:12,293 - INFO - 172.19.0.1 - - [30/Jun/2025 22:11:12] "PUT /api/professores/5 HTTP/1.1" 200 -
