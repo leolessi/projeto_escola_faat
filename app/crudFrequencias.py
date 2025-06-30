@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-import Util.bd as bd
+from app.Util import bd
 
 frequencias_bp = Blueprint("frequencias", __name__)
 
