@@ -38,7 +38,7 @@ def listar_disciplinas():
         return jsonify({"error": "Failed to connect to the database"}), 500
     cursor = conn.cursor()
     try:
-        cursor.execute("SELECT * FROM Disciplina")
+        cursor.execute("SELECT * FROM Disciplinas")
         disciplinas = cursor.fetchall()
         return (
             jsonify(
@@ -96,7 +96,7 @@ def buscar_disciplina(id_disciplina):
     cursor = conn.cursor()
     try:
         cursor.execute(
-            "SELECT * FROM Disciplina WHERE id_disciplina = %s", (id_disciplina,)
+            "SELECT * FROM Disciplinas WHERE id_disciplina = %s", (id_disciplina,)
         )
         d = cursor.fetchone()
         if d is None:
@@ -145,7 +145,7 @@ def cadastrar_disciplina():
     cursor = conn.cursor()
     try:
         cursor.execute(
-            "INSERT INTO Disciplina (nome_disciplina, id_professor) VALUES (%s, %s)",
+            "INSERT INTO Disciplinas (nome_disciplina, id_professor) VALUES (%s, %s)",
             (data["nome_disciplina"], data.get("id_professor")),
         )
         conn.commit()
@@ -194,7 +194,7 @@ def alterar_disciplina(id_disciplina):
     cursor = conn.cursor()
     try:
         cursor.execute(
-            "UPDATE Disciplina SET nome_disciplina = %s, id_professor = %s WHERE id_disciplina = %s",
+            "UPDATE Disciplinas SET nome_disciplina = %s, id_professor = %s WHERE id_disciplina = %s",
             (data["nome_disciplina"], data.get("id_professor"), id_disciplina),
         )
         conn.commit()
@@ -249,7 +249,7 @@ def excluir_disciplina(id_disciplina):
     cursor = conn.cursor()
     try:
         cursor.execute(
-            "DELETE FROM Disciplina WHERE id_disciplina = %s", (id_disciplina,)
+            "DELETE FROM Disciplinas WHERE id_disciplina = %s", (id_disciplina,)
         )
         conn.commit()
         return jsonify({"message": "Disciplina excluída com sucesso"}), 200

@@ -44,7 +44,7 @@ def listar_notas():
         return jsonify({"error": "Failed to connect to the database"}), 500
     cursor = conn.cursor()
     try:
-        cursor.execute("SELECT * FROM Nota")
+        cursor.execute("SELECT * FROM Notas")
         notas = cursor.fetchall()
         return (
             jsonify(
@@ -109,7 +109,7 @@ def buscar_nota(id_nota):
         return jsonify({"error": "Failed to connect to the database"}), 500
     cursor = conn.cursor()
     try:
-        cursor.execute("SELECT * FROM Nota WHERE id_nota = %s", (id_nota,))
+        cursor.execute("SELECT * FROM Notas WHERE id_nota = %s", (id_nota,))
         n = cursor.fetchone()
         if n is None:
             return jsonify({"error": "Nota não encontrada"}), 404
@@ -169,7 +169,7 @@ def cadastrar_nota():
     cursor = conn.cursor()
     try:
         cursor.execute(
-            "INSERT INTO Nota (id_aluno, id_disciplina, valor_nota, data_avaliacao) VALUES (%s, %s, %s, %s)",
+            "INSERT INTO Notas (id_aluno, id_disciplina, valor_nota, data_avaliacao) VALUES (%s, %s, %s, %s)",
             (
                 data["id_aluno"],
                 data["id_disciplina"],
@@ -229,7 +229,7 @@ def alterar_nota(id_nota):
     cursor = conn.cursor()
     try:
         cursor.execute(
-            "UPDATE Nota SET id_aluno = %s, id_disciplina = %s, valor_nota = %s, data_avaliacao = %s WHERE id_nota = %s",
+            "UPDATE Notas SET id_aluno = %s, id_disciplina = %s, valor_nota = %s, data_avaliacao = %s WHERE id_nota = %s",
             (
                 data["id_aluno"],
                 data["id_disciplina"],
@@ -289,7 +289,7 @@ def excluir_nota(id_nota):
         return jsonify({"error": "Failed to connect to the database"}), 500
     cursor = conn.cursor()
     try:
-        cursor.execute("DELETE FROM Nota WHERE id_nota = %s", (id_nota,))
+        cursor.execute("DELETE FROM Notas WHERE id_nota = %s", (id_nota,))
         conn.commit()
         return jsonify({"message": "Nota excluída com sucesso"}), 200
     except Exception as e:
@@ -343,7 +343,7 @@ def buscar_notas_por_aluno(id_aluno):
         return jsonify({"error": "Failed to connect to the database"}), 500
     cursor = conn.cursor()
     try:
-        cursor.execute("SELECT * FROM Nota WHERE id_aluno = %s", (id_aluno,))
+        cursor.execute("SELECT * FROM Notas WHERE id_aluno = %s", (id_aluno,))
         notas = cursor.fetchall()
         if not notas:
             return jsonify({"error": "Nenhuma nota encontrada para este aluno"}), 404

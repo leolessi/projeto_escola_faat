@@ -48,7 +48,7 @@ def listar_presencas():
         return jsonify({"error": "Failed to connect to the database"}), 500
     cursor = conn.cursor()
     try:
-        cursor.execute("SELECT * FROM Presenca")
+        cursor.execute("SELECT * FROM Presencas")
         presencas = cursor.fetchall()
         return (
             jsonify(
@@ -123,7 +123,7 @@ def cadastrar_presenca():
     try:
         cursor.execute(
             """
-            INSERT INTO Presenca (id_aluno, data_presenca, presente)
+            INSERT INTO Presencas (id_aluno, data_presenca, presente)
             VALUES (%s, %s, %s)
             """,
             (
@@ -199,7 +199,7 @@ def alterar_presenca(id_presenca):
     try:
         cursor.execute(
             """
-            UPDATE Presenca
+            UPDATE Presencas
             SET id_aluno = %s, data_presenca = %s, presente = %s
             WHERE id_presenca = %s
             """,
@@ -261,7 +261,7 @@ def excluir_presenca(id_presenca):
         return jsonify({"error": "Failed to connect to the database"}), 500
     cursor = conn.cursor()
     try:
-        cursor.execute("DELETE FROM Presenca WHERE id_presenca = %s", (id_presenca,))
+        cursor.execute("DELETE FROM Presencas WHERE id_presenca = %s", (id_presenca,))
         conn.commit()
         return jsonify({"message": "Presença excluída com sucesso"}), 200
     except Exception as e:

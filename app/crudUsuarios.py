@@ -49,7 +49,7 @@ def listar_usuarios():
         return jsonify({"error": "Failed to connect to the database"}), 500
     cursor = conn.cursor()
     try:
-        cursor.execute("SELECT * FROM Usuario")
+        cursor.execute("SELECT * FROM Usuarios")
         usuarios = cursor.fetchall()
         return (
             jsonify(
@@ -112,7 +112,7 @@ def buscar_usuario(id_usuario):
         return jsonify({"error": "Failed to connect to the database"}), 500
     cursor = conn.cursor()
     try:
-        cursor.execute("SELECT * FROM Usuario WHERE id_usuario = %s", (id_usuario,))
+        cursor.execute("SELECT * FROM Usuarios WHERE id_usuario = %s", (id_usuario,))
         usuario = cursor.fetchone()
         if usuario is None:
             return jsonify({"error": "Usuário não encontrado"}), 404
@@ -188,7 +188,7 @@ def cadastrar_usuario():
     try:
         cursor.execute(
             """
-            INSERT INTO Usuario (login, senha, nivel_acesso, id_professor)
+            INSERT INTO Usuarios (login, senha, nivel_acesso, id_professor)
             VALUES (%s, %s, %s, %s)
             """,
             (
@@ -266,7 +266,7 @@ def alterar_usuario(id_usuario):
     try:
         cursor.execute(
             """
-            UPDATE Usuario
+            UPDATE Usuarios
             SET login = %s, senha = %s, nivel_acesso = %s, id_professor = %s
             WHERE id_usuario = %s
             """,
@@ -329,7 +329,7 @@ def excluir_usuario(id_usuario):
         return jsonify({"error": "Failed to connect to the database"}), 500
     cursor = conn.cursor()
     try:
-        cursor.execute("DELETE FROM Usuario WHERE id_usuario = %s", (id_usuario,))
+        cursor.execute("DELETE FROM Usuarios WHERE id_usuario = %s", (id_usuario,))
         conn.commit()
         return jsonify({"message": "Usuário excluído com sucesso"}), 200
     except Exception as e:

@@ -57,7 +57,7 @@ def listar_pagamentos():
         return jsonify({"error": "Failed to connect to the database"}), 500
     cursor = conn.cursor()
     try:
-        cursor.execute("SELECT * FROM Pagamento")
+        cursor.execute("SELECT * FROM Pagamentos")
         pagamentos = cursor.fetchall()
         return (
             jsonify(
@@ -142,7 +142,7 @@ def cadastrar_pagamento():
     try:
         cursor.execute(
             """
-            INSERT INTO Pagamento (id_aluno, data_pagamento, valor_pago, forma_pagamento, referencia, status)
+            INSERT INTO Pagamentos (id_aluno, data_pagamento, valor_pago, forma_pagamento, referencia, status)
             VALUES (%s, %s, %s, %s, %s, %s)
             """,
             (
@@ -228,7 +228,7 @@ def alterar_pagamento(id_pagamento):
     try:
         cursor.execute(
             """
-            UPDATE Pagamento
+            UPDATE Pagamentos
             SET id_aluno = %s, data_pagamento = %s, valor_pago = %s, forma_pagamento = %s, referencia = %s, status = %s
             WHERE id_pagamento = %s
             """,
@@ -293,7 +293,9 @@ def excluir_pagamento(id_pagamento):
         return jsonify({"error": "Failed to connect to the database"}), 500
     cursor = conn.cursor()
     try:
-        cursor.execute("DELETE FROM Pagamento WHERE id_pagamento = %s", (id_pagamento,))
+        cursor.execute(
+            "DELETE FROM Pagamentos WHERE id_pagamento = %s", (id_pagamento,)
+        )
         conn.commit()
         return jsonify({"message": "Pagamento excluído com sucesso"}), 200
     except Exception as e:

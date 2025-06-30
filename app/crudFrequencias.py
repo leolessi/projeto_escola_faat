@@ -43,7 +43,7 @@ def listar_frequencias():
         return jsonify({"error": "Failed to connect to the database"}), 500
     cursor = conn.cursor()
     try:
-        cursor.execute("SELECT * FROM Frequencia")
+        cursor.execute("SELECT * FROM Frequencias")
         frequencias = cursor.fetchall()
         return (
             jsonify(
@@ -114,7 +114,7 @@ def buscar_frequencias_por_aluno(id_aluno):
         return jsonify({"error": "Failed to connect to the database"}), 500
     cursor = conn.cursor()
     try:
-        cursor.execute("SELECT * FROM Frequencia WHERE id_aluno = %s", (id_aluno,))
+        cursor.execute("SELECT * FROM Frequencias WHERE id_aluno = %s", (id_aluno,))
         frequencias = cursor.fetchall()
         if not frequencias:
             return (
@@ -189,7 +189,7 @@ def buscar_frequencia(id_frequencia):
     cursor = conn.cursor()
     try:
         cursor.execute(
-            "SELECT * FROM Frequencia WHERE id_frequencia = %s", (id_frequencia,)
+            "SELECT * FROM Frequencias WHERE id_frequencia = %s", (id_frequencia,)
         )
         f = cursor.fetchone()
         if f is None:
@@ -259,7 +259,7 @@ def cadastrar_frequencia():
     cursor = conn.cursor()
     try:
         cursor.execute(
-            "INSERT INTO Frequencia (id_aluno, id_disciplina, data_aula, presente) VALUES (%s, %s, %s, %s)",
+            "INSERT INTO Frequencias (id_aluno, id_disciplina, data_aula, presente) VALUES (%s, %s, %s, %s)",
             (
                 data["id_aluno"],
                 data["id_disciplina"],
@@ -328,7 +328,7 @@ def alterar_frequencia(id_frequencia):
     cursor = conn.cursor()
     try:
         cursor.execute(
-            "UPDATE Frequencia SET id_aluno = %s, id_disciplina = %s, data_aula = %s, presente = %s WHERE id_frequencia = %s",
+            "UPDATE Frequencias SET id_aluno = %s, id_disciplina = %s, data_aula = %s, presente = %s WHERE id_frequencia = %s",
             (
                 data["id_aluno"],
                 data["id_disciplina"],
@@ -382,7 +382,7 @@ def excluir_frequencia(id_frequencia):
     cursor = conn.cursor()
     try:
         cursor.execute(
-            "DELETE FROM Frequencia WHERE id_frequencia = %s", (id_frequencia,)
+            "DELETE FROM Frequencias WHERE id_frequencia = %s", (id_frequencia,)
         )
         conn.commit()
         return jsonify({"message": "Frequência excluída com sucesso"}), 200

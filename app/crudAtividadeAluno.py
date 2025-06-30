@@ -36,7 +36,7 @@ def listar_atividade_aluno():
         return jsonify({"error": "Failed to connect to the database"}), 500
     cursor = conn.cursor()
     try:
-        cursor.execute("SELECT * FROM Atividade_Aluno")
+        cursor.execute("SELECT * FROM Atividades_Alunos")
         atividade_aluno = cursor.fetchall()
         return (
             jsonify(
@@ -89,7 +89,7 @@ def listar_atividades_por_aluno(id_aluno):
     cursor = conn.cursor()
     try:
         cursor.execute(
-            "SELECT id_atividade FROM Atividade_Aluno WHERE id_aluno = %s",
+            "SELECT id_atividade FROM Atividades_Alunos WHERE id_aluno = %s",
             (id_aluno,),
         )
         atividades = cursor.fetchall()
@@ -138,7 +138,7 @@ def listar_alunos_por_atividade(id_atividade):
     cursor = conn.cursor()
     try:
         cursor.execute(
-            "SELECT id_aluno FROM Atividade_Aluno WHERE id_atividade = %s",
+            "SELECT id_aluno FROM Atividades_Alunos WHERE id_atividade = %s",
             (id_atividade,),
         )
         alunos = cursor.fetchall()
@@ -192,7 +192,7 @@ def cadastrar_atividade_aluno():
     try:
         cursor.execute(
             """
-            INSERT INTO Atividade_Aluno (id_atividade, id_aluno)
+            INSERT INTO Atividades_Alunos (id_atividade, id_aluno)
             VALUES (%s, %s)
             """,
             (
@@ -266,7 +266,7 @@ def atualizar_atividade_aluno(id_atividade, id_aluno):
     try:
         cursor.execute(
             """
-            UPDATE Atividade_Aluno
+            UPDATE Atividades_Alunos
             SET id_atividade = %s, id_aluno = %s
             WHERE id_atividade = %s AND id_aluno = %s
             """,
@@ -334,7 +334,7 @@ def excluir_atividade_aluno(id_atividade, id_aluno):
     cursor = conn.cursor()
     try:
         cursor.execute(
-            "DELETE FROM Atividade_Aluno WHERE id_atividade = %s AND id_aluno = %s",
+            "DELETE FROM Atividades_Alunos WHERE id_atividade = %s AND id_aluno = %s",
             (id_atividade, id_aluno),
         )
         conn.commit()
