@@ -1707,3 +1707,27 @@ expected <block end>, but found '?'
 2025-06-30 16:12:51,514 - INFO -  * Restarting with stat
 2025-06-30 16:12:51,934 - WARNING -  * Debugger is active!
 2025-06-30 16:12:51,935 - INFO -  * Debugger PIN: 268-080-317
+2025-06-30 18:27:38,153 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-06-30 18:27:38,153 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-30 18:27:38,155 - INFO -  * Restarting with stat
+2025-06-30 18:27:38,594 - WARNING -  * Debugger is active!
+2025-06-30 18:27:38,595 - INFO -  * Debugger PIN: 264-847-934
+2025-06-30 18:27:51,065 - INFO - 172.18.0.1 - - [30/Jun/2025 18:27:51] "GET /apidocs/ HTTP/1.1" 200 -
+2025-06-30 18:27:51,141 - INFO - 172.18.0.1 - - [30/Jun/2025 18:27:51] "GET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+2025-06-30 18:27:51,142 - INFO - 172.18.0.1 - - [30/Jun/2025 18:27:51] "GET /flasgger_static/swagger-ui.css HTTP/1.1" 200 -
+2025-06-30 18:27:51,142 - INFO - 172.18.0.1 - - [30/Jun/2025 18:27:51] "GET /flasgger_static/lib/jquery.min.js HTTP/1.1" 200 -
+2025-06-30 18:27:51,143 - INFO - 172.18.0.1 - - [30/Jun/2025 18:27:51] "GET /flasgger_static/swagger-ui-bundle.js HTTP/1.1" 200 -
+2025-06-30 18:27:51,527 - INFO - 172.18.0.1 - - [30/Jun/2025 18:27:51] "GET /flasgger_static/favicon-32x32.png HTTP/1.1" 200 -
+2025-06-30 18:27:51,793 - INFO - 172.18.0.1 - - [30/Jun/2025 18:27:51] "GET /apispec_1.json HTTP/1.1" 200 -
+2025-06-30 18:27:58,184 - INFO - 172.18.0.1 - - [30/Jun/2025 18:27:58] "GET /api/professores HTTP/1.1" 200 -
+2025-06-30 18:27:59,318 - INFO - 172.18.0.1 - - [30/Jun/2025 18:27:59] "GET /api/professores HTTP/1.1" 200 -
+2025-06-30 18:28:11,491 - INFO - 172.18.0.1 - - [30/Jun/2025 18:28:11] "GET /api/professores HTTP/1.1" 200 -
+2025-06-30 18:28:57,013 - INFO - 172.18.0.1 - - [30/Jun/2025 18:28:57] "GET /api/professores HTTP/1.1" 200 -
+2025-06-30 18:29:00,157 - INFO - 172.18.0.1 - - [30/Jun/2025 18:29:00] "[35m[1mPOST /api/professores HTTP/1.1[0m" 201 -
+2025-06-30 18:29:02,576 - INFO - 172.18.0.1 - - [30/Jun/2025 18:29:02] "GET /api/professores HTTP/1.1" 200 -
+2025-06-30 18:29:24,304 - INFO - 172.18.0.1 - - [30/Jun/2025 18:29:24] "[35m[1mPOST /api/professores HTTP/1.1[0m" 201 -
+2025-06-30 18:29:26,361 - INFO - 172.18.0.1 - - [30/Jun/2025 18:29:26] "GET /api/professores HTTP/1.1" 200 -
+2025-06-30 18:34:16,464 - INFO - 172.18.0.1 - - [30/Jun/2025 18:34:16] "DELETE /api/professores/2 HTTP/1.1" 200 -

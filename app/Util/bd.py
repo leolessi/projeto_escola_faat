@@ -26,7 +26,3 @@ def create_connection():
     except OperationalError as e:
         print(f"The error '{e}' occurred")
     return connection
-
-
-# Example usage:
-# connection = create_connection("your_db_name", "your_db_user", "your_db_password", "your_db_host", "your_db_port")
