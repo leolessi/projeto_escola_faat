@@ -1773,3 +1773,15 @@ expected <block end>, but found '?'
 2025-06-30 20:17:42,648 - WARNING -  * Debugger is active!
 2025-06-30 20:17:42,649 - INFO -  * Debugger PIN: 253-555-860
 2025-06-30 20:17:44,857 - INFO - 172.18.0.1 - - [30/Jun/2025 20:17:44] "GET /api/atividades HTTP/1.1" 200 -
+2025-06-30 20:20:10,833 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-06-30 20:20:10,833 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-30 20:20:10,834 - INFO -  * Restarting with stat
+2025-06-30 20:20:11,229 - WARNING -  * Debugger is active!
+2025-06-30 20:20:11,230 - INFO -  * Debugger PIN: 521-174-407
+2025-06-30 20:20:16,720 - INFO - 172.18.0.1 - - [30/Jun/2025 20:20:16] "[33mGET /api/aluno HTTP/1.1[0m" 404 -
+2025-06-30 20:20:18,537 - INFO - 172.18.0.1 - - [30/Jun/2025 20:20:18] "GET /api/alunos HTTP/1.1" 200 -
+2025-06-30 20:20:27,816 - INFO - 172.18.0.1 - - [30/Jun/2025 20:20:27] "GET /api/professores HTTP/1.1" 200 -
+2025-06-30 20:20:32,968 - INFO - 172.18.0.1 - - [30/Jun/2025 20:20:32] "GET /api/atividades HTTP/1.1" 200 -

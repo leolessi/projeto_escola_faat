@@ -51,7 +51,7 @@ def listar_alunos():
         return jsonify({"error": "Failed to connect to the database"}), 500
     cursor = conn.cursor()
     try:
-        cursor.execute("SELECT * FROM Aluno")
+        cursor.execute("SELECT * FROM Alunos")
         alunos = cursor.fetchall()
         return (
             jsonify(
@@ -124,7 +124,7 @@ def buscar_aluno(id_aluno):
         return jsonify({"error": "Failed to connect to the database"}), 500
     cursor = conn.cursor()
     try:
-        cursor.execute("SELECT * FROM Aluno WHERE id_aluno = %s", (id_aluno,))
+        cursor.execute("SELECT * FROM Alunos WHERE id_aluno = %s", (id_aluno,))
         aluno = cursor.fetchone()
         if aluno is None:
             return jsonify({"error": "Aluno não encontrado"}), 404
@@ -193,7 +193,7 @@ def cadastrar_aluno():
     try:
         cursor.execute(
             """
-            INSERT INTO Aluno (nome_completo, data_nascimento, id_turma, nome_responsavel, telefone_responsavel, email_responsavel, informacoes_adicionais)
+            INSERT INTO Alunos (nome_completo, data_nascimento, id_turma, nome_responsavel, telefone_responsavel, email_responsavel, informacoes_adicionais)
             VALUES (%s, %s, %s, %s, %s, %s, %s)
             """,
             (
@@ -264,7 +264,7 @@ def alterar_aluno(id_aluno):
     try:
         cursor.execute(
             """
-            UPDATE Aluno
+            UPDATE Alunos
             SET nome_completo = %s, data_nascimento = %s, id_turma = %s, nome_responsavel = %s, telefone_responsavel = %s, email_responsavel = %s, informacoes_adicionais = %s
             WHERE id_aluno = %s
             """,
@@ -330,7 +330,7 @@ def excluir_aluno(id_aluno):
         return jsonify({"error": "Failed to connect to the database"}), 500
     cursor = conn.cursor()
     try:
-        cursor.execute("DELETE FROM Aluno WHERE id_aluno = %s", (id_aluno,))
+        cursor.execute("DELETE FROM Alunos WHERE id_aluno = %s", (id_aluno,))
         conn.commit()
         return jsonify({"message": "Aluno excluído com sucesso"}), 200
     except Exception as e:
