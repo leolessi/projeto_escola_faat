@@ -47,7 +47,7 @@ def listar_turmas():
         return jsonify({"error": "Failed to connect to the database"}), 500
     cursor = conn.cursor()
     try:
-        cursor.execute("SELECT * FROM Turma")
+        cursor.execute("SELECT * FROM Turmas")
         turmas = cursor.fetchall()
         return (
             jsonify(
@@ -121,7 +121,7 @@ def cadastrar_turma():
     try:
         cursor.execute(
             """
-            INSERT INTO Turma (nome_turma, id_professor, horario)
+            INSERT INTO Turmas (nome_turma, id_professor, horario)
             VALUES (%s, %s, %s)
             """,
             (
@@ -196,7 +196,7 @@ def alterar_turma(id_turma):
     try:
         cursor.execute(
             """
-            UPDATE Turma
+            UPDATE Turmas
             SET nome_turma = %s, id_professor = %s, horario = %s
             WHERE id_turma = %s
             """,
@@ -258,7 +258,7 @@ def excluir_turma(id_turma):
         return jsonify({"error": "Failed to connect to the database"}), 500
     cursor = conn.cursor()
     try:
-        cursor.execute("DELETE FROM Turma WHERE id_turma = %s", (id_turma,))
+        cursor.execute("DELETE FROM Turmas WHERE id_turma = %s", (id_turma,))
         conn.commit()
         return jsonify({"message": "Turma excluída com sucesso"}), 200
     except Exception as e:
