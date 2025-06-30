@@ -1815,3 +1815,59 @@ expected <block end>, but found '?'
 2025-06-30 22:10:52,806 - INFO - 172.19.0.1 - - [30/Jun/2025 22:10:52] "[35m[1mPOST /api/professores HTTP/1.1[0m" 201 -
 2025-06-30 22:11:01,638 - INFO - 172.19.0.1 - - [30/Jun/2025 22:11:01] "PUT /api/professores/5 HTTP/1.1" 200 -
 2025-06-30 22:11:12,293 - INFO - 172.19.0.1 - - [30/Jun/2025 22:11:12] "PUT /api/professores/5 HTTP/1.1" 200 -
+2025-06-30 22:16:26,131 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.3:5000
+2025-06-30 22:16:26,132 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-30 22:16:26,135 - INFO -  * Restarting with stat
+2025-06-30 22:16:26,613 - WARNING -  * Debugger is active!
+2025-06-30 22:16:26,614 - INFO -  * Debugger PIN: 121-996-891
+2025-06-30 22:17:14,584 - INFO - 172.19.0.1 - - [30/Jun/2025 22:17:14] "GET /api/turmas HTTP/1.1" 200 -
+2025-06-30 22:18:28,915 - INFO - 172.19.0.1 - - [30/Jun/2025 22:18:28] "[35m[1mPOST /api/turmas HTTP/1.1[0m" 201 -
+2025-06-30 22:18:50,174 - INFO - 172.19.0.1 - - [30/Jun/2025 22:18:50] "GET /api/turmas HTTP/1.1" 200 -
+2025-06-30 22:19:09,856 - INFO - 172.19.0.1 - - [30/Jun/2025 22:19:09] "GET /api/turmas HTTP/1.1" 200 -
+2025-06-30 22:19:39,869 - INFO - 172.19.0.1 - - [30/Jun/2025 22:19:39] "GET /api/turmas HTTP/1.1" 200 -
+2025-06-30 22:19:49,629 - INFO - 172.19.0.1 - - [30/Jun/2025 22:19:49] "GET /api/turmas HTTP/1.1" 200 -
+2025-06-30 22:19:54,236 - INFO - 172.19.0.1 - - [30/Jun/2025 22:19:54] "GET /api/turmas HTTP/1.1" 200 -
+2025-06-30 22:21:02,738 - INFO - 172.19.0.1 - - [30/Jun/2025 22:21:02] "GET /api/alunos HTTP/1.1" 200 -
+2025-06-30 22:21:09,990 - INFO - 172.19.0.1 - - [30/Jun/2025 22:21:09] "GET /api/turmas HTTP/1.1" 200 -
+2025-06-30 22:22:24,248 - INFO - 172.19.0.1 - - [30/Jun/2025 22:22:24] "GET /api/turmas HTTP/1.1" 200 -
+2025-06-30 22:41:25,803 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-06-30 22:41:25,803 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-30 22:41:25,806 - INFO -  * Restarting with stat
+2025-06-30 22:41:26,316 - WARNING -  * Debugger is active!
+2025-06-30 22:41:26,317 - INFO -  * Debugger PIN: 322-201-206
+2025-06-30 22:41:31,604 - INFO - 172.18.0.1 - - [30/Jun/2025 22:41:31] "GET /api/turmas HTTP/1.1" 200 -
+2025-06-30 22:42:04,800 - INFO - 172.18.0.1 - - [30/Jun/2025 22:42:04] "[35m[1mPOST /api/turmas HTTP/1.1[0m" 201 -
+2025-06-30 22:42:07,925 - INFO - 172.18.0.1 - - [30/Jun/2025 22:42:07] "GET /api/turmas HTTP/1.1" 200 -
+2025-06-30 22:42:25,677 - INFO - 172.18.0.1 - - [30/Jun/2025 22:42:25] "DELETE /api/turmas/4 HTTP/1.1" 200 -
+2025-06-30 22:42:30,295 - INFO - 172.18.0.1 - - [30/Jun/2025 22:42:30] "GET /api/turmas HTTP/1.1" 200 -
+2025-06-30 22:42:46,682 - INFO - 172.18.0.1 - - [30/Jun/2025 22:42:46] "GET /api/turmas HTTP/1.1" 200 -
+2025-06-30 22:42:50,426 - INFO - 172.18.0.1 - - [30/Jun/2025 22:42:50] "GET /apidocs/ HTTP/1.1" 200 -
+2025-06-30 22:42:50,506 - INFO - 172.18.0.1 - - [30/Jun/2025 22:42:50] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-06-30 22:42:50,546 - INFO - 172.18.0.1 - - [30/Jun/2025 22:42:50] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-06-30 22:42:50,587 - INFO - 172.18.0.1 - - [30/Jun/2025 22:42:50] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-06-30 22:42:50,608 - INFO - 172.18.0.1 - - [30/Jun/2025 22:42:50] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2025-06-30 22:42:50,725 - INFO - 172.18.0.1 - - [30/Jun/2025 22:42:50] "GET /flasgger_static/favicon-32x32.png HTTP/1.1" 200 -
+2025-06-30 22:42:51,050 - INFO - 172.18.0.1 - - [30/Jun/2025 22:42:51] "GET /apispec_1.json HTTP/1.1" 200 -
+2025-06-30 22:49:19,309 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-06-30 22:49:19,310 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-30 22:49:19,312 - INFO -  * Restarting with stat
+2025-06-30 22:49:20,234 - WARNING -  * Debugger is active!
+2025-06-30 22:49:20,236 - INFO -  * Debugger PIN: 341-640-009
+2025-06-30 22:49:32,026 - INFO - 172.18.0.1 - - [30/Jun/2025 22:49:32] "GET /apidocs/ HTTP/1.1" 200 -
+2025-06-30 22:49:32,119 - INFO - 172.18.0.1 - - [30/Jun/2025 22:49:32] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-06-30 22:49:32,120 - INFO - 172.18.0.1 - - [30/Jun/2025 22:49:32] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-06-30 22:49:32,120 - INFO - 172.18.0.1 - - [30/Jun/2025 22:49:32] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2025-06-30 22:49:32,121 - INFO - 172.18.0.1 - - [30/Jun/2025 22:49:32] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-06-30 22:49:32,634 - INFO - 172.18.0.1 - - [30/Jun/2025 22:49:32] "GET /apispec_1.json HTTP/1.1" 200 -
+2025-06-30 22:49:44,861 - INFO - 172.18.0.1 - - [30/Jun/2025 22:49:44] "GET /api/professores HTTP/1.1" 200 -
+2025-06-30 22:49:54,998 - INFO - 172.18.0.1 - - [30/Jun/2025 22:49:54] "[35m[1mPOST /api/professores HTTP/1.1[0m" 201 -
+2025-06-30 22:49:58,937 - INFO - 172.18.0.1 - - [30/Jun/2025 22:49:58] "GET /api/professores HTTP/1.1" 200 -
