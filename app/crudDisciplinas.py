@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from app.Util import bd
+from Util import bd
 
 disciplinas_bp = Blueprint("disciplinas", __name__)
 

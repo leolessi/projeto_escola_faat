@@ -1,5 +1,5 @@
 from flask import request, jsonify, Blueprint
-from app.Util import bd
+from Util import bd
 import logging
 
 logger = logging.getLogger(__name__)

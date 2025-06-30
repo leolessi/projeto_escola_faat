@@ -1,5 +1,5 @@
 from flask import request, jsonify, Blueprint
-from app.Util import bd
+from Util import bd
 
 atividades_bp = Blueprint("atividades", __name__)
 
@@ -46,7 +46,7 @@ def listar_atividades():
         return jsonify({"error": "Failed to connect to the database"}), 500
     cursor = conn.cursor()
     try:
-        cursor.execute("SELECT * FROM Atividade")
+        cursor.execute("SELECT * FROM Atividades")
         atividades = cursor.fetchall()
         return (
             jsonify(
@@ -118,7 +118,7 @@ def cadastrar_atividade():
     try:
         cursor.execute(
             """
-            INSERT INTO Atividade (descricao, data_realizacao)
+            INSERT INTO Atividades (descricao, data_realizacao)
             VALUES (%s, %s)
             """,
             (
@@ -191,7 +191,7 @@ def alterar_atividade(id_atividade):
     try:
         cursor.execute(
             """
-            UPDATE Atividade
+            UPDATE Atividades
             SET descricao = %s, data_realizacao = %s
             WHERE id_atividade = %s
             """,
@@ -252,7 +252,9 @@ def excluir_atividade(id_atividade):
         return jsonify({"error": "Failed to connect to the database"}), 500
     cursor = conn.cursor()
     try:
-        cursor.execute("DELETE FROM Atividade WHERE id_atividade = %s", (id_atividade,))
+        cursor.execute(
+            "DELETE FROM Atividades WHERE id_atividade = %s", (id_atividade,)
+        )
         conn.commit()
         return jsonify({"message": "Atividade excluída com sucesso"}), 200
     except Exception as e:
