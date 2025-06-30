@@ -6,6 +6,7 @@ COPY app/requirements.txt requirements.txt
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 RUN pip install --upgrade flasgger pyyaml
+RUN pip install pytest
 
 COPY ./app .
 

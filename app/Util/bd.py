@@ -1,8 +1,10 @@
 import psycopg2
 from psycopg2 import OperationalError
 import yaml
+import os
 
-with open("Util/paramsBD.yml", "r") as config_file:
+config_path = os.path.join(os.path.dirname(__file__), "paramsBD.yml")
+with open(config_path, "r") as config_file:
     config = yaml.safe_load(config_file)
 
 

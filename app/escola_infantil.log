@@ -1689,3 +1689,21 @@ expected <block end>, but found '?'
 2025-06-27 18:14:27,187 - INFO - 172.19.0.1 - - [27/Jun/2025 18:14:27] "GET /api/professores HTTP/1.1" 200 -
 2025-06-27 18:14:50,546 - INFO - 172.19.0.1 - - [27/Jun/2025 18:14:50] "[35m[1mPOST /api/professores HTTP/1.1[0m" 201 -
 2025-06-27 18:14:53,896 - INFO - 172.19.0.1 - - [27/Jun/2025 18:14:53] "GET /api/professores HTTP/1.1" 200 -
+2025-06-30 16:10:03,056 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.3:5000
+2025-06-30 16:10:03,057 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-30 16:10:03,058 - INFO -  * Restarting with stat
+2025-06-30 16:10:03,499 - WARNING -  * Debugger is active!
+2025-06-30 16:10:03,500 - INFO -  * Debugger PIN: 112-280-551
+2025-06-30 16:12:04,775 - INFO -  * Detected change in '/app/Util/bd.py', reloading
+2025-06-30 16:12:04,819 - INFO -  * Restarting with stat
+2025-06-30 16:12:51,513 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.0.3:5000
+2025-06-30 16:12:51,513 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-30 16:12:51,514 - INFO -  * Restarting with stat
+2025-06-30 16:12:51,934 - WARNING -  * Debugger is active!
+2025-06-30 16:12:51,935 - INFO -  * Debugger PIN: 268-080-317
